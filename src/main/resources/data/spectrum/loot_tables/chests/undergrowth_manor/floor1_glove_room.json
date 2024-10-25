@@ -75,6 +75,7 @@
         },
         {
             "rolls": 1,
+            "bonus_rolls": 0.3,
             "entries": [
                 {
                 "type": "minecraft:item",
@@ -101,6 +102,7 @@
         },
         {
             "rolls": 1,
+            "bonus_rolls": 0.5,
             "entries": [
               {
                 "type": "minecraft:item",

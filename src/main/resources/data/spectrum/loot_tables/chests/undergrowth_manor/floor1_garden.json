@@ -9,11 +9,11 @@
                     "name": "spectrum:nightdew_sprout",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 12,
-                            "max": 24
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 12,
+                                "max": 24
+                            }
                         }
                     ]
                 },
@@ -22,11 +22,11 @@
                     "name": "spectrum:fissure_plum",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 10,
-                            "max": 18
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 10,
+                                "max": 18
+                            }
                         }
                     ]
                 },
@@ -35,11 +35,11 @@
                     "name": "spectrum:nephrite_blossom_bulb",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 4,
-                            "max": 6
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 6
+                            }
                         }
                     ]
                 }
@@ -53,11 +53,11 @@
                     "name": "spectrum:glass_peach",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 7,
-                            "max": 11
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 7,
+                                "max": 11
+                            }
                         }
                     ]
                 }
@@ -71,11 +71,11 @@
                     "name": "minecraft:flowering_azalea",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 3,
-                            "max": 6
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 6
+                            }
                         }
                     ]
                 }
@@ -89,11 +89,11 @@
                     "name": "minecraft:torchflower_seeds",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 6,
-                            "max": 12
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 6,
+                                "max": 12
+                            }
                         }
                     ]
                 }
@@ -107,11 +107,11 @@
                     "name": "spectrum:glistering_melon_seeds",
                     "functions": [
                         {
-                        "function": "minecraft:set_count",
-                        "count": {
-                            "min": 3,
-                            "max": 6
-                        }
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 6
+                            }
                         }
                     ]
                 }
