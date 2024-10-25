@@ -2,35 +2,43 @@
     "type": "minecraft:chest",
     "pools": [
         {
-            "rolls": 1,
+            "rolls": 2,
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:paper",
+                    "name": "spectrum:nightdew_sprout",
                     "functions": [
                         {
                             "function": "minecraft:set_count",
                             "count": {
-                                "min": 10,
-                                "max": 20
+                                "min": 6,
+                                "max": 12
                             }
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
+                },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:book",
+                    "name": "spectrum:fissure_plum",
                     "functions": [
                         {
                             "function": "minecraft:set_count",
                             "count": {
                                 "min": 5,
-                                "max": 12
+                                "max": 15
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:nephrite_blossom_bulb",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 3
                             }
                         }
                     ]
@@ -42,7 +50,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:shimmerstone_gem",
+                    "name": "spectrum:glass_peach",
                     "functions": [
                         {
                             "function": "minecraft:set_count",
@@ -56,60 +64,46 @@
             ]
         },
         {
-            "rolls": 1,
+            "rolls": 2,
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:imbrifer_cookbook",
-                    "conditions": [
+                    "name": "minecraft:torchflower_seeds",
+                    "weight": 2,
+                    "functions": [
                         {
-                            "condition": "minecraft:random_chance",
-                            "chance": 0.3
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 10
+                            }
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
+                },
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:imperial_cookbook",
-                    "conditions": [
+                    "name": "minecraft:flowering_azalea",
+                    "weight": 2,
+                    "functions": [
                         {
-                            "condition": "minecraft:random_chance",
-                            "chance": 0.3
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
+                },
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:melochites_cookbook_vol_1",
-                    "conditions": [
+                    "name": "spectrum:glistering_melon_seeds",
+                    "functions": [
                         {
-                            "condition": "minecraft:random_chance",
-                            "chance": 0.3
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "spectrum:melochites_cookbook_vol_2",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:random_chance",
-                            "chance": 0.3
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
                         }
                     ]
                 }

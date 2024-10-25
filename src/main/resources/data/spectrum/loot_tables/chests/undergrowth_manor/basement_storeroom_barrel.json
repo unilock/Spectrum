@@ -75,7 +75,7 @@
             ]
         },
         {
-            "rolls": 1,
+            "rolls": 2,
             "entries": [
               {
                 "type": "minecraft:item",
@@ -88,42 +88,24 @@
               {
                 "type": "minecraft:item",
                 "name": "minecraft:gold_ingot"
-              }
-            ],
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "min": 4,
-                  "max": 12
-                }
-              }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-              {
-                "type": "minecraft:item",
-                "name": "minecraft:gold_nugget"
               },
               {
                 "type": "minecraft:item",
-                "name": "minecraft:iron_nugget"
+                "name": "spectrum:pyrite_chunk"
               }
             ],
             "functions": [
               {
                 "function": "minecraft:set_count",
                 "count": {
-                  "min": 0,
+                  "min": 5,
                   "max": 10
                 }
               }
             ]
         },
         {
-            "rolls": 1,
+            "rolls": 3,
             "entries": [
               {
                 "type": "minecraft:item",
@@ -147,6 +129,32 @@
                     "count": {
                       "min": 9,
                       "max": 15
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:gold_nugget",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "min": 0,
+                      "max": 9
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:iron_nugget",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "min": 0,
+                      "max": 9
                     }
                   }
                 ]
