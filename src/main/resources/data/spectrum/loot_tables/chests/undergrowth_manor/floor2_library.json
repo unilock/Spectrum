@@ -69,28 +69,13 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:imbrifer_cookbook"
-                }
-            ],
-            "conditions": [
-                {
-                "condition": "minecraft:random_chance",
-                "chance": 0.4
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "spectrum:imperial_cookbook"
-                }
-            ],
-            "conditions": [
-                {
-                "condition": "minecraft:random_chance",
-                "chance": 0.4
+                    "name": "spectrum:imbrifer_cookbook",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.4
+                        }
+                    ]
                 }
             ]
         },
@@ -99,13 +84,13 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:melochites_cookbook_vol_1"
-                }
-            ],
-            "conditions": [
-                {
-                "condition": "minecraft:random_chance",
-                "chance": 0.4
+                    "name": "spectrum:imperial_cookbook",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.4
+                        }
+                    ]
                 }
             ]
         },
@@ -114,13 +99,28 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:melochites_cookbook_vol_2"
+                    "name": "spectrum:melochites_cookbook_vol_1",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.4
+                        }
+                    ]
                 }
-            ],
-            "conditions": [
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
                 {
-                "condition": "minecraft:random_chance",
-                "chance": 0.4
+                    "type": "minecraft:item",
+                    "name": "spectrum:melochites_cookbook_vol_2",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.4
+                        }
+                    ]
                 }
             ]
         }

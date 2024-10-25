@@ -78,24 +78,6 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "ITEM NAME",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 0,
-                                "max": 0
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
                     "name": "spectrum:nightdew_sprout",
                     "functions": [
                             {
@@ -168,13 +150,13 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:air",
-                    "weight": 5
-                },
-                {
-                    "type": "minecraft:item",
                     "name": "spectrum:nectardew_burgeon",
-                    "weight": 1
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.15
+                        }
+                    ]
                 }
             ]
         },
