@@ -1,0 +1,109 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "ITEM NAME",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 0,
+                  "max": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 2,
+        "bonus_rolls": 0,
+        "entries": [
+            {
+                "type": "minecraft:item",
+                "name": "spectrum:infused_beverage",
+                "functions": [
+                    {
+                        "function": "minecraft:set_nbt",
+                        "tag": "{Variant: \"camomillesque\", Color: 15517767 }"
+                    },
+                    {
+                        "function": "spectrum:ferment_randomly",
+                        "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/camomillesque",
+                        "days_fermented": {
+                            "min": 180000,
+                            "max": 216000
+                        },
+                        "thickness": 1.5
+                    }
+                ]
+            },
+            {
+                "type": "minecraft:item",
+                "name": "spectrum:morchella",
+                "functions": [
+                    {
+                        "function": "spectrum:ferment_randomly",
+                        "fermentation_recipe_id": "spectrum:titration_barrel/morchella",
+                        "days_fermented": {
+                            "min": 180000,
+                            "max": 216000
+                        },
+                        "thickness": 1.5
+                    }
+                ]
+            }
+        ]
+      },
+      {
+        "rolls": 2,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "ITEM NAME"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "ITEM NAME"
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 0,
+              "max": 0
+            }
+          }
+        ]
+      },
+      {
+        "rolls": 3,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "ITEM NAME",
+            "weight": 2
+          },
+          {
+            "type": "minecraft:item",
+            "name": "ITEM NAME",
+            "weight": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 0,
+                  "max": 0
+                }
+              }
+            ]
+          }
+        ]
+      }     
+    ]
+  }

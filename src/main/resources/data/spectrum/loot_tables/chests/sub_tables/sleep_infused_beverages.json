@@ -1,0 +1,91 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:infused_beverage",
+                    "weight": 4,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Variant: \"camomillesque\", Color: 15517767 }"
+                        },
+                        {
+                            "function": "spectrum:ferment_randomly",
+                            "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/camomillesque",
+                            "days_fermented": {
+                                "min": 180000,
+                                "max": 216000
+                            },
+                            "thickness": 1.5
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:infused_beverage",
+                    "weight": 4,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Variant: \"verdegris_wine\", Color: 4237444 }"
+                        },
+                        {
+                            "function": "spectrum:ferment_randomly",
+                            "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/verdegris_wine",
+                            "days_fermented": {
+                                "min": 180000,
+                                "max": 216000
+                            },
+                            "thickness": 1.5
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:infused_beverage",
+                    "weight": 1,
+                    "quality": 1.5,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Variant: \"velvet_brandy\", Color: 15383295 }"
+                        },
+                        {
+                            "function": "spectrum:ferment_randomly",
+                            "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/velvet_brandy",
+                            "days_fermented": {
+                                "min": 180000,
+                                "max": 216000
+                            },
+                            "thickness": 1.5
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:infused_beverage",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Variant: \"night_cream\", Color: 12982783 }"
+                        },
+                        {
+                            "function": "spectrum:ferment_randomly",
+                            "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/night_cream",
+                            "days_fermented": {
+                                "min": 180000,
+                                "max": 216000
+                            },
+                            "thickness": 1.5
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
