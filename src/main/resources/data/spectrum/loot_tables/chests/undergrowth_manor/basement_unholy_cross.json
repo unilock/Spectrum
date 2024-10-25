@@ -103,12 +103,8 @@
       ]
     },
     {
-      "rolls": 2,
+      "rolls": 1,
       "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "spectrum:bismuth_flake"
-        },
         {
           "type": "minecraft:item",
           "name": "spectrum:koi"

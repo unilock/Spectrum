@@ -6,24 +6,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "spectrum:stardust",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 20,
-                "max": 34
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
           "name": "spectrum:aether_vestiges",
           "weight": 4130,
           "quality": 10
@@ -31,7 +13,7 @@
       ]
     },
     {
-      "rolls": 4,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -41,20 +23,6 @@
             {
               "function": "minecraft:set_count",
               "count": 3
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "spectrum:frostbite_essence",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 10,
-                "max": 17
-              }
             }
           ]
         },
@@ -71,35 +39,22 @@
               }
             }
           ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "spectrum:aloe_leaf",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 8,
-                "max": 12
-              }
-            }
-          ]
         }
       ]
     },
     {
-      "rolls": 2,
+      "rolls": 3,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:dragon_egg",
-          "weight": 0,
+          "weight": 1,
           "quality": 3
         },
         {
           "type": "minecraft:item",
           "name": "spectrum:downstone_fragments",
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -113,15 +68,11 @@
       ]
     },
     {
-      "rolls": 4,
+      "rolls": 3,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "spectrum:bismuth_crystal"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "spectrum:raw_malachite"
+          "name": "spectrum:raw_azurite"
         },
         {
           "type": "minecraft:item",
@@ -132,8 +83,8 @@
         {
           "function": "minecraft:set_count",
           "count": {
-            "min": 6,
-            "max": 11
+            "min": 2,
+            "max": 4
           }
         }
       ]
