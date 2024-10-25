@@ -26,7 +26,7 @@
                     "function": "minecraft:set_count",
                     "count": {
                       "min": 0,
-                      "max": 4
+                      "max": 5
                     }
                   }
                 ]
@@ -39,7 +39,7 @@
                     "function": "minecraft:set_count",
                     "count": {
                       "min": 0,
-                      "max": 4
+                      "max": 5
                     }
                   }
                 ]
@@ -73,16 +73,24 @@
             "entries": [
               {
                 "type": "minecraft:item",
-                "name": "minecraft:gold_ingot",
-                "functions": [
-                  {
-                    "function": "minecraft:set_count",
-                    "count": {
-                      "min": 3,
-                      "max": 10
-                    }
-                  }
-                ]
+                "name": "minecraft:copper_ingot"
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:iron_ingot"
+              },
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:gold_ingot"
+              }
+            ],
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 4,
+                  "max": 12
+                }
               }
             ]
         },
@@ -98,24 +106,6 @@
                     "count": {
                       "min": 0,
                       "max": 8
-                    }
-                  }
-                ]
-              }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-              {
-                "type": "minecraft:item",
-                "name": "minecraft:iron_ingot",
-                "functions": [
-                  {
-                    "function": "minecraft:set_count",
-                    "count": {
-                      "min": 5,
-                      "max": 16
                     }
                   }
                 ]
