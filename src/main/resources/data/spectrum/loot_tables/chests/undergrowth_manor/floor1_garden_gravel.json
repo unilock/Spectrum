@@ -7,6 +7,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "spectrum:lesser_potion_pendant",
+                    "weight": 4,
                     "functions": [
                         {
                             "function": "spectrum:fill_potion_fillable",
@@ -25,47 +26,63 @@
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:nightdew_sprout"
+                    "name": "spectrum:nectardew_burgeon",
+                    "weight": 2
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:nephrite_blossom_bulb"
+                    "name": "spectrum:nightdew_sprout",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:torchflower_seeds"
+                    "name": "spectrum:nephrite_blossom_bulb",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:glistering_melon_seeds"
+                    "name": "minecraft:torchflower_seeds",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:iron_nugget"
+                    "name": "spectrum:glistering_melon_seeds",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:gold_nugget"
+                    "name": "minecraft:iron_nugget",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "spectrum:bismuth_flake"
+                    "name": "minecraft:gold_nugget",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:brewer_pottery_sherd"
+                    "name": "spectrum:bismuth_flake",
+                    "weight": 7
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:snort_pottery_sherd"
+                    "name": "minecraft:brewer_pottery_sherd",
+                    "weight": 5
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:prize_pottery_sherd"
+                    "name": "minecraft:snort_pottery_sherd",
+                    "weight": 5
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:arms_up_pottery_sherd"
+                    "name": "minecraft:prize_pottery_sherd",
+                    "weight": 5
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:arms_up_pottery_sherd",
+                    "weight": 5
                 }
             ]
         }
