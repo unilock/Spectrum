@@ -1,0 +1,121 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:nightdew_sprout",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 12,
+                            "max": 24
+                        }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:fissure_plum",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 10,
+                            "max": 18
+                        }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:nephrite_blossom_bulb",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 4,
+                            "max": 6
+                        }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:glass_peach",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 7,
+                            "max": 11
+                        }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:flowering_azalea",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 3,
+                            "max": 6
+                        }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:torchflower_seeds",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 6,
+                            "max": 12
+                        }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:glistering_melon_seeds",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 3,
+                            "max": 6
+                        }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

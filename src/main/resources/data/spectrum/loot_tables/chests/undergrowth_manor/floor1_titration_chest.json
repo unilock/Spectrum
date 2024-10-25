@@ -1,0 +1,191 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:purple_planks",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 8,
+                                "max": 16
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:mermaids_gem",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 8,
+                                "max": 16
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:honeycomb",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 5,
+                                "max": 10
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:sugar",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 8,
+                                "max": 20
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "ITEM NAME",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:nightdew_sprout",
+                    "functions": [
+                            {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 8,
+                                "max": 16
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:pure_coal",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:glass_bottle",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 8,
+                            "max": 16
+                        }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:water_bottle",
+                    "functions": [
+                        {
+                        "function": "minecraft:set_count",
+                        "count": {
+                            "min": 1,
+                            "max": 4
+                        }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:air",
+                    "weight": 5
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "spectrum:nectardew_burgeon",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "rolls": 4,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "spectrum:chests/sub_tables/sleep_infused_beverages"
+                }
+            ]
+        }
+    ]
+}
