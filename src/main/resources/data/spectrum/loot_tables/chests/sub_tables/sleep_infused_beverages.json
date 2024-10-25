@@ -31,11 +31,11 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{Variant: \"verdegris_wine\", Color: 4237444 }"
+                            "tag": "{Variant: \"verdigris_wine\", Color: 4237444 }"
                         },
                         {
                             "function": "spectrum:ferment_randomly",
-                            "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/verdegris_wine",
+                            "fermentation_recipe_id": "spectrum:titration_barrel/infused_beverages/verdigris_wine",
                             "days_fermented": {
                                 "min": 180000,
                                 "max": 216000

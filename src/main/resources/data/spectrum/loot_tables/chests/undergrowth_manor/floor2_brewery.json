@@ -197,7 +197,7 @@
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:glowstone"
+                    "name": "minecraft:glowstone_dust"
                 },
                 {
                     "type": "minecraft:item",

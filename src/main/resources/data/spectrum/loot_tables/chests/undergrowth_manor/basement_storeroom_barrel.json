@@ -52,7 +52,7 @@
                     "function": "minecraft:set_count",
                     "count": {
                       "min": 0,
-                      "max": 4
+                      "max": 3
                     }
                   }
                 ]
@@ -64,7 +64,13 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "spectrum:chests/sub_tables/sleep_infused_beverages"
+                    "name": "spectrum:chests/sub_tables/sleep_infused_beverages",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.5
+                        }
+                    ]
                 }
             ]
         },
@@ -99,34 +105,20 @@
             "entries": [
               {
                 "type": "minecraft:item",
-                "name": "minecraft:gold_nugget",
-                "functions": [
-                  {
-                    "function": "minecraft:set_count",
-                    "count": {
-                      "min": 0,
-                      "max": 8
-                    }
-                  }
-                ]
-              }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
+                "name": "minecraft:gold_nugget"
+              },
               {
                 "type": "minecraft:item",
-                "name": "minecraft:iron_nugget",
-                "functions": [
-                  {
-                    "function": "minecraft:set_count",
-                    "count": {
-                      "min": 0,
-                      "max": 13
-                    }
-                  }
-                ]
+                "name": "minecraft:iron_nugget"
+              }
+            ],
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 0,
+                  "max": 10
+                }
               }
             ]
         },
