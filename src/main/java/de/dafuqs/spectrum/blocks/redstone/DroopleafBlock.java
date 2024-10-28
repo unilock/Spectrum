@@ -26,7 +26,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.*;
 import net.minecraft.world.event.GameEvent;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
@@ -130,7 +129,8 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         return !world.isOutOfHeightLimit(pos) && canGrowInto(state);
     }
     protected static boolean placeDroopleafAt(WorldAccess world, BlockPos pos, FluidLogging.State fluidState, Direction direction) {
-        BlockState blockState = SpectrumBlocks.DROOPLEAF.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, fluidState).with(FACING, direction).with(Properties.INVERTED, false);
+        BlockState blockState = SpectrumBlocks.DROOPLEAF.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, fluidState).with(FACING, direction).with(Properties.INVERTED, true);
+        world.scheduleBlockTick(pos, SpectrumBlocks.DROOPLEAF, 100);
         return world.setBlockState(pos, blockState, 3);
     }
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
@@ -157,20 +157,20 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
     }
     public void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {
         BlockPos pos = hit.getBlockPos();
-        world.setBlockState(pos, state.with(Properties.INVERTED, false), 2);
+        world.setBlockState(pos, state.with(Properties.INVERTED, false), Block.NOTIFY_LISTENERS);
         if(world.getBlockState(pos.down()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
         {
-            dropLeaf(state, world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_DOWN);
+            dropLeaf(state, world, pos);
         }
     }
     private void preDropLeaf(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, state.with(Properties.INVERTED, false), 2);
+        world.setBlockState(pos, state.with(Properties.INVERTED, false), Block.NOTIFY_LISTENERS);
         //TODO: Increase delay if planted in Mud?
         world.scheduleBlockTick(pos, this, 20);
     }
-    private static void dropLeaf(BlockState state, World world, BlockPos pos, @Nullable SoundEvent sound) {
-        if (sound != null) {
-            playDropSound(world, pos, sound);
+    private static void dropLeaf(BlockState state, World world, BlockPos pos) {
+        if (SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_DOWN != null) {
+            playDropSound(world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_DOWN);
         }
         world.setBlockState(pos, SpectrumBlocks.DROOPLEAF_STEM.getStateWithProperties(state), Block.NOTIFY_LISTENERS);
         world.setBlockState(pos.down(), state.with(Properties.INVERTED, true), Block.NOTIFY_LISTENERS);
@@ -180,10 +180,10 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         world.emitGameEvent(null, GameEvent.BLOCK_CHANGE, pos.down());
         world.scheduleBlockTick(pos.down(), state.getBlock(), 100);
     }
-    private static void riseLeaf(BlockState state, World world, BlockPos pos, @Nullable SoundEvent sound)
+    private static void riseLeaf(BlockState state, World world, BlockPos pos)
     {
-        if (sound != null) {
-            playDropSound(world, pos, sound);
+        if (SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_UP != null) {
+            playDropSound(world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_UP);
         }
         world.setBlockState(pos, SpectrumBlocks.DROOPLEAF_STEM.getStateWithProperties(state), Block.NOTIFY_LISTENERS);
         world.setBlockState(pos.up(), state, Block.NOTIFY_LISTENERS);
@@ -203,7 +203,7 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
             if(world.getBlockState(pos.up()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
             {
                 world.scheduleBlockTick(pos.up(), this, 100);
-                riseLeaf(state, world, pos,  SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_UP);
+                riseLeaf(state, world, pos);
             }
             else{
                 world.setBlockState(pos, state.with(Properties.INVERTED, false), Block.NOTIFY_LISTENERS);
@@ -213,7 +213,7 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         {
             if(world.getBlockState(pos.down()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
             {
-                dropLeaf(state, world, pos,  SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_DOWN);
+                dropLeaf(state, world, pos);
             }
             else{
                 world.setBlockState(pos, state.with(Properties.INVERTED, true), Block.NOTIFY_LISTENERS);
