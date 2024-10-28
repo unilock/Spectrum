@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,inverted=false": {
+      "model": "spectrum:block/droopleaf",
+      "y": 90
+    },
+    "facing=east,inverted=true": {
+      "model": "spectrum:block/droopleaf",
+      "y": 90
+    },
+    "facing=north,inverted=false": {
+      "model": "spectrum:block/droopleaf"
+    },
+    "facing=north,inverted=true": {
+      "model": "spectrum:block/droopleaf"
+    },
+    "facing=south,inverted=false": {
+      "model": "spectrum:block/droopleaf",
+      "y": 180
+    },
+    "facing=south,inverted=true": {
+      "model": "spectrum:block/droopleaf",
+      "y": 180
+    },
+    "facing=west,inverted=false": {
+      "model": "spectrum:block/droopleaf",
+      "y": 270
+    },
+    "facing=west,inverted=true": {
+      "model": "spectrum:block/droopleaf",
+      "y": 270
+    }
+  }
+}
