@@ -71,6 +71,9 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         BlockState blockState = world.getBlockState(blockPos);
         return blockState.isOf(this) || blockState.isOf(SpectrumBlocks.DROOPLEAF_STEM) || blockState.isIn(BlockTags.BIG_DRIPLEAF_PLACEABLE);
     }
+    public boolean canReplace(BlockState state, ItemPlacementContext context) {
+        return context.getStack().isOf(this.asItem());
+    }
     public boolean emitsRedstonePower(BlockState state) {
         return true;
     }

@@ -1644,6 +1644,7 @@ public class SpectrumBlocks {
 		registerBlock("deeper_down_portal", DEEPER_DOWN_PORTAL);
 		registerBlock("glistering_melon_stem", GLISTERING_MELON_STEM);
 		registerBlock("attached_glistering_melon_stem", ATTACHED_GLISTERING_MELON_STEM);
+		registerBlock("droopleaf", DROOPLEAF);
 		registerBlock("droopleaf_stem", DROOPLEAF_STEM);
 		registerBlock("stuck_storm_stone", STUCK_STORM_STONE);
 		registerBlock("wand_light", WAND_LIGHT_BLOCK);
@@ -1902,7 +1903,6 @@ public class SpectrumBlocks {
 		registerBlockWithItem("creative_particle_spawner", CREATIVE_PARTICLE_SPAWNER, new BlockItem(CREATIVE_PARTICLE_SPAWNER, IS.of(Rarity.EPIC)), DyeColor.PINK);
 
 		registerBlockWithItem("glistering_melon", GLISTERING_MELON, settings, DyeColor.LIME);
-		registerBlockWithItem("droopleaf", DROOPLEAF, settings, DyeColor.LIME);
 
 		registerBlockWithItem("lava_sponge", LAVA_SPONGE, settings, DyeColor.ORANGE);
 		registerBlockWithItem("wet_lava_sponge", WET_LAVA_SPONGE, new WetLavaSpongeItem(WET_LAVA_SPONGE, IS.of(1).recipeRemainder(LAVA_SPONGE.asItem())), DyeColor.ORANGE);

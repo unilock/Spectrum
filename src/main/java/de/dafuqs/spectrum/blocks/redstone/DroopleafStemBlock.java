@@ -2,7 +2,9 @@ package de.dafuqs.spectrum.blocks.redstone;
 
 import de.dafuqs.spectrum.blocks.FluidLogging;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.minecraft.block.*;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
@@ -58,6 +60,9 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
         BlockPos blockPos = pos.down();
         BlockState blockState = world.getBlockState(blockPos);
         return (blockState.isOf(this) || blockState.isIn(BlockTags.BIG_DRIPLEAF_PLACEABLE) || blockState.isOf(SpectrumBlocks.DROOPLEAF)) && (BlockLocating.findColumnEnd(world, pos, state.getBlock(), Direction.DOWN, SpectrumBlocks.DROOPLEAF).isPresent() || BlockLocating.findColumnEnd(world, pos, state.getBlock(), Direction.UP, SpectrumBlocks.DROOPLEAF).isPresent());
+    }
+    public boolean canReplace(BlockState state, ItemPlacementContext context) {
+        return context.getStack().isOf(SpectrumItems.DROOPLEAF);
     }
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if ((direction == Direction.DOWN || direction == Direction.UP) && !state.canPlaceAt(world, pos)) {

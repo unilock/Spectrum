@@ -257,7 +257,7 @@ public class SpectrumItemGroups {
 				entries.add(SpectrumBlocks.PARTICLE_SPAWNER);
 				
 				entries.add(SpectrumBlocks.GLISTERING_MELON);
-				entries.add(SpectrumBlocks.DROOPLEAF);
+				entries.add(SpectrumItems.DROOPLEAF);
 				entries.add(SpectrumBlocks.LAVA_SPONGE);
 				entries.add(SpectrumBlocks.WET_LAVA_SPONGE);
 				entries.add(SpectrumBlocks.ETHEREAL_PLATFORM);
