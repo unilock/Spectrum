@@ -6,7 +6,7 @@ import de.dafuqs.spectrum.api.color.*;
 import de.dafuqs.spectrum.api.item.*;
 import de.dafuqs.spectrum.blocks.bottomless_bundle.*;
 import de.dafuqs.spectrum.blocks.conditional.*;
-import de.dafuqs.spectrum.blocks.fluid.RemainderlessItemFluidStorage;
+import de.dafuqs.spectrum.blocks.fluid.*;
 import de.dafuqs.spectrum.blocks.gravity.*;
 import de.dafuqs.spectrum.blocks.jade_vines.*;
 import de.dafuqs.spectrum.blocks.rock_candy.*;
@@ -29,9 +29,7 @@ import de.dafuqs.spectrum.particle.*;
 import de.dafuqs.spectrum.recipe.pedestal.*;
 import net.fabricmc.fabric.api.item.v1.*;
 import net.fabricmc.fabric.api.registry.*;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.fluid.*;
 import net.minecraft.enchantment.*;
 import net.minecraft.fluid.*;
 import net.minecraft.item.*;
@@ -129,7 +127,7 @@ public class SpectrumItems {
 	};
 	public static final Item RAZOR_FALCHION = new RazorFalchionItem(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH, 4, -2.2F, IS.of(Rarity.UNCOMMON).maxDamage(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH.getDurability()));
 	public static final Item OBLIVION_PICKAXE = new OblivionPickaxeItem(SpectrumToolMaterials.ToolMaterial.VOIDING, 1, -2.8F, IS.of(Rarity.UNCOMMON).maxDamage(SpectrumToolMaterials.ToolMaterial.VOIDING.getDurability()));
-	public static final Item RESONANT_PICKAXE = new GlintlessPickaxe(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH, 1, -2.8F, IS.of(Rarity.UNCOMMON).maxDamage(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH.getDurability())) {
+	public static final Item RESONANT_PICKAXE = new GlintlessPickaxe(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH_MINING_LEVEL_4, 1, -2.8F, IS.of(Rarity.UNCOMMON).maxDamage(SpectrumToolMaterials.ToolMaterial.LOW_HEALTH.getDurability())) {
 		@Override
 		public Map<Enchantment, Integer> getDefaultEnchantments() {
 			return Map.of(SpectrumEnchantments.RESONANCE, 1);
