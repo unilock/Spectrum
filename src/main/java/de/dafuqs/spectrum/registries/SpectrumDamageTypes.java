@@ -30,7 +30,7 @@ public class SpectrumDamageTypes {
 	public static final RegistryKey<DamageType> INCANDESCENCE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("incandescence")); // explosions with that type cause Primordial Fire
 	public static final RegistryKey<DamageType> MOONSTONE_STRIKE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("moonstone_strike"));
 	public static final RegistryKey<DamageType> BRISTLE_SPROUTS = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("bristle_sprouts"));
-	public static final RegistryKey<DamageType> SAWTOOTH = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("sawtooth"));
+	public static final RegistryKey<DamageType> RIPPING = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("ripping"));
 	public static final RegistryKey<DamageType> SET_HEALTH = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("set_health"));
 	public static final RegistryKey<DamageType> IRRADIANCE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("irradiance"));
 	public static final RegistryKey<DamageType> KINDLING_COUGH = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, locate("kindling_cough"));
@@ -51,8 +51,8 @@ public class SpectrumDamageTypes {
 		return new DamageSource(world.getDamageSources().registry.entryOf(SLEEP), attacker);
 	}
 	
-	public static DamageSource sawtooth(World world) {
-		return new DamageSource(world.getDamageSources().registry.entryOf(SAWTOOTH));
+	public static DamageSource ripping(World world) {
+		return new DamageSource(world.getDamageSources().registry.entryOf(RIPPING));
 	}
 	
 	public static DamageSource dragonrot(World world) {

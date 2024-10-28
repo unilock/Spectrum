@@ -4252,7 +4252,7 @@
   "container.spectrum.rei.titration_barrel.time_days": "%d real-life days",
   "container.spectrum.rei.titration_barrel.time_hour": "1 real-life hour",
   "container.spectrum.rei.titration_barrel.time_hours": "%d real-life hours",
-  "death.attack.sawtooth": "%1$s got ripped!",
+  "death.attack.ripping": "%1$s got ripped!",
   "death.attack.spectrum_bristle_sprouts": "%1$s was pricked to death",
   "death.attack.spectrum_deadly_poison": "%1$s succumbed to deadly poison",
   "death.attack.spectrum_deadly_poison.item": "%1$s was deadly poisoned by %2$s using %3$s",
