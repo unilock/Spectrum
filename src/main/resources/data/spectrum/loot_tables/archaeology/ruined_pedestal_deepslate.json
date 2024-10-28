@@ -2,14 +2,13 @@
   "type": "minecraft:archaeology",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:sniffer_egg"
         }
-      ],
-      "rolls": 1.0
+      ]
     }
   ],
   "random_sequence": "spectrum:archaeology/pedestal_ruins_deepslate_gravel"
