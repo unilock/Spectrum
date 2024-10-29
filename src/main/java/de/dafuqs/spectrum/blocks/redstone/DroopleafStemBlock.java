@@ -4,12 +4,14 @@ import de.dafuqs.spectrum.blocks.FluidLogging;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.minecraft.block.*;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -53,7 +55,7 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
         } else {
             BlockPos blockPos = optional.get().up();
             BlockState blockState = world.getBlockState(blockPos);
-            return DroopleafBlock.canGrowInto(world, blockPos, blockState);
+            return world.getBlockState(optional.get()).get(Properties.SHORT) || DroopleafBlock.canGrowInto(world, blockPos, blockState);
         }
     }
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
@@ -88,9 +90,17 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
         if (optional.isPresent()) {
             BlockPos blockPos = optional.get();
             BlockPos blockPos2 = blockPos.up();
-            Direction direction = state.get(FACING);
-            placeStemAt(world, blockPos, getForFluidState(world.getFluidState(blockPos)), direction);
-            DroopleafBlock.placeDroopleafAt(world, blockPos2, getForFluidState(world.getFluidState(blockPos2)), direction);
+            if(world.getBlockState(blockPos).get(Properties.SHORT))
+            {
+                world.setBlockState(blockPos, state.with(Properties.SHORT, false), Block.NOTIFY_LISTENERS);
+                world.scheduleBlockTick(blockPos, SpectrumBlocks.DROOPLEAF, 50);
+            }
+            else
+            {
+                Direction direction = state.get(FACING);
+                placeStemAt(world, blockPos, getForFluidState(world.getFluidState(blockPos)), direction);
+                DroopleafBlock.placeDroopleafAt(world, blockPos2, getForFluidState(world.getFluidState(blockPos2)), direction);
+            }
         }
     }
     protected static boolean placeStemAt(WorldAccess world, BlockPos pos, FluidLogging.State fluidState, Direction direction) {
@@ -99,5 +109,9 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
     }
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         return new ItemStack(SpectrumBlocks.DROOPLEAF);
+    }
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.get(LOGGED).getFluidState();
     }
 }

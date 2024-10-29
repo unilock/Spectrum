@@ -4,6 +4,7 @@ import de.dafuqs.spectrum.blocks.conditional.colored_tree.*;
 import de.dafuqs.spectrum.blocks.decoration.*;
 import de.dafuqs.spectrum.helpers.*;
 import net.fabricmc.fabric.api.registry.*;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.*;
 
 public class SpectrumFlammableBlocks {
@@ -21,8 +22,33 @@ public class SpectrumFlammableBlocks {
 			FlammableBlockRegistry.getDefaultInstance().add(ColoredFenceBlock.byColor(dyeColor), 5, 20);
 			FlammableBlockRegistry.getDefaultInstance().add(ColoredFenceGateBlock.byColor(dyeColor), 5, 20);
 			FlammableBlockRegistry.getDefaultInstance().add(ColoredStairsBlock.byColor(dyeColor), 5, 20);
+			FlammableBlockRegistry.getDefaultInstance().add(ColoredSporeBlossomBlock.byColor(dyeColor), 60, 100);
 		}
-		
+
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.VEGETAL_BLOCK,30,60);
+
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.DROOPLEAF, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.DROOPLEAF_STEM, 60, 100);
+
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.SWEET_PEA, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.APRICOTTI, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.HUMMING_BELL, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.BLOOD_ORCHID, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.RESONANT_LILY, 60, 100);
+
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NEPHRITE_BLOSSOM_STEM, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NEPHRITE_BLOSSOM_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADE_VINES, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADEITE_LOTUS_STEM, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADEITE_LOTUS_FLOWER, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADE_VINE_PETAL_BLOCK, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADE_VINE_PETAL_CARPET, 60, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADEITE_PETAL_BLOCK, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADEITE_PETAL_CARPET, 60, 20);
+
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NIGHTDEW,15,60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.ABYSSAL_VINES,15,60);
+
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.SLATE_NOXCAP_STEM, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.STRIPPED_SLATE_NOXCAP_STEM, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.SLATE_NOXCAP_BLOCK, 5, 5);
@@ -72,8 +98,8 @@ public class SpectrumFlammableBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.CHESTNUT_NOXWOOD_BEAM, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.CHESTNUT_NOXWOOD_LIGHT, 5, 20);
 
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.MOSS_BALL, 1, 5);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.GIANT_MOSS_BALL, 1, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.MOSS_BALL, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.GIANT_MOSS_BALL, 30, 60);
 
 		// Gala wood is intentionally non-flammable
 	}

@@ -1,33 +1,63 @@
 {
   "variants": {
-    "facing=east,inverted=false": {
+    "facing=east,unstable=false,short=false": {
       "model": "spectrum:block/droopleaf",
       "y": 90
     },
-    "facing=east,inverted=true": {
+    "facing=east,unstable=false,short=true": {
+      "model": "spectrum:block/droopleaf_short",
+      "y": 90
+    },
+    "facing=east,unstable=true,short=false": {
       "model": "spectrum:block/droopleaf",
       "y": 90
     },
-    "facing=north,inverted=false": {
+    "facing=east,unstable=true,short=true": {
+      "model": "spectrum:block/droopleaf_short",
+      "y": 90
+    },
+    "facing=north,unstable=false,short=false": {
       "model": "spectrum:block/droopleaf"
     },
-    "facing=north,inverted=true": {
+    "facing=north,unstable=false,short=true": {
+      "model": "spectrum:block/droopleaf_short"
+    },
+    "facing=north,unstable=true,short=false": {
       "model": "spectrum:block/droopleaf"
     },
-    "facing=south,inverted=false": {
+    "facing=north,unstable=true,short=true": {
+      "model": "spectrum:block/droopleaf_short"
+    },
+    "facing=south,unstable=false,short=false": {
       "model": "spectrum:block/droopleaf",
       "y": 180
     },
-    "facing=south,inverted=true": {
+    "facing=south,unstable=false,short=true": {
+      "model": "spectrum:block/droopleaf_short",
+      "y": 180
+    },
+    "facing=south,unstable=true,short=false": {
       "model": "spectrum:block/droopleaf",
       "y": 180
     },
-    "facing=west,inverted=false": {
+    "facing=south,unstable=true,short=true": {
+      "model": "spectrum:block/droopleaf_short",
+      "y": 180
+    },
+    "facing=west,unstable=false,short=false": {
       "model": "spectrum:block/droopleaf",
       "y": 270
     },
-    "facing=west,inverted=true": {
+    "facing=west,unstable=false,short=true": {
+      "model": "spectrum:block/droopleaf_short",
+      "y": 270
+    },
+    "facing=west,unstable=true,short=false": {
       "model": "spectrum:block/droopleaf",
+      "y": 270
+    },
+    "facing=west,unstable=true,short=true": {
+      "model": "spectrum:block/droopleaf_short",
       "y": 270
     }
   }
