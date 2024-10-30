@@ -47,12 +47,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dragon_egg",
-          "weight": 1,
-          "quality": 3
-        },
-        {
-          "type": "minecraft:item",
           "name": "spectrum:downstone_fragments",
           "weight": 2,
           "functions": [

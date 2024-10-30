@@ -81,6 +81,18 @@
                     "name": "spectrum:infused_beverage",
                     "conditions": [
                         {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "type_specific": {
+                                    "type": "player",
+                                    "advancements": {
+                                        "spectrum:triggers/confirmed_drinking_age": true
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "condition": "minecraft:random_chance",
                             "chance": 0.7
                         }

@@ -172,6 +172,20 @@
                     "type": "minecraft:loot_table",
                     "name": "spectrum:chests/sub_tables/sleep_infused_beverages"
                 }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "type_specific": {
+                            "type": "player",
+                            "advancements": {
+                                "spectrum:triggers/confirmed_drinking_age": true
+                            }
+                        }
+                    }
+                }
             ]
         }
     ]
