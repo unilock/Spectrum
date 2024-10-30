@@ -2643,6 +2643,7 @@
   "book.spectrum.guidebook.gemstone_lights.page0.text": "When I set foot in the first geode, I was greeted by a pleasant, cozy glow.\\\n\\\nWith the help of [Shimmerstone](entry://general/shimmerstone), it was easy to amplify this light to create fancy lights.",
   "book.spectrum.guidebook.gemstone_lights.page1.text": "I can build them out of every gemstone I found.\\\nBoth [Chiseled Calcite and Chiseled Basalt](entry://decoration/block_variants@chiseled_and_notched) will do as a base.",
   "book.spectrum.guidebook.gemstone_powder.name": "Gemstone Powder",
+  "book.spectrum.guidebook.gemstone_powder.description": "About bright colours and poor mixing behavior",
   "book.spectrum.guidebook.gemstone_powder.page0.text": "Most recipes in the Pedestal will require a certain amount of Gemstone Powder as a catalyst.\\\n\\\nIf I do not find some, I can get it by pulverizing [Gem Shards](entry://general/shards) via [Item Crushing](entry://general/item_crushing).",
   "book.spectrum.guidebook.gemstone_powder.page1.text": "There's nothing more important to a budding artist than mixing the right color.\\\nUnfortunately, I found that in the case of Gemstone Powder, it wasn't nearly as easy as it first seemed. *The powders don't quite want to mix*, the result always just being a bland, multicolored mass.\\\n\\\nMaybe I can come up with something later?",
   "book.spectrum.guidebook.gemstone_powder.page1.title": "Mixing Colors",
