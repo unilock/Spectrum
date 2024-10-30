@@ -55,6 +55,10 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
         } else {
             BlockPos blockPos = optional.get().up();
             BlockState blockState = world.getBlockState(blockPos);
+            if(world.getBlockState(optional.get()).get(DroopleafBlock.MUDDY))
+            {
+                return false;
+            }
             return world.getBlockState(optional.get()).get(Properties.SHORT) || DroopleafBlock.canGrowInto(world, blockPos, blockState);
         }
     }

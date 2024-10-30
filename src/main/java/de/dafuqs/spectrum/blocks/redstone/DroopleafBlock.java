@@ -3,6 +3,7 @@ package de.dafuqs.spectrum.blocks.redstone;
 import com.google.common.collect.ImmutableMap;
 import de.dafuqs.spectrum.blocks.FluidLogging;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import de.dafuqs.spectrum.registries.SpectrumFluids;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -14,6 +15,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.function.BooleanBiFunction;
@@ -35,6 +37,7 @@ import static de.dafuqs.spectrum.blocks.FluidLogging.State.getForFluidState;
 @SuppressWarnings("deprecation")
 public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizable, FluidLogging.SpectrumFluidLoggable {
     public static final EnumProperty<FluidLogging.State> LOGGED = FluidLogging.ANY_INCLUDING_NONE;
+    public static final BooleanProperty MUDDY = BooleanProperty.of("muddy");
     private static final VoxelShape BASE_SHAPE = Block.createCuboidShape(0.0, 13.0, 0.0, 16.0, 15.0, 16.0);
     private static final VoxelShape SHORT_SHAPE = Block.createCuboidShape(0.0, 5.0, 0.0, 16.0, 7.0, 16.0);
     private static final Map<Direction, VoxelShape> SHAPES_FOR_DIRECTION = ImmutableMap.of(Direction.NORTH, VoxelShapes.combine(DroopleafStemBlock.NORTH_SHAPE, BASE_SHAPE, BooleanBiFunction.ONLY_FIRST), Direction.SOUTH, VoxelShapes.combine(DroopleafStemBlock.SOUTH_SHAPE, BASE_SHAPE, BooleanBiFunction.ONLY_FIRST), Direction.EAST, VoxelShapes.combine(DroopleafStemBlock.EAST_SHAPE, BASE_SHAPE, BooleanBiFunction.ONLY_FIRST), Direction.WEST, VoxelShapes.combine(DroopleafStemBlock.WEST_SHAPE, BASE_SHAPE, BooleanBiFunction.ONLY_FIRST));
@@ -45,19 +48,19 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
 
     public DroopleafBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((this.stateManager.getDefaultState().with(LOGGED, FluidLogging.State.NOT_LOGGED).with(FACING, Direction.NORTH).with(Properties.UNSTABLE, false).with(Properties.SHORT, false)));
+        this.setDefaultState((this.stateManager.getDefaultState().with(LOGGED, FluidLogging.State.NOT_LOGGED).with(FACING, Direction.NORTH).with(Properties.UNSTABLE, false).with(Properties.SHORT, false).with(MUDDY,false)));
         this.shapes = this.getShapesForStates(DroopleafBlock::getShapeForState);
     }
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, LOGGED, Properties.UNSTABLE, Properties.SHORT);
+        builder.add(FACING, LOGGED, Properties.UNSTABLE, Properties.SHORT, MUDDY);
     }
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos().down());
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         if(blockState.isOf(this) || blockState.isOf(SpectrumBlocks.DROOPLEAF_STEM))
         {
-            if(blockState.isOf(this))
+            if(blockState.isOf(this) && !blockState.get(MUDDY))
             {
                 ctx.getWorld().setBlockState(ctx.getBlockPos().down(), blockState.with(Properties.UNSTABLE, false), Block.NOTIFY_LISTENERS);
                 ctx.getWorld().scheduleBlockTick(ctx.getBlockPos().down(), blockState.getBlock(), 50);
@@ -66,7 +69,7 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         }
         else
         {
-            return this.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, getForFluidState(fluidState)).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(Properties.UNSTABLE, false);
+            return this.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, getForFluidState(fluidState)).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(Properties.UNSTABLE, false).with(MUDDY, fluidState.getFluid() == SpectrumFluids.MUD);
         }
     }
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
@@ -93,6 +96,10 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         return VoxelShapes.union(Block.createCuboidShape(0.0, 11.0, 0.0, 16.0, 15.0, 16.0),SHAPES_FOR_DIRECTION.get(state.get(FACING)));
     }
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
+        if(state.get(MUDDY))
+        {
+            return false;
+        }
         BlockState blockState = world.getBlockState(pos.up());
         return state.get(Properties.SHORT) || canGrowInto(blockState);
     }
@@ -121,10 +128,10 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
     protected static boolean canGrowInto(HeightLimitView world, BlockPos pos, BlockState state) {
         return !world.isOutOfHeightLimit(pos) && canGrowInto(state);
     }
-    protected static boolean placeDroopleafAt(WorldAccess world, BlockPos pos, FluidLogging.State fluidState, Direction direction) {
+    protected static void placeDroopleafAt(WorldAccess world, BlockPos pos, FluidLogging.State fluidState, Direction direction) {
         BlockState blockState = SpectrumBlocks.DROOPLEAF.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, fluidState).with(FACING, direction).with(Properties.UNSTABLE, false).with(Properties.SHORT,true);
         world.scheduleBlockTick(pos, SpectrumBlocks.DROOPLEAF, 50);
-        return world.setBlockState(pos, blockState, 3);
+        world.setBlockState(pos, blockState, 3);
     }
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (direction == Direction.DOWN && !state.canPlaceAt(world, pos)) {
@@ -146,14 +153,21 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
     }
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (!world.isClient) {
-            if (isEntityAbove(pos, entity, state.get(Properties.SHORT))) {
-                preDropLeaf(state, world, pos);
+            if (!state.get(Properties.UNSTABLE) && !state.get(MUDDY)) {
+                if (isEntityAbove(pos, entity, state.get(Properties.SHORT))) {
+                    world.setBlockState(pos, state.with(Properties.UNSTABLE, true), Block.NOTIFY_LISTENERS);
+                    if(world.getBlockTickScheduler().isQueued(pos,this))
+                    {
+                        ((ServerWorld)world).getBlockTickScheduler().clearNextTicks(BlockBox.create(pos,pos));
+                    }
+                    world.scheduleBlockTick(pos, this, 10);
+                }
             }
 
         }
     }
     public void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {
-        if (!state.get(Properties.UNSTABLE)) {
+        if (!state.get(Properties.UNSTABLE) && !state.get(MUDDY)) {
             BlockPos pos = hit.getBlockPos();
             if(!state.get(Properties.SHORT))
             {
@@ -166,17 +180,6 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
                 world.setBlockState(pos, state.with(Properties.UNSTABLE, true), Block.NOTIFY_LISTENERS);
                 dropLeaf(state, world, pos);
             }
-        }
-    }
-    private void preDropLeaf(BlockState state, World world, BlockPos pos) {
-        if (!state.get(Properties.UNSTABLE)) {
-            world.setBlockState(pos, state.with(Properties.UNSTABLE, true), Block.NOTIFY_LISTENERS);
-            //TODO: Increase delay if planted in Mud?
-            if(!world.isClient && world.getBlockTickScheduler().isQueued(pos,this))
-            {
-                ((ServerWorld)world).getBlockTickScheduler().clearNextTicks(BlockBox.create(pos,pos));
-            }
-            world.scheduleBlockTick(pos, this, 10);
         }
     }
     private static void dropLeaf(BlockState state, World world, BlockPos pos) {
@@ -205,35 +208,40 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         world.playSound(null, pos, soundEvent, SoundCategory.BLOCKS, 1.0F, f);
     }
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (state.get(Properties.UNSTABLE)) {
-            if(!state.get(Properties.SHORT))
-            {
-                playDropSound(world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_DOWN);
-                world.setBlockState(pos, state.with(Properties.SHORT, true).with(Properties.UNSTABLE,false), Block.NOTIFY_LISTENERS);
-                world.scheduleBlockTick(pos, this, 50);
-                world.emitGameEvent(null, GameEvent.BLOCK_CHANGE, pos);
+        if (!state.get(MUDDY)) {
+            if (state.get(Properties.UNSTABLE)) {
+                if(!state.get(Properties.SHORT))
+                {
+                    playDropSound(world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_DOWN);
+                    world.setBlockState(pos, state.with(Properties.SHORT, true).with(Properties.UNSTABLE,false), Block.NOTIFY_LISTENERS);
+                    world.scheduleBlockTick(pos, this, 50);
+                    world.emitGameEvent(null, GameEvent.BLOCK_CHANGE, pos);
+                }
+                else if(world.getBlockState(pos.down()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
+                {
+                    dropLeaf(state, world, pos);
+                }
+                else{
+                    world.setBlockState(pos, state.with(Properties.UNSTABLE, false), Block.NOTIFY_LISTENERS);
+                    world.scheduleBlockTick(pos, state.getBlock(), 50);
+                }
+            } else {
+                if(state.get(Properties.SHORT))
+                {
+                    playDropSound(world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_UP);
+                    world.setBlockState(pos, state.with(Properties.SHORT, false), Block.NOTIFY_LISTENERS);
+                    world.scheduleBlockTick(pos, this, 50);
+                    world.emitGameEvent(null, GameEvent.BLOCK_CHANGE, pos);
+                }
+                else if(world.getBlockState(pos.up()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
+                {
+                    world.scheduleBlockTick(pos.up(), this, 50);
+                    riseLeaf(state, world, pos);
+                }
             }
-            else if(world.getBlockState(pos.down()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
-            {
-                dropLeaf(state, world, pos);
-            }
-            else{
-                world.setBlockState(pos, state.with(Properties.UNSTABLE, false), Block.NOTIFY_LISTENERS);
-                world.scheduleBlockTick(pos, state.getBlock(), 50);
-            }
-        } else {
-            if(state.get(Properties.SHORT))
-            {
-                playDropSound(world, pos, SoundEvents.BLOCK_BIG_DRIPLEAF_TILT_UP);
-                world.setBlockState(pos, state.with(Properties.SHORT, false), Block.NOTIFY_LISTENERS);
-                world.scheduleBlockTick(pos, this, 50);
-                world.emitGameEvent(null, GameEvent.BLOCK_CHANGE, pos);
-            }
-            else if(world.getBlockState(pos.up()).getBlock() == SpectrumBlocks.DROOPLEAF_STEM)
-            {
-                world.scheduleBlockTick(pos.up(), this, 50);
-                riseLeaf(state, world, pos);
-            }
+        }
+        else if (state.get(Properties.UNSTABLE)){
+            world.setBlockState(pos, state.with(Properties.UNSTABLE, false), Block.NOTIFY_LISTENERS);
         }
     }
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
