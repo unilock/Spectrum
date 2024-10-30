@@ -200,7 +200,7 @@
         "advancement_id": "spectrum:unlocks/potions/strong_sleep_effects"
       },
       "recipe_id": "spectrum:potion_workshop_brewing/fatal_slumber",
-      "text": "book.spectrum.guidebook.low_yield"
+      "text": "book.spectrum.guidebook.fillable_only"
     }
   ]
 }
