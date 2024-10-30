@@ -201,6 +201,15 @@
       },
       "recipe_id": "spectrum:potion_workshop_brewing/fatal_slumber",
       "text": "book.spectrum.guidebook.fillable_only"
+    },
+    {
+      "type": "spectrum:potion_workshop_brewing",
+      "title": "effect.spectrum.immunity",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "spectrum:hidden/collect_cookbooks/poisoners_handbook"
+      },
+      "recipe_id": "spectrum:potion_workshop_brewing/immunity"
     }
   ]
 }
