@@ -44,7 +44,7 @@
       "title": "item.spectrum.infused_beverage.tooltip.variant.camomillesque",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_nightdew"
+        "advancement_id": "spectrum:unlocks/food/camomillesque"
       },
       "recipe_id": "spectrum:titration_barrel/infused_beverages/camomillesque"
     },
@@ -53,9 +53,10 @@
       "title": "item.spectrum.infused_beverage.tooltip.variant.verdigris_wine",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:unlocks/items/night_salts"
+        "advancement_id": "spectrum:unlocks/food/verdigris_wine"
       },
-      "recipe_id": "spectrum:titration_barrel/infused_beverages/verdigris_wine"
+      "recipe_id": "spectrum:titration_barrel/infused_beverages/verdigris_wine",
+      "text": "book.spectrum.guidebook.infused_beverages.page5.text"
     },
     {
       "type": "spectrum:titration_barrel_fermenting",
