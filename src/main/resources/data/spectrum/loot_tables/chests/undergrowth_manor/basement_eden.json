@@ -40,6 +40,20 @@
                   },
                   "thickness": 1.5
                 }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "player",
+                      "advancements": {
+                        "spectrum:triggers/confirmed_drinking_age": true
+                      }
+                    }
+                  }
+                }
               ]
             },
             {
@@ -74,6 +88,20 @@
                   },
                   "thickness": 1.5
                 }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "player",
+                      "advancements": {
+                        "spectrum:triggers/confirmed_drinking_age": true
+                      }
+                    }
+                  }
+                }
               ]
             },
             {
@@ -93,6 +121,20 @@
                   },
                   "thickness": 1.5
                 }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "player",
+                      "advancements": {
+                        "spectrum:triggers/confirmed_drinking_age": true
+                      }
+                    }
+                  }
+                }
               ]
             },
             {
@@ -111,6 +153,20 @@
                     "max": 216000
                   },
                   "thickness": 1.5
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "player",
+                      "advancements": {
+                        "spectrum:triggers/confirmed_drinking_age": true
+                      }
+                    }
+                  }
                 }
               ]
             },

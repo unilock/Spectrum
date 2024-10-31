@@ -237,7 +237,7 @@
   "death.attack.spectrum_moonstone_strike": "%1$s взорвался.",
   "death.attack.spectrum_moonstone_strike.player": "%2$s заставил %1$s взорваться.",
   "death.attack.spectrum_moonstone_strike.item": "%2$s Использовал %3$s чтобы взорвать %1$s",
-  "death.attack.sawtooth": "%1$s был прокушён!",
+  "death.attack.ripping": "%1$s был прокушён!",
 
   "entity.spectrum.block_flooder_projectile": "Заполнитель Блоков",
   "entity.spectrum.gravity_block": "Гравиблок",

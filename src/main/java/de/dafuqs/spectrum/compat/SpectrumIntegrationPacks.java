@@ -5,11 +5,11 @@ import de.dafuqs.spectrum.compat.ae2.*;
 import de.dafuqs.spectrum.compat.alloy_forgery.*;
 import de.dafuqs.spectrum.compat.botania.*;
 import de.dafuqs.spectrum.compat.create.*;
-import de.dafuqs.spectrum.compat.farmersdelight.FDCompat;
+import de.dafuqs.spectrum.compat.farmersdelight.*;
 import de.dafuqs.spectrum.compat.gobber.*;
-import de.dafuqs.spectrum.compat.malum.MalumCompat;
+import de.dafuqs.spectrum.compat.malum.*;
 import de.dafuqs.spectrum.compat.modonomicon.*;
-import de.dafuqs.spectrum.compat.neepmeat.NEEPMeatCompat;
+import de.dafuqs.spectrum.compat.neepmeat.*;
 import de.dafuqs.spectrum.compat.travelersbackpack.*;
 import net.fabricmc.api.*;
 import net.fabricmc.loader.api.*;
@@ -56,7 +56,7 @@ public class SpectrumIntegrationPacks {
 		registerIntegrationPack(NEEPMEAT_ID, () -> new NEEPMeatCompat());
 		registerIntegrationPack(FARMERSDELIGHT_ID, () -> new FDCompat());
 		registerIntegrationPack(MALUM_ID, () -> new MalumCompat());
-		if (!FabricLoader.getInstance().isModLoaded("forgified-fabric-api")) {
+		if (!FabricLoader.getInstance().isModLoaded("connectormod")) {
 			registerIntegrationPack(CREATE_ID, () -> new CreateCompat());
 		}
 		
