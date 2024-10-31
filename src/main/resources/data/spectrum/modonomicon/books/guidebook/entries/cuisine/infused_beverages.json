@@ -55,7 +55,8 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:unlocks/food/verdigris_wine"
       },
-      "recipe_id": "spectrum:titration_barrel/infused_beverages/verdigris_wine"
+      "recipe_id": "spectrum:titration_barrel/infused_beverages/verdigris_wine",
+      "text": "book.spectrum.guidebook.infused_beverages.page5.text"
     },
     {
       "type": "spectrum:titration_barrel_fermenting",
