@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.*;
 @Mixin(PlayerInventory.class)
 public abstract class PlayerInventoryMixin {
 	
-	@Inject(at = @At("HEAD"), method = "addStack(Lnet/minecraft/item/ItemStack;)I")
+	@Inject(at = @At("HEAD"), method = "addStack(Lnet/minecraft/item/ItemStack;)I", cancellable = true)
 	private void addStack(ItemStack stack, CallbackInfoReturnable<Integer> callbackInfoReturnable) {
 		PlayerInventory playerInventory = (PlayerInventory) (Object) this;
 		
