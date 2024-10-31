@@ -1,26 +1,22 @@
 package de.dafuqs.spectrum.api.energy;
 
-import com.sammy.malum.registry.common.MobEffectRegistry;
 import de.dafuqs.revelationary.api.advancements.*;
 import de.dafuqs.spectrum.*;
 import de.dafuqs.spectrum.api.energy.color.*;
-import de.dafuqs.spectrum.compat.SpectrumIntegrationPacks;
+import de.dafuqs.spectrum.compat.*;
 import de.dafuqs.spectrum.helpers.*;
 import de.dafuqs.spectrum.progression.*;
-import de.dafuqs.spectrum.registries.SpectrumStatusEffects;
 import dev.emi.trinkets.api.*;
 import net.fabricmc.api.*;
 import net.minecraft.client.*;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.*;
 import net.minecraft.inventory.*;
 import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
+import net.minecraft.registry.*;
 import net.minecraft.server.network.*;
 import net.minecraft.text.*;
 import net.minecraft.util.*;
 import org.jetbrains.annotations.*;
-
 
 import java.util.*;
 
@@ -57,10 +53,10 @@ public interface InkPowered {
 			if (getUsedColors().size() > 1) {
 				tooltip.add(Text.translatable("spectrum.tooltip.ink_powered.prefix").formatted(Formatting.GRAY));
 				for (InkColor color : getUsedColors()) {
-					tooltip.add(color.getInkName().formatted(Formatting.GRAY));
+					tooltip.add(color.getColoredInkName().formatted(Formatting.GRAY));
 				}
 			} else {
-				tooltip.add(Text.translatable("spectrum.tooltip.ink_powered.consume", getUsedColors().get(0).getInkName()).formatted(Formatting.GRAY));
+				tooltip.add(Text.translatable("spectrum.tooltip.ink_powered.consume", getUsedColors().get(0).getColoredInkName()).formatted(Formatting.GRAY));
 			}
 		}
 	}

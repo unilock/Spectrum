@@ -47,14 +47,11 @@ public class PaintbrushItem extends Item implements SignChangingItem {
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 		super.appendTooltip(stack, world, tooltip, context);
 		
-		Optional<InkColor> color = getColor(stack);
 		boolean unlockedColoring = AdvancementHelper.hasAdvancementClient(SpectrumAdvancements.PAINTBRUSH_COLORING);
 		boolean unlockedSlinging = AdvancementHelper.hasAdvancementClient(SpectrumAdvancements.PAINTBRUSH_INK_SLINGING);
-		
 		if (unlockedColoring || unlockedSlinging) {
-			if (color.isPresent()) {
-				tooltip.add(Text.translatable("spectrum.ink.color." + color.get()));
-			} else {
+			Optional<InkColor> color = getColor(stack);
+			if (color.isEmpty()) {
 				tooltip.add(Text.translatable("item.spectrum.paintbrush.tooltip.select_color"));
 			}
 		}
@@ -82,6 +79,25 @@ public class PaintbrushItem extends Item implements SignChangingItem {
 				new PaintbrushScreenHandler(syncId, inventory, itemStack),
 				Text.translatable("item.spectrum.paintbrush")
 		);
+	}
+	
+	@Override
+	public Text getName(ItemStack stack) {
+		Text name = Text.translatable(this.getTranslationKey(stack));
+		
+		boolean unlockedColoring = AdvancementHelper.hasAdvancementClient(SpectrumAdvancements.PAINTBRUSH_COLORING);
+		boolean unlockedSlinging = AdvancementHelper.hasAdvancementClient(SpectrumAdvancements.PAINTBRUSH_INK_SLINGING);
+		if (unlockedColoring || unlockedSlinging) {
+			Optional<InkColor> color = getColor(stack);
+			if (color.isPresent()) {
+				InkColor inkColor = color.get();
+				name = inkColor.getColoredName().append(" ").append(name);
+			}
+		} else {
+			return super.getName();
+		}
+		
+		return name;
 	}
 	
 	public static void setColor(ItemStack stack, @Nullable InkColor color) {
