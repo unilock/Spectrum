@@ -2,11 +2,15 @@ package de.dafuqs.spectrum.blocks.redstone;
 
 import de.dafuqs.spectrum.blocks.FluidLogging;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
+import de.dafuqs.spectrum.registries.SpectrumFluids;
 import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.minecraft.block.*;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
@@ -22,7 +26,7 @@ import static de.dafuqs.spectrum.blocks.FluidLogging.State.getForFluidState;
 
 @SuppressWarnings("deprecation")
 public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertilizable, FluidLogging.SpectrumFluidLoggable {
-    public static final EnumProperty<FluidLogging.State> LOGGED = FluidLogging.ANY_INCLUDING_NONE;
+    public static final EnumProperty<FluidLogging.State> LOGGED = FluidLogging.NONE_WATER_AND_MUD;
     protected static final VoxelShape NORTH_SHAPE = Block.createCuboidShape(5.0, 0.0, 9.0, 11.0, 16.0, 15.0);
     protected static final VoxelShape SOUTH_SHAPE = Block.createCuboidShape(5.0, 0.0, 1.0, 11.0, 16.0, 7.0);
     protected static final VoxelShape EAST_SHAPE = Block.createCuboidShape(1.0, 0.0, 5.0, 7.0, 16.0, 11.0);
@@ -62,6 +66,67 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
             return world.getBlockState(optional.get()).get(Properties.SHORT) || DroopleafBlock.canGrowInto(world, blockPos, blockState);
         }
     }
+    @Override
+    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        return state.get(LOGGED) == FluidLogging.State.NOT_LOGGED && (fluid == Fluids.WATER || fluid == SpectrumFluids.MUD);
+    }
+    @Override
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        if (state.get(LOGGED) == FluidLogging.State.NOT_LOGGED) {
+            if (!world.isClient()) {
+                if (fluidState.getFluid() == Fluids.WATER) {
+                    world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.WATER), Block.NOTIFY_ALL);
+                    world.scheduleFluidTick(pos, fluidState.getFluid(), fluidState.getFluid().getTickRate(world));
+                } else if (fluidState.getFluid() == SpectrumFluids.MUD) {
+                    Block soilBlock = world.getBlockState(pos.down()).getBlock();
+                    if(soilBlock != SpectrumBlocks.DROOPLEAF_STEM && soilBlock != SpectrumBlocks.DROOPLEAF)
+                    {
+                        Optional<BlockPos> optional = BlockLocating.findColumnEnd(world, pos, state.getBlock(), Direction.UP, SpectrumBlocks.DROOPLEAF);
+                        if(optional.isPresent())
+                        {
+                            world.setBlockState(optional.get(), world.getBlockState(optional.get()).with(DroopleafBlock.MUDDY, true), Block.NOTIFY_ALL);
+                        }
+                    }
+                    world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.MUD), Block.NOTIFY_ALL);
+                    world.scheduleFluidTick(pos, fluidState.getFluid(), fluidState.getFluid().getTickRate(world));
+                }
+            }
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+    @Override
+    public ItemStack tryDrainFluid(WorldAccess world, BlockPos pos, BlockState state) {
+        FluidLogging.State fluidLog = state.get(LOGGED);
+
+        if (fluidLog == FluidLogging.State.WATER) {
+            world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.NOT_LOGGED), Block.NOTIFY_ALL);
+            if (!state.canPlaceAt(world, pos)) {
+                world.breakBlock(pos, true);
+            }
+            return new ItemStack(Items.WATER_BUCKET);
+        } else if (fluidLog == FluidLogging.State.MUD) {
+            Block soilBlock = world.getBlockState(pos.down()).getBlock();
+            if(soilBlock != SpectrumBlocks.DROOPLEAF_STEM && soilBlock != SpectrumBlocks.DROOPLEAF)
+            {
+                Optional<BlockPos> optional = BlockLocating.findColumnEnd(world, pos, state.getBlock(), Direction.UP, SpectrumBlocks.DROOPLEAF);
+                if(optional.isPresent())
+                {
+                    world.setBlockState(optional.get(), world.getBlockState(optional.get()).with(DroopleafBlock.MUDDY, false), Block.NOTIFY_ALL);
+                    world.scheduleBlockTick(optional.get(), SpectrumBlocks.DROOPLEAF, 50);
+
+                }
+            }
+            world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.NOT_LOGGED), Block.NOTIFY_ALL);
+            if (!state.canPlaceAt(world, pos)) {
+                world.breakBlock(pos, true);
+            }
+            return new ItemStack(SpectrumItems.MUD_BUCKET);
+        }
+        return ItemStack.EMPTY;
+    }
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockPos blockPos = pos.down();
         BlockState blockState = world.getBlockState(blockPos);
@@ -96,7 +161,7 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
             BlockPos blockPos2 = blockPos.up();
             if(world.getBlockState(blockPos).get(Properties.SHORT))
             {
-                world.setBlockState(blockPos, state.with(Properties.SHORT, false), Block.NOTIFY_LISTENERS);
+                world.setBlockState(blockPos, world.getBlockState(blockPos).with(Properties.SHORT, false), Block.NOTIFY_LISTENERS);
                 world.scheduleBlockTick(blockPos, SpectrumBlocks.DROOPLEAF, 50);
             }
             else
@@ -108,7 +173,7 @@ public class DroopleafStemBlock  extends HorizontalFacingBlock implements Fertil
         }
     }
     protected static boolean placeStemAt(WorldAccess world, BlockPos pos, FluidLogging.State fluidState, Direction direction) {
-        BlockState blockState = SpectrumBlocks.DROOPLEAF_STEM.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, fluidState).with(FACING, direction);
+        BlockState blockState = SpectrumBlocks.DROOPLEAF_STEM.getDefaultState().with(LOGGED, fluidState).with(FACING, direction);
         return world.setBlockState(pos, blockState, 3);
     }
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {

@@ -4,11 +4,16 @@ import com.google.common.collect.ImmutableMap;
 import de.dafuqs.spectrum.blocks.FluidLogging;
 import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import de.dafuqs.spectrum.registries.SpectrumFluids;
+import de.dafuqs.spectrum.registries.SpectrumItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -36,7 +41,7 @@ import static de.dafuqs.spectrum.blocks.FluidLogging.State.getForFluidState;
 
 @SuppressWarnings("deprecation")
 public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizable, FluidLogging.SpectrumFluidLoggable {
-    public static final EnumProperty<FluidLogging.State> LOGGED = FluidLogging.ANY_INCLUDING_NONE;
+    public static final EnumProperty<FluidLogging.State> LOGGED = FluidLogging.NONE_WATER_AND_MUD;
     public static final BooleanProperty MUDDY = BooleanProperty.of("muddy");
     private static final VoxelShape BASE_SHAPE = Block.createCuboidShape(0.0, 13.0, 0.0, 16.0, 15.0, 16.0);
     private static final VoxelShape SHORT_SHAPE = Block.createCuboidShape(0.0, 5.0, 0.0, 16.0, 7.0, 16.0);
@@ -57,7 +62,8 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
     }
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos().down());
-        FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        FluidLogging.State preFluidState = getForFluidState(ctx.getWorld().getFluidState(ctx.getBlockPos()));
+        FluidLogging.State fluidState = preFluidState!=FluidLogging.State.LIQUID_CRYSTAL ? preFluidState : FluidLogging.State.NOT_LOGGED;
         if(blockState.isOf(this) || blockState.isOf(SpectrumBlocks.DROOPLEAF_STEM))
         {
             if(blockState.isOf(this) && !blockState.get(MUDDY))
@@ -65,11 +71,11 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
                 ctx.getWorld().setBlockState(ctx.getBlockPos().down(), blockState.with(Properties.UNSTABLE, false), Block.NOTIFY_LISTENERS);
                 ctx.getWorld().scheduleBlockTick(ctx.getBlockPos().down(), blockState.getBlock(), 50);
             }
-            return SpectrumBlocks.DROOPLEAF_STEM.getStateWithProperties(blockState).with(FluidLogging.ANY_INCLUDING_NONE, getForFluidState(fluidState));
+            return SpectrumBlocks.DROOPLEAF_STEM.getStateWithProperties(blockState).with(LOGGED, fluidState);
         }
         else
         {
-            return this.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, getForFluidState(fluidState)).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(Properties.UNSTABLE, false).with(MUDDY, fluidState.getFluid() == SpectrumFluids.MUD);
+            return this.getDefaultState().with(LOGGED, fluidState).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(Properties.UNSTABLE, false).with(MUDDY, fluidState == FluidLogging.State.MUD);
         }
     }
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
@@ -94,6 +100,60 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
             return VoxelShapes.union(Block.createCuboidShape(0.0, 3.0, 0.0, 16.0, 7.0, 16.0),SHORT_SHAPES_FOR_DIRECTION.get(state.get(FACING)));
         }
         return VoxelShapes.union(Block.createCuboidShape(0.0, 11.0, 0.0, 16.0, 15.0, 16.0),SHAPES_FOR_DIRECTION.get(state.get(FACING)));
+    }
+    @Override
+    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        return state.get(LOGGED) == FluidLogging.State.NOT_LOGGED && (fluid == Fluids.WATER || fluid == SpectrumFluids.MUD);
+    }
+    @Override
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        if (state.get(LOGGED) == FluidLogging.State.NOT_LOGGED) {
+            if (!world.isClient()) {
+                if (fluidState.getFluid() == Fluids.WATER) {
+                    world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.WATER), Block.NOTIFY_ALL);
+                    world.scheduleFluidTick(pos, fluidState.getFluid(), fluidState.getFluid().getTickRate(world));
+                } else if (fluidState.getFluid() == SpectrumFluids.MUD) {
+                    if (world.getBlockState(pos.down()).getBlock() != SpectrumBlocks.DROOPLEAF_STEM) {
+                        world.setBlockState(pos, state.with(MUDDY, true).with(LOGGED, FluidLogging.State.MUD), Block.NOTIFY_ALL);
+                    }
+                    else{
+                        world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.MUD), Block.NOTIFY_ALL);
+                    }
+                    world.scheduleFluidTick(pos, fluidState.getFluid(), fluidState.getFluid().getTickRate(world));
+                }
+            }
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+    @Override
+    public ItemStack tryDrainFluid(WorldAccess world, BlockPos pos, BlockState state) {
+        FluidLogging.State fluidLog = state.get(LOGGED);
+
+        if (fluidLog == FluidLogging.State.WATER) {
+            world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.NOT_LOGGED), Block.NOTIFY_ALL);
+            if (!state.canPlaceAt(world, pos)) {
+                world.breakBlock(pos, true);
+            }
+            return new ItemStack(Items.WATER_BUCKET);
+        } else if (fluidLog == FluidLogging.State.MUD) {
+            if(world.getBlockState(pos.down()).getBlock() != SpectrumBlocks.DROOPLEAF_STEM)
+            {
+                world.setBlockState(pos, state.with(MUDDY, false).with(LOGGED, FluidLogging.State.NOT_LOGGED), Block.NOTIFY_ALL);
+                world.scheduleBlockTick(pos, this, 50);
+            }
+            else
+            {
+                world.setBlockState(pos, state.with(LOGGED, FluidLogging.State.NOT_LOGGED), Block.NOTIFY_ALL);
+            }
+            if (!state.canPlaceAt(world, pos)) {
+                world.breakBlock(pos, true);
+            }
+            return new ItemStack(SpectrumItems.MUD_BUCKET);
+        }
+        return ItemStack.EMPTY;
     }
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
         if(state.get(MUDDY))
@@ -129,7 +189,7 @@ public class DroopleafBlock extends HorizontalFacingBlock implements Fertilizabl
         return !world.isOutOfHeightLimit(pos) && canGrowInto(state);
     }
     protected static void placeDroopleafAt(WorldAccess world, BlockPos pos, FluidLogging.State fluidState, Direction direction) {
-        BlockState blockState = SpectrumBlocks.DROOPLEAF.getDefaultState().with(FluidLogging.ANY_INCLUDING_NONE, fluidState).with(FACING, direction).with(Properties.UNSTABLE, false).with(Properties.SHORT,true);
+        BlockState blockState = SpectrumBlocks.DROOPLEAF.getDefaultState().with(LOGGED, fluidState).with(FACING, direction).with(Properties.UNSTABLE, false).with(Properties.SHORT,true);
         world.scheduleBlockTick(pos, SpectrumBlocks.DROOPLEAF, 50);
         world.setBlockState(pos, blockState, 3);
     }
