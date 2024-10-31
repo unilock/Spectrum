@@ -302,11 +302,11 @@ public class SpectrumItems {
 	public static final Item KIMCHI = new KimchiItem(IS.of().food(SpectrumFoodComponents.KIMCHI));
 	public static final Item CLOTTED_CREAM = new ClottedCreamItem(IS.of().food(SpectrumFoodComponents.CLOTTED_CREAM), new String[]{"item.spectrum.clotted_cream.tooltip", "item.spectrum.clotted_cream.tooltip2"});
 	public static final Item FRESH_CHOCOLATE = new CustomUseTimeItem(IS.of().food(SpectrumFoodComponents.FRESH_CHOCOLATE), 10);
-	public static final Item HOT_CHOCOLATE = new TeaItem(IS.of().food(SpectrumFoodComponents.HOT_CHOCOLATE), SpectrumFoodComponents.HOT_CHOCOLATE_SCONE_BONUS);
-	public static final Item KARAK_CHAI = new TeaItem(IS.of().food(SpectrumFoodComponents.KARAK_CHAI), SpectrumFoodComponents.KARAK_CHAI_SCONE_BONUS);
-	public static final Item AZALEA_TEA = new AzaleaTeaItem(IS.of().food(SpectrumFoodComponents.AZALEA_TEA), SpectrumFoodComponents.AZALEA_TEA_SCONE_BONUS);
+	public static final Item HOT_CHOCOLATE = new TeaItem(IS.of(16).food(SpectrumFoodComponents.HOT_CHOCOLATE), SpectrumFoodComponents.HOT_CHOCOLATE_SCONE_BONUS);
+	public static final Item KARAK_CHAI = new TeaItem(IS.of(16).food(SpectrumFoodComponents.KARAK_CHAI), SpectrumFoodComponents.KARAK_CHAI_SCONE_BONUS);
+	public static final Item AZALEA_TEA = new AzaleaTeaItem(IS.of(16).food(SpectrumFoodComponents.AZALEA_TEA), SpectrumFoodComponents.AZALEA_TEA_SCONE_BONUS);
 	public static final Item BODACIOUS_BERRY_BAR = new Item(IS.of().food(SpectrumFoodComponents.BODACIOUS_BERRY_BAR));
-	public static final Item DEMON_TEA = new TeaItem(IS.of().food(SpectrumFoodComponents.DEMON_TEA), SpectrumFoodComponents.DEMON_TEA_SCONE_BONUS);
+	public static final Item DEMON_TEA = new TeaItem(IS.of(16).food(SpectrumFoodComponents.DEMON_TEA), SpectrumFoodComponents.DEMON_TEA_SCONE_BONUS);
 	public static final Item SCONE = new Item(IS.of().food(SpectrumFoodComponents.SCONE));
 	
 	public static final Item CHEONG = new ItemWithTooltip(IS.of().food(SpectrumFoodComponents.CHEONG), "item.spectrum.cheong.tooltip");
@@ -385,7 +385,7 @@ public class SpectrumItems {
 	public static final Item FISHCAKE = new Item(IS.of().food(SpectrumFoodComponents.FISHCAKE));
 	public static final Item LIZARD_MEAT = new Item(IS.of().food(SpectrumFoodComponents.LIZARD_MEAT));
 	public static final Item COOKED_LIZARD_MEAT = new Item(IS.of().food(SpectrumFoodComponents.COOKED_LIZARD_MEAT));
-	public static final Item GOLDEN_BRISTLE_TEA = new TeaItem(IS.of().food(SpectrumFoodComponents.GOLDEN_BRISTLE_TEA), SpectrumFoodComponents.GOLDEN_BRISTLE_TEA_SCONE_BONUS);
+	public static final Item GOLDEN_BRISTLE_TEA = new TeaItem(IS.of(16).food(SpectrumFoodComponents.GOLDEN_BRISTLE_TEA), SpectrumFoodComponents.GOLDEN_BRISTLE_TEA_SCONE_BONUS);
 	public static final Item HARE_ROAST = new CustomUseTimeItem(IS.of().food(SpectrumFoodComponents.HARE_ROAST), 64);
 	public static final Item JUNKET = new Item(IS.of().food(SpectrumFoodComponents.JUNKET));
 	public static final Item KOI = new Item(IS.of().food(SpectrumFoodComponents.KOI));
@@ -395,7 +395,7 @@ public class SpectrumItems {
 	public static final Item MORCHELLA = new SimpleBeverageItem(IS.of(16).food(SpectrumFoodComponents.BEVERAGE));
 	public static final Item NECTERED_VIOGNIER = new JadeWineItem(IS.of(16).food(SpectrumFoodComponents.NECTERED_VIOGNIER));
 	public static final Item PEACHES_FLAMBE = new CustomUseTimeItem(IS.of().food(SpectrumFoodComponents.PEACHES_FLAMBE), 64);
-	public static final Item PEACH_CREAM = new TeaItem(IS.of().food(SpectrumFoodComponents.PEACH_CREAM), SpectrumFoodComponents.PEACH_CREAM_SCONE_BONUS);
+	public static final Item PEACH_CREAM = new TeaItem(IS.of(16).food(SpectrumFoodComponents.PEACH_CREAM), SpectrumFoodComponents.PEACH_CREAM_SCONE_BONUS);
 	public static final Item PEACH_JAM = new Item(IS.of().food(SpectrumFoodComponents.PEACH_JAM));
 	public static final Item RABBIT_CREAM_PIE = new ItemWithTooltip(IS.of().food(SpectrumFoodComponents.RABBIT_CREAM_PIE), "item.spectrum.rabbit_cream_pie.tooltip");
 	public static final Item SEDATIVES = new SedativesItem(IS.of().food(SpectrumFoodComponents.SEDATIVES), "item.spectrum.sedatives.tooltip");
