@@ -18,15 +18,6 @@
         "projection": "rigid",
         "processors": "minecraft:empty"
       }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "location": "spectrum:preservation_ruins/color_mixing/white",
-        "projection": "rigid",
-        "processors": "minecraft:empty"
-      }
     }
   ]
 }
