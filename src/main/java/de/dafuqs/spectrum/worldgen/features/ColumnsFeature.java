@@ -2,6 +2,8 @@ package de.dafuqs.spectrum.worldgen.features;
 
 import com.google.common.collect.*;
 import com.mojang.serialization.*;
+import de.dafuqs.spectrum.registries.SpectrumBlockTags;
+import de.dafuqs.spectrum.registries.SpectrumBlocks;
 import net.minecraft.block.*;
 import net.minecraft.util.math.*;
 import net.minecraft.util.math.random.Random;
@@ -17,7 +19,7 @@ import java.util.*;
  */
 public class ColumnsFeature extends Feature<ColumnsFeatureConfig> {
 	
-	private static final ImmutableList<Block> CANNOT_REPLACE_BLOCKS = ImmutableList.of(Blocks.BEDROCK, Blocks.CHEST, Blocks.SPAWNER);
+	private static final ImmutableList<Block> CANNOT_REPLACE_BLOCKS = ImmutableList.of(Blocks.BEDROCK, Blocks.CHEST, Blocks.SPAWNER, SpectrumBlocks.DOWNSTONE);
 	private static final int BIG_MAX_OFFSET = 5;
 	private static final int BIG_COUNT = 50;
 	private static final int SMALL_MAX_OFFSET = 8;
@@ -68,12 +70,12 @@ public class ColumnsFeature extends Feature<ColumnsFeatureConfig> {
 				
 				BlockPos blockPos = it.next();
 				manhattanDistanceFromOrigin = blockPos.getManhattanDistance(pos);
-				currPos = isAirOrFluid(world, seaLevel, blockPos) ? moveDownToGround(world, seaLevel, blockPos.mutableCopy(), manhattanDistanceFromOrigin) : moveUpToAir(world, blockPos.mutableCopy(), manhattanDistanceFromOrigin);
+				currPos = isReplaceable(world, seaLevel, blockPos) ? moveDownToGround(world, seaLevel, blockPos.mutableCopy(), manhattanDistanceFromOrigin) : moveUpToAir(world, blockPos.mutableCopy(), manhattanDistanceFromOrigin);
 			} while (currPos == null);
 			
 			int j = height - manhattanDistanceFromOrigin / 2;
 			for (BlockPos.Mutable mutable = currPos.mutableCopy(); j >= 0; --j) {
-                if (isAirOrFluid(world, seaLevel, mutable)) {
+                if (isReplaceable(world, seaLevel, mutable)) {
                     this.setBlockState(world, mutable, blockState);
                     mutable.move(Direction.UP);
 					success = true;
@@ -102,12 +104,12 @@ public class ColumnsFeature extends Feature<ColumnsFeatureConfig> {
     }
 
     private static boolean canPlaceAt(WorldAccess world, int seaLevel, BlockPos.Mutable mutablePos) {
-        if (!isAirOrFluid(world, seaLevel, mutablePos)) {
+        if (!isReplaceable(world, seaLevel, mutablePos)) {
             return false;
         } else {
             BlockState blockState = world.getBlockState(mutablePos.move(Direction.DOWN));
             mutablePos.move(Direction.UP);
-            return !blockState.isAir() && !CANNOT_REPLACE_BLOCKS.contains(blockState.getBlock());
+            return !blockState.isAir() && !blockState.isIn(SpectrumBlockTags.DEEPER_DOWN_FEATURE_REPLACEABLES) && !CANNOT_REPLACE_BLOCKS.contains(blockState.getBlock());
         }
     }
 
@@ -120,7 +122,7 @@ public class ColumnsFeature extends Feature<ColumnsFeatureConfig> {
                 return null;
             }
 
-            if (blockState.isAir()) {
+            if (blockState.isAir() || blockState.isIn(SpectrumBlockTags.DEEPER_DOWN_FEATURE_REPLACEABLES)) {
                 return mutablePos;
             }
 
@@ -130,9 +132,9 @@ public class ColumnsFeature extends Feature<ColumnsFeatureConfig> {
         return null;
     }
 
-    private static boolean isAirOrFluid(WorldAccess world, int seaLevel, BlockPos pos) {
+    private static boolean isReplaceable(WorldAccess world, int seaLevel, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos);
-        return blockState.isAir() || !blockState.getFluidState().isEmpty() && pos.getY() <= seaLevel;
+        return blockState.isAir() || blockState.isIn(SpectrumBlockTags.DEEPER_DOWN_FEATURE_REPLACEABLES) ||!blockState.getFluidState().isEmpty() && pos.getY() <= seaLevel;
     }
 
 }
