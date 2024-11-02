@@ -26,15 +26,15 @@ public class SpectrumFlammableBlocks {
 			FlammableBlockRegistry.getDefaultInstance().add(ColoredStrippedLogBlock.byColor(dyeColor), 5, 20);
 			FlammableBlockRegistry.getDefaultInstance().add(ColoredStrippedWoodBlock.byColor(dyeColor), 5, 20);
 		}
-
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.VEGETAL_BLOCK,30,60);
-
+		
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.VEGETAL_BLOCK, 30, 60);
+		
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.SWEET_PEA, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.APRICOTTI, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.HUMMING_BELL, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.BLOOD_ORCHID, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.RESONANT_LILY, 60, 100);
-
+		
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NEPHRITE_BLOSSOM_STEM, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NEPHRITE_BLOSSOM_LEAVES, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADE_VINES, 5, 5);
@@ -44,10 +44,10 @@ public class SpectrumFlammableBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADE_VINE_PETAL_CARPET, 60, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADEITE_PETAL_BLOCK, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.JADEITE_PETAL_CARPET, 60, 20);
-
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NIGHTDEW,15,60);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.ABYSSAL_VINES,15,60);
-
+		
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.NIGHTDEW, 15, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.ABYSSAL_VINES, 15, 60);
+		
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.SLATE_NOXCAP_STEM, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.STRIPPED_SLATE_NOXCAP_STEM, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.SLATE_NOXCAP_HYPHAE, 5, 5);
@@ -117,12 +117,9 @@ public class SpectrumFlammableBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_PILLAR, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LIGHT, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LAMP, 5, 20);
-
-
+		
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.MOSS_BALL, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.GIANT_MOSS_BALL, 30, 60);
-
-		// Gala wood is intentionally non-flammable
 	}
 	
 }
