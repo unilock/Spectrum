@@ -61,8 +61,8 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:hidden/unlock_explard_hint"
       },
-      "title": "book.spectrum.guidebook.kindlings.page4.title",
-      "text": "book.spectrum.guidebook.kindlings.page4.text"
+      "title": "book.spectrum.guidebook.kindlings.page3.title",
+      "text": "book.spectrum.guidebook.kindlings.page3.text"
     }
   ]
 }
