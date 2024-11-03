@@ -20,10 +20,10 @@ public class AzureAuraParticle extends AbstractSlowingParticle {
 		super(clientWorld, x, y, z, velocityX, velocityY, velocityZ);
 		this.maxAge = 160 + random.nextInt(140);
 		this.scale = 0.3F;
-		this.length = 2 + random.nextFloat() * 2;
-		this.scale += length / 14F;
+		var thisLength = 2 + random.nextFloat() * 2;
+		this.scale += thisLength / 14F;
 		this.scale *= random.nextFloat() * 0.75F + 0.25F;
-		this.length *= random.nextFloat() * 0.75F + 0.25F;
+		this.length = thisLength * (random.nextFloat() * 0.75F + 0.25F);
 		this.velocityY += this.length / 100;
 		this.alpha = 0;
 		this.collidesWithWorld = false;
@@ -68,35 +68,36 @@ public class AzureAuraParticle extends AbstractSlowingParticle {
 	
 	// Mildly cursed
 	// Dafuqs: Update: Majorly cursed
+	// Mostly uncursed by Pizzer
 	public void buildGeometry(VertexConsumer vertexConsumer, Camera camera, float tickDelta) {
-		Vec3d vec3d = camera.getPos();
-		float f = (float) (MathHelper.lerp(tickDelta, this.prevPosX, this.x) - vec3d.getX());
-		float g = (float) (MathHelper.lerp(tickDelta, this.prevPosY, this.y) - vec3d.getY());
-		float h = (float) (MathHelper.lerp(tickDelta, this.prevPosZ, this.z) - vec3d.getZ());
-		var xOffset = x - camera.getPos().x;
-		var zOffset = z - camera.getPos().z;
-		
-		Quaternionf quaternionf = RotationAxis.POSITIVE_Y.rotation((float) MathHelper.atan2(xOffset, zOffset));
-		
-		Vector3f[] vector3fs = new Vector3f[]{new Vector3f(-1.0F, -length, 0.0F), new Vector3f(-1.0F, length, 0.0F), new Vector3f(1.0F, length, 0.0F), new Vector3f(1.0F, -length, 0.0F)};
-		float i = this.getSize(tickDelta);
-		
-		for (int j = 0; j < 4; ++j) {
-			Vector3f vector3f = vector3fs[j];
-			vector3f.rotate(quaternionf);
-			vector3f.mul(i);
-			vector3f.add(f, g, h);
-		}
-		
-		float k = this.getMinU();
-		float l = this.getMaxU();
-		float m = this.getMinV();
-		float n = this.getMaxV();
-		int o = this.getBrightness(tickDelta);
-		vertexConsumer.vertex(vector3fs[0].x(), vector3fs[0].y(), vector3fs[0].z()).texture(l, n).color(this.red, this.green, this.blue, 0).light(o).next();
-		vertexConsumer.vertex(vector3fs[1].x(), vector3fs[1].y(), vector3fs[1].z()).texture(l, m).color(this.red, this.green, this.blue, this.alpha).light(o).next();
-		vertexConsumer.vertex(vector3fs[2].x(), vector3fs[2].y(), vector3fs[2].z()).texture(k, m).color(this.red, this.green, this.blue, this.alpha).light(o).next();
-		vertexConsumer.vertex(vector3fs[3].x(), vector3fs[3].y(), vector3fs[3].z()).texture(k, n).color(this.red, this.green, this.blue, 0).light(o).next();
+		final Vec3d cameraPos = camera.getPos();
+		final float xOff = (float) (MathHelper.lerp(tickDelta, this.prevPosX, this.x) - cameraPos.getX());
+		final float yOff = (float) (MathHelper.lerp(tickDelta, this.prevPosY, this.y) - cameraPos.getY());
+		final float zOff = (float) (MathHelper.lerp(tickDelta, this.prevPosZ, this.z) - cameraPos.getZ());
+		final float size = this.getSize(tickDelta);
+
+		final float rot = (float) MathHelper.atan2(xOff, zOff);
+		final float sin = org.joml.Math.sin(rot);
+		final float cos = org.joml.Math.cosFromSin(sin, rot);
+
+		final float negX = Math.fma(-cos,    size, xOff);
+		final float posX = Math.fma( cos,    size, xOff);
+
+		final float negY = Math.fma(-length, size, yOff);
+		final float posY = Math.fma( length, size, yOff);
+
+		final float negZ = Math.fma(-sin,    size, zOff);
+		final float posZ = Math.fma( sin,    size, zOff);
+
+		final float minU = this.getMinU();
+		final float maxU = this.getMaxU();
+		final float minV = this.getMinV();
+		final float maxV = this.getMaxV();
+		final int   brightness = this.getBrightness(tickDelta);
+		vertexConsumer.vertex(negX, negY, posZ).texture(maxU, maxV).color(this.red, this.green, this.blue, 0).light(brightness).next();
+		vertexConsumer.vertex(negX, posY, posZ).texture(maxU, minV).color(this.red, this.green, this.blue, this.alpha).light(brightness).next();
+		vertexConsumer.vertex(posX, posY, negZ).texture(minU, minV).color(this.red, this.green, this.blue, this.alpha).light(brightness).next();
+		vertexConsumer.vertex(posX, negY, negZ).texture(minU, maxV).color(this.red, this.green, this.blue, 0).light(brightness).next();
 	}
 	
 	@Override

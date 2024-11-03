@@ -47,6 +47,7 @@
     "ItemStackMixin",
     "KilledByPlayerLootConditionMixin",
     "LightningEntityMixin",
+    "LilyPadBlockMixin",
     "LivingEntityMixin",
     "LoomContainerPatternSlotMixin",
     "LoomScreenHandlerMixin",
