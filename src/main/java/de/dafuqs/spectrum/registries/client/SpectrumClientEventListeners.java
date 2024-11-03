@@ -114,7 +114,6 @@ public class SpectrumClientEventListeners {
 
 			HowlingSpireEffects.clientTick(world, cameraEntity, biome);
 			DarknessEffects.clientTick(world, (LivingEntity) cameraEntity, biome);
-			BlockAuraSoundInstance.update(world);
 		});
 	}
 	

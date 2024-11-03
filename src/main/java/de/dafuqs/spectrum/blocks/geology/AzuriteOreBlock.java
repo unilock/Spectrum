@@ -56,16 +56,7 @@ public class AzuriteOreBlock extends CloakedOreBlock {
         super.randomDisplayTick(state, world, pos, random);
         
         if (this.isVisibleTo(MinecraftClient.getInstance().player)) {
-
-            var center = pos.toCenterPos();
-            if (!BlockAuraSoundInstance.isNearPreexistingAura(center)) {
-                var emitters = BlockAuraSoundInstance.scanForBlocks(SpectrumBlockTags.AZURITE_ORES, world, pos.toCenterPos());
-
-                if (emitters.size() >= 32) {
-                    BlockAuraSoundInstance.tryCreateNewInstance(SpectrumBlockTags.AZURITE_ORES, SpectrumSoundEvents.CRYSTAL_AURA, 100, emitters);
-                }
-            }
-
+            BlockAuraSoundInstance.addToExistingInstanceOrCreateNewOne(world, pos);
 
             if (world.getRandom().nextFloat() >= 0.02)
                 return;
