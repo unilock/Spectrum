@@ -1,5 +1,7 @@
 package de.dafuqs.spectrum.sound;
 
+import de.dafuqs.spectrum.helpers.*;
+import de.dafuqs.spectrum.particle.*;
 import de.dafuqs.spectrum.registries.*;
 import net.fabricmc.api.*;
 import net.minecraft.client.*;
@@ -50,20 +52,26 @@ public class BlockAuraSoundInstance extends AbstractSoundInstance implements Tic
 			updatePositionAndCount();
 		}
 		
-		float targetVolume = (float) MathHelper.clamp(sources.size() * 0.175 - 0.25, MIN_VOLUME, MAX_VOLUME);
+		float targetVolume = (float) MathHelper.clamp(sources.size() * 0.05 - 0.5, MIN_VOLUME, MAX_VOLUME);
 		if (this.volume < targetVolume) {
 			this.volume += VOLUME_EASING_STEPS;
 		} else if (this.volume > targetVolume) {
 			this.volume -= VOLUME_EASING_STEPS;
 		}
 		
-		if (this.volume > 0) {
-			double cameraEntityEyeY = MinecraftClient.getInstance().getCameraEntity().getEyeY();
-			var pitchMod = MathHelper.clamp((Math.abs(cameraEntityEyeY - this.y) - 2F) / 64F, 0, 0.334F);
-			if (cameraEntityEyeY < this.y) {
-				pitchMod *= -1;
-			}
-			this.pitch = (float) (1 + pitchMod);
+		double cameraEntityEyeY = MinecraftClient.getInstance().getCameraEntity().getEyeY();
+		var pitchMod = MathHelper.clamp((Math.abs(cameraEntityEyeY - this.y) - 2F) / 64F, 0, 0.334F);
+		if (cameraEntityEyeY < this.y) {
+			pitchMod *= -1;
+		}
+		this.pitch = (float) (1 + pitchMod);
+		
+		if (volume > 0.25) {
+			Vec3d pos = new Vec3d(this.x, this.y, this.z);
+			ParticleHelper.playTriangulatedParticle(world, SpectrumParticleTypes.AZURE_AURA, (int) (volume + 0.1), false, new Vec3d(24, 8, 24), -8, true, pos, new Vec3d(0, 0.04D + random.nextDouble() * 0.06, 0));
+			ParticleHelper.playTriangulatedParticle(world, SpectrumParticleTypes.AZURE_AURA, (int) (volume * 2 + 0.1), true, new Vec3d(24, 8, 24), -8, true, pos, new Vec3d(0, 0.04D + random.nextDouble() * 0.06, 0));
+			ParticleHelper.playTriangulatedParticle(world, SpectrumParticleTypes.AZURE_MOTE_SMALL, (int) (volume * 2 + 0.1), false, new Vec3d(16, 8, 16), -6, false, pos, Vec3d.ZERO);
+			ParticleHelper.playTriangulatedParticle(world, SpectrumParticleTypes.AZURE_MOTE, (int) (volume * 2 + 0.1), true, new Vec3d(16, 6, 16), -4, false, pos, Vec3d.ZERO);
 		}
 	}
 	
