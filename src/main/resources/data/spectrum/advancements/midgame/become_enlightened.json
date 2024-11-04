@@ -2,19 +2,25 @@
   "parent": "spectrum:midgame/collect_stratine",
   "display": {
     "icon": {
-      "item": "minecraft:cat_spawn_egg"
+      "item": "spectrum:cat_head"
     },
     "title": {
-      "translate": "advancements.spectrum.post_cats_every_day"
+      "translate": "advancements.spectrum.become_enlightened.title"
     },
     "description": {
-      "translate": "advancements.spectrum.become_enlightened"
+      "translate": "advancements.spectrum.become_enlightened.description"
     }
   },
   "hidden": true,
   "criteria": {
     "confirmed": {
       "trigger": "minecraft:impossible"
+    },
+    "gotten_previous": {
+      "trigger": "revelationary:advancement_gotten",
+      "conditions": {
+        "advancement_identifier": "spectrum:midgame/collect_stratine"
+      }
     }
   }
 }
