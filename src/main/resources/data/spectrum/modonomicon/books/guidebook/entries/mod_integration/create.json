@@ -32,7 +32,7 @@
       "title": "container.spectrum.rei.anvil_crushing.title",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:spectrum"
+        "advancement_id": "spectrum:collect_any_basic_shard"
       },
       "item": {
         "item": "minecraft:amethyst_shard"

@@ -10,7 +10,7 @@
   "icon": "minecraft:writable_book",
   "condition": {
     "type": "modonomicon:advancement",
-    "advancement_id": "spectrum:spectrum"
+    "advancement_id": "spectrum:collect_any_basic_shard"
   },
   "read_by_default": true,
   "turnin": "spectrum:hidden/collect_shards/citrine",

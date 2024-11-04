@@ -57,10 +57,6 @@
       "item": {
         "item": "minecraft:amethyst_shard"
       },
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:spectrum"
-      },
       "text": "book.spectrum.guidebook.mod_integration.tech_reborn.page3.text"
     }
   ]
