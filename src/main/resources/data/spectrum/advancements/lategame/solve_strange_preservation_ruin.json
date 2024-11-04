@@ -13,7 +13,7 @@
     "hidden": true
   },
   "criteria": {
-    "gotten_handbook": {
+    "found_poisoners_handbook": {
       "trigger": "revelationary:advancement_gotten",
       "conditions": {
         "advancement_identifier": "spectrum:hidden/collect_cookbooks/poisoners_handbook"
