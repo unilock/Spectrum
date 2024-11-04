@@ -1607,7 +1607,7 @@ public class SpectrumBlocks {
 
 		registerBlockWithItem("black_materia", BLACK_MATERIA, IS.of(), DyeColor.GRAY);
 		registerBlockWithItem("frostbite_crystal", FROSTBITE_CRYSTAL, IS.of(), DyeColor.LIGHT_BLUE);
-		registerBlockWithItem("blazing_crystal", BLAZING_CRYSTAL, IS.of(), DyeColor.ORANGE);
+		registerBlockWithItem("blazing_crystal", BLAZING_CRYSTAL, IS.of().fireproof(), DyeColor.ORANGE);
 		registerBlockWithItem("resonant_lily", RESONANT_LILY, IS.of(), DyeColor.GREEN);
 		registerBlockWithItem("clover", CLOVER, IS.of(), DyeColor.LIME);
 		registerBlockWithItem("four_leaf_clover", FOUR_LEAF_CLOVER, new FourLeafCloverItem(FOUR_LEAF_CLOVER, IS.of(), SpectrumAdvancements.REVEAL_FOUR_LEAF_CLOVER, CLOVER.asItem()), DyeColor.LIME);
@@ -1626,7 +1626,7 @@ public class SpectrumBlocks {
 		registerBlock("potted_amaranth_bushel", POTTED_AMARANTH_BUSHEL);
 
 		registerBlockWithItem("bedrock_anvil", BEDROCK_ANVIL, IS.of(), DyeColor.BLACK);
-		registerBlockWithItem("cracked_end_portal_frame", CRACKED_END_PORTAL_FRAME, IS.of(), DyeColor.PURPLE);
+		registerBlockWithItem("cracked_end_portal_frame", CRACKED_END_PORTAL_FRAME, IS.of().fireproof(), DyeColor.PURPLE);
 
 		registerBlockWithItem("memory", MEMORY, new MemoryItem(MEMORY, IS.of(Rarity.UNCOMMON)), DyeColor.LIGHT_GRAY);
 
@@ -1814,7 +1814,6 @@ public class SpectrumBlocks {
 	}
 
 	private static void registerCrystallarieumGrowingBlocks(FabricItemSettings settings) {
-		// vanilla
 		registerBlockWithItem("small_coal_bud", SMALL_COAL_BUD, settings, DyeColor.BROWN);
 		registerBlockWithItem("large_coal_bud", LARGE_COAL_BUD, settings, DyeColor.BROWN);
 		registerBlockWithItem("coal_cluster", COAL_CLUSTER, settings, DyeColor.BROWN);
@@ -1850,10 +1849,10 @@ public class SpectrumBlocks {
 		registerBlockWithItem("small_quartz_bud", SMALL_QUARTZ_BUD, settings, DyeColor.BROWN);
 		registerBlockWithItem("large_quartz_bud", LARGE_QUARTZ_BUD, settings, DyeColor.BROWN);
 		registerBlockWithItem("quartz_cluster", QUARTZ_CLUSTER, settings, DyeColor.BROWN);
-
-		registerBlockWithItem("small_netherite_scrap_bud", SMALL_NETHERITE_SCRAP_BUD, settings, DyeColor.BROWN);
-		registerBlockWithItem("large_netherite_scrap_bud", LARGE_NETHERITE_SCRAP_BUD, settings, DyeColor.BROWN);
-		registerBlockWithItem("netherite_scrap_cluster", NETHERITE_SCRAP_CLUSTER, settings, DyeColor.BROWN);
+		
+		registerBlockWithItem("small_netherite_scrap_bud", SMALL_NETHERITE_SCRAP_BUD, IS.of().fireproof(), DyeColor.BROWN);
+		registerBlockWithItem("large_netherite_scrap_bud", LARGE_NETHERITE_SCRAP_BUD, IS.of().fireproof(), DyeColor.BROWN);
+		registerBlockWithItem("netherite_scrap_cluster", NETHERITE_SCRAP_CLUSTER, IS.of().fireproof(), DyeColor.BROWN);
 
 		registerBlockWithItem("small_echo_bud", SMALL_ECHO_BUD, settings, DyeColor.BROWN);
 		registerBlockWithItem("large_echo_bud", LARGE_ECHO_BUD, settings, DyeColor.BROWN);
@@ -1899,9 +1898,9 @@ public class SpectrumBlocks {
 		registerBlockWithItem("creative_particle_spawner", CREATIVE_PARTICLE_SPAWNER, new BlockItem(CREATIVE_PARTICLE_SPAWNER, IS.of(Rarity.EPIC)), DyeColor.PINK);
 
 		registerBlockWithItem("glistering_melon", GLISTERING_MELON, settings, DyeColor.LIME);
-
-		registerBlockWithItem("lava_sponge", LAVA_SPONGE, settings, DyeColor.ORANGE);
-		registerBlockWithItem("wet_lava_sponge", WET_LAVA_SPONGE, new WetLavaSpongeItem(WET_LAVA_SPONGE, IS.of(1).recipeRemainder(LAVA_SPONGE.asItem())), DyeColor.ORANGE);
+		
+		registerBlockWithItem("lava_sponge", LAVA_SPONGE, IS.of().fireproof(), DyeColor.ORANGE);
+		registerBlockWithItem("wet_lava_sponge", WET_LAVA_SPONGE, new WetLavaSpongeItem(WET_LAVA_SPONGE, IS.of(1).fireproof().recipeRemainder(LAVA_SPONGE.asItem())), DyeColor.ORANGE);
 
 		registerBlockWithItem("ethereal_platform", ETHEREAL_PLATFORM, settings, DyeColor.LIGHT_GRAY);
 		registerBlockWithItem("universe_spyhole", UNIVERSE_SPYHOLE, settings, DyeColor.LIGHT_GRAY);
@@ -2778,7 +2777,7 @@ public class SpectrumBlocks {
 		registerBlockWithItem("pure_quartz_block", PURE_QUARTZ_BLOCK, settings, DyeColor.BROWN);
 		registerBlockWithItem("pure_glowstone_block", PURE_GLOWSTONE_BLOCK, settings, DyeColor.YELLOW);
 		registerBlockWithItem("pure_prismarine_block", PURE_PRISMARINE_BLOCK, settings, DyeColor.CYAN);
-		registerBlockWithItem("pure_netherite_scrap_block", PURE_NETHERITE_SCRAP_BLOCK, settings, DyeColor.BROWN);
+		registerBlockWithItem("pure_netherite_scrap_block", PURE_NETHERITE_SCRAP_BLOCK, IS.of().fireproof(), DyeColor.BROWN);
 		registerBlockWithItem("pure_echo_block", PURE_ECHO_BLOCK, settings, DyeColor.BROWN);
 	}
 

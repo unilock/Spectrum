@@ -358,7 +358,7 @@ public class SpectrumItems {
 	public static final Item PRICKLY_BAYLEAF = new Item(IS.of().food(SpectrumFoodComponents.PRICKLY_BAYLEAF));
 	public static final Item TRIPLE_MEAT_POT_STEW = new StackableStewItem(IS.of(8).food(SpectrumFoodComponents.TRIPLE_MEAT_POT_STEW), 96);
 	public static final Item DRAGONBONE_BROTH = new StackableStewItem(IS.of(8).food(SpectrumFoodComponents.DRAGONBONE_BROTH));
-	public static final Item DOOMBLOOM_SEED = new AliasedBlockItem(SpectrumBlocks.DOOMBLOOM, IS.of());
+	public static final Item DOOMBLOOM_SEED = new AliasedBlockItem(SpectrumBlocks.DOOMBLOOM, IS.of().fireproof());
 	
 	public static final Item GLISTERING_MELON_SEEDS = new AliasedBlockItem(SpectrumBlocks.GLISTERING_MELON_STEM, IS.of());
 	public static final Item AMARANTH_GRAINS = new AliasedBlockItem(SpectrumBlocks.AMARANTH, IS.of());
@@ -438,8 +438,8 @@ public class SpectrumItems {
 	public static final Item SOOTHING_BOUQUET = new SoothingBouquetItem(IS.of(1, Rarity.RARE));
 	public static final Item CONCEALING_OILS = new ConcealingOilsItem(IS.of(1));
 	public static final Item BITTER_OILS = new DrinkItem(IS.of(16).food(SpectrumFoodComponents.BITTER_OILS));
-
-	public static final Item INCANDESCENT_ESSENCE = new CloakedItem(IS.of(), SpectrumCommon.locate("midgame/spectrum_midgame"), Items.ORANGE_DYE);
+	
+	public static final Item INCANDESCENT_ESSENCE = new CloakedItem(IS.of().fireproof(), SpectrumCommon.locate("midgame/spectrum_midgame"), Items.ORANGE_DYE);
 	public static final Item FROSTBITE_ESSENCE = new CloakedItem(IS.of(), SpectrumCommon.locate("midgame/spectrum_midgame"), Items.LIGHT_BLUE_DYE);
 	public static final Item MOONSTONE_CORE = new CloakedItem(IS.of(16, Rarity.RARE), SpectrumCommon.locate("lategame/find_forgotten_city"), Items.WHITE_DYE);
 	
@@ -519,7 +519,7 @@ public class SpectrumItems {
 	public static final Item PURE_GOLD = new Item(IS.of());
 	public static final Item PURE_DIAMOND = new Item(IS.of());
 	public static final Item PURE_IRON = new Item(IS.of());
-	public static final Item PURE_NETHERITE_SCRAP = new Item(IS.of());
+	public static final Item PURE_NETHERITE_SCRAP = new Item(IS.of().fireproof());
 	public static final Item PURE_ECHO = new Item(IS.of());
 
 	//Technical Items
