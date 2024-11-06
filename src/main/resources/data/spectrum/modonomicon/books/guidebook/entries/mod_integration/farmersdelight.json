@@ -1,0 +1,73 @@
+{
+  "name": "book.spectrum.guidebook.mod_integration.farmersdelight.name",
+  "icon": {
+    "item": "farmersdelight:potion",
+    "nbt": {
+      "Potion": "minecraft:night_vision"
+    }
+  },
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:mod_loaded",
+        "mod_id": "farmersdelight"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "spectrum:place_pedestal"
+      }
+    ]
+  },
+  "category": "spectrum:mod_integration",
+  "hide_while_locked": true,
+  "parents": [],
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "x": 8,
+  "y": 6,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.spectrum.guidebook.mod_integration.farmersdelight.page0.text",
+      "title": "book.spectrum.guidebook.mod_integration.farmersdelight.name"
+    },
+
+    {
+      "type": "spectrum:anvil_crushing",
+      "recipe_id": "spectrum:mod_integration/farmersdelight/anvil_crushing/rice"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "title": "book.spectrum.guidebook.mod_integration.farmersdelight.amaranth_cutting.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "spectrum:hidden/collect_frostbite_crystal"
+      },
+      "item": {
+        "item": "spectrum:amaranth_bushel"
+      },
+      "text": "book.spectrum.guidebook.mod_integration.farmersdelight.amaranth_cutting.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "title": "book.spectrum.guidebook.mod_integration.farmersdelight.gemstone_cutting.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "spectrum:collect_any_basic_shard"
+      },
+      "item": {
+        "item": "spectrum:citrine_block"
+      },
+      "text": "book.spectrum.guidebook.mod_integration.farmersdelight.gemstone_cutting.text"
+    },
+    {
+      "type": "spectrum:anvil_crushing",
+      "recipe_id": "spectrum:mod_integration/farmersdelight/enchanter/backstabbing"
+    },
+    {
+      "type": "spectrum:pedestal",
+      "recipe_id": "spectrum:mod_integration/farmersdelight/pedestal/alt_enchantment_canvas"
+    }
+  ]
+}

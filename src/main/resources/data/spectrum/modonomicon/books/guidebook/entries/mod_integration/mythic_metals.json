@@ -1,0 +1,45 @@
+{
+  "name": "book.spectrum.guidebook.mod_integration.mythic_metals.name",
+  "icon": "mythic_metals:celestite_cluster",
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:mod_loaded",
+        "mod_id": "mythic_metals"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "spectrum:place_pedestal"
+      }
+    ]
+  },
+  "category": "spectrum:mod_integration",
+  "hide_while_locked": true,
+  "parents": [],
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "x": 8,
+  "y": 4,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.spectrum.guidebook.mod_integration.mythic_metals.page0.text",
+      "title": "book.spectrum.guidebook.mod_integration.mythic_metals.name"
+    },
+
+    {
+      "type": "spectrum:anvil_crushing",
+      "recipe_id": "spectrum:mod_integration/mythic_metals/enchanter/enchanted_midas_gold_block"
+    }
+    {
+      "type": "spectrum:anvil_crushing",
+      "recipe_id": "spectrum:mod_integration/mythic_metals/pedestal/aquarium_pearl"
+    }
+    {
+      "type": "spectrum:anvil_crushing",
+      "recipe_id": "spectrum:mod_integration/mythic_metals/pedestal/banglum_chunk"
+    }
+
+  ]
+}
