@@ -10,20 +10,8 @@
   "y": 0,
   "icon": "spectrum:textures/gui/guidebook/icons/idea.png",
   "condition": {
-    "type": "modonomicon:and",
-    "children": [
-      {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:collect_any_basic_shard"
-      },
-      {
-        "type": "spectrum:not",
-        "child": {
-          "type": "modonomicon:advancement",
-          "advancement_id": "spectrum:hidden/collect_shards/citrine"
-        }
-      }
-    ]
+    "type": "modonomicon:advancement",
+    "advancement_id": "spectrum:collect_any_basic_shard"
   },
   "read_by_default": true,
   "turnin": "spectrum:hidden/collect_shards/amethyst",

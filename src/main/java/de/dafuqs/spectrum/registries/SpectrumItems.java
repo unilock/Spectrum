@@ -271,7 +271,7 @@ public class SpectrumItems {
 	public static final Item MERMAIDS_GEM = new MermaidsGemItem(SpectrumBlocks.MERMAIDS_BRUSH, IS.of());
 	public static final CloakedItem STAR_FRAGMENT = new CloakedItem(IS.of(16), SpectrumAdvancements.UNLOCK_SHOOTING_STARS, Items.PURPLE_DYE);
 	public static final Item STARDUST = new CloakedItemWithLoomPattern(IS.of(), SpectrumAdvancements.UNLOCK_SHOOTING_STARS, Items.PURPLE_DYE, SpectrumBannerPatterns.SHIMMER);
-	public static final Item ASH_FLAKES = new AshItem(IS.of(), "item.spectrum.ash_flakes.tooltip");
+	public static final Item ASH_FLAKES = new AshItem(IS.of());
 	
 	public static final Item HIBERNATING_JADE_VINE_BULB = new ItemWithTooltip(IS.of(16), "item.spectrum.hibernating_jade_vine_bulb.tooltip");
 	public static final Item GERMINATED_JADE_VINE_BULB = new GerminatedJadeVineBulbItem(IS.of(16), SpectrumAdvancements.COLLECT_HIBERNATING_JADE_VINE_BULB, Items.LIME_DYE);
