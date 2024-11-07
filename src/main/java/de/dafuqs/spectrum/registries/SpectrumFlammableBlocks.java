@@ -105,18 +105,18 @@ public class SpectrumFlammableBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.CHESTNUT_NOXWOOD_BEAM, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.CHESTNUT_NOXWOOD_LIGHT, 5, 20);
 		
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LOG, 5, 5);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LEAVES, 30, 60);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_PLANKS, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_SLAB, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_FENCE, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_FENCE_GATE, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_STAIRS, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.STRIPPED_WEEPING_GALA_LOG, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.STRIPPED_WEEPING_GALA_WOOD, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_PILLAR, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LIGHT, 5, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LAMP, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LOG, 2, 2);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LEAVES, 10, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_PLANKS, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_SLAB, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_FENCE, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_FENCE_GATE, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_STAIRS, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.STRIPPED_WEEPING_GALA_LOG, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.STRIPPED_WEEPING_GALA_WOOD, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_PILLAR, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LIGHT, 2, 8);
+		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.WEEPING_GALA_LAMP, 2, 8);
 		
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.MOSS_BALL, 30, 60);
 		FlammableBlockRegistry.getDefaultInstance().add(SpectrumBlocks.GIANT_MOSS_BALL, 30, 60);
