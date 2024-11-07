@@ -3883,7 +3883,7 @@
   "book.spectrum.guidebook.upgrading_enchanted_books.name": "Upgrading Enchanted Books",
   "book.spectrum.guidebook.upgrading_enchanted_books.page0.text": "Enchantments and Color Magic have a lot in common. So I wasn't surprised when my first attempt to combine [#](bb00bb)Enchanted Books[#]() with [Pigment](entry://general/pigment) was an instant success.[#]()\\\n\\\nPlacing an [#](bb00bb)Enchanted Book[#]() on the [Enchanter](entry://enchanting/enchanter), surrounding it with matching [Pigment](entry://general/pigment) and providing a steady stream of experience will raise the level of the book.",
   "book.spectrum.guidebook.upgrading_enchanted_books.page1.text": "Interrupting said process will stop it entirely.",
-  "book.spectrum.guidebook.use_in_potion_workshop_bottle_slot": "Use the [Potion Workshop](entry://brewing/potion_workshop) to infuse it, by placing it where the [#](bb00bb)Bottle[#]() would normally go.\\\n\\\nTo clear its effect, put it in a crafting grid.",
+  "book.spectrum.guidebook.use_in_potion_workshop_bottle_slot": "Use the [Potion Workshop](entry://brewing/potion_workshop) to infuse it, by placing it where the [#](bb00bb)Bottle[#]() would normally go.\\\n\\\nTo clear its effect, put it in a crafting grid.\\\nThe stored effect gets reapplied every 15 seconds.",
   "book.spectrum.guidebook.mundane_items.name": "Mundane Items",
   "book.spectrum.guidebook.mundane_items.page0.text": "There are a few items that have always been difficult or even impossible to craft. My new skills make that *much* easier.",
   "book.spectrum.guidebook.mundane_items.page4.text": "Explodes when punched.",
