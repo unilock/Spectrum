@@ -11,11 +11,13 @@ public class SpectrumStatusEffectTags {
 	public static TagKey<StatusEffect> INCURABLE;
 	public static TagKey<StatusEffect> NO_DURATION_EXTENSION;
 	public static TagKey<StatusEffect> SOPORIFIC;
+	public static TagKey<StatusEffect> NIGHT_ALCHEMY;
 
 	public static void register() {
 		INCURABLE = of("uncurable");
 		NO_DURATION_EXTENSION = of("no_duration_extension");
 		SOPORIFIC = of("soporific");
+		NIGHT_ALCHEMY = of("night_alchemy");
 	}
 	
 	private static TagKey<StatusEffect> of(String id) {
