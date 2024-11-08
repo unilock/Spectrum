@@ -45,14 +45,6 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:unlocks/blocks/liquid_crystal"
       },
-      "recipe_id": "spectrum:mod_integration/spelunkery/liquid_crystal_converting/salt"
-    },
-    {
-      "type": "spectrum:liquid_crystal_converting",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:unlocks/blocks/liquid_crystal"
-      },
       "recipe_id": "spectrum:mod_integration/spelunkery/liquid_crystal_converting/crystallize_salt"
     },
     {

@@ -28,52 +28,21 @@
       "title": "book.spectrum.guidebook.mod_integration.the_bumblezone.name"
     },
     {
-      "type": "spectrum:ink_converting",
-      "recipe_id": "spectrum:mod_integration/the_bumblezone/ink_converting/from_light_blue_essence",
+      "type": "spectrum:collection",
+      "title": "book.spectrum.guidebook.mod_integration.the_bumblezone.essence_ink.title",
+      "items": [
+        "the_bumblezone:essence_raging",
+        "the_bumblezone:essence_knowing",
+        "the_bumblezone:essence_calming",
+        "the_bumblezone:essence_life",
+        "the_bumblezone:essence_radiance",
+        "the_bumblezone:essence_continuity"
+      ],
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:mod_integration/the_bumblezone/red_raging"
-      }
-    },
-    {
-      "type": "spectrum:ink_converting",
-      "recipe_id": "spectrum:mod_integration/the_bumblezone/ink_converting/from_lime_essence",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:mod_integration/the_bumblezone/red_raging"
-      }
-    },
-    {
-      "type": "spectrum:ink_converting",
-      "recipe_id": "spectrum:mod_integration/the_bumblezone/ink_converting/from_purple_essence",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:mod_integration/the_bumblezone/red_raging"
-      }
-    },
-    {
-      "type": "spectrum:ink_converting",
-      "recipe_id": "spectrum:mod_integration/the_bumblezone/ink_converting/from_red_essence",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:mod_integration/the_bumblezone/red_raging"
-      }
-    },
-    {
-      "type": "spectrum:ink_converting",
-      "recipe_id": "spectrum:mod_integration/the_bumblezone/ink_converting/from_white_essence",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:mod_integration/the_bumblezone/white_continuity"
-      }
-    },
-    {
-      "type": "spectrum:ink_converting",
-      "recipe_id": "spectrum:mod_integration/the_bumblezone/ink_converting/from_yellow_essence",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:mod_integration/the_bumblezone/red_raging"
-      }
+        "advancement_id": "spectrum:mod_integration/the_bumblezone/any_essence"
+      },
+      "text": "book.spectrum.guidebook.mod_integration.the_bumblezone.essence_ink.text"
     },
     {
       "type": "spectrum:potion_workshop_brewing",

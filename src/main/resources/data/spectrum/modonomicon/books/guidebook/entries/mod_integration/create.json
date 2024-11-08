@@ -135,46 +135,36 @@
       "type": "spectrum:anvil_crushing",
       "recipe_id": "spectrum:mod_integration/create/anvil_crushing/zinc_ore_crushing"
     },
-
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:enchanter_crafting",
       "recipe_id": "spectrum:mod_integration/create/enchanter/book_capacity"
     },
     {
-      "type": "spectrum:anvil_crushing",
-      "recipe_id": "spectrum:mod_integration/create/enchantment_upgrade/capacity"
-    },
-    {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:enchanter_crafting",
       "recipe_id": "spectrum:mod_integration/create/enchanter/book_potato_recovery"
     },
     {
-      "type": "spectrum:anvil_crushing",
-      "recipe_id": "spectrum:mod_integration/create/enchantment_upgrade/potato_recovery"
-    },
-
-    {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:liquid_crystal_converting",
       "recipe_id": "spectrum:mod_integration/create/liquid_crystal_converting/purify_crushed_copper"
     },
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:liquid_crystal_converting",
       "recipe_id": "spectrum:mod_integration/create/liquid_crystal_converting/purify_crushed_gold"
     },
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:liquid_crystal_converting",
       "recipe_id": "spectrum:mod_integration/create/liquid_crystal_converting/purify_crushed_iron"
     },
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:liquid_crystal_converting",
       "recipe_id": "spectrum:mod_integration/create/liquid_crystal_converting/purify_crushed_zinc"
     },
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:liquid_crystal_converting",
       "recipe_id": "spectrum:mod_integration/create/liquid_crystal_converting/purify_rose_quartz"
     },
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:spirit_instiller_crafting",
       "recipe_id": "spectrum:mod_integration/create/spirit_instiller/blaze_burner"
     }
   ]

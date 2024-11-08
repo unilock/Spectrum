@@ -31,7 +31,7 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "title": "book.spectrum.guidebook.mod_integration.farmersdelight.page1.text",
+      "title": "book.spectrum.guidebook.mod_integration.farmersdelight.page1.title",
       "item": {
         "item": "spectrum:multitool"
       },
@@ -40,10 +40,6 @@
         "advancement_id": "spectrum:build_basic_pedestal_structure"
       },
       "text": "book.spectrum.guidebook.mod_integration.farmersdelight.page1.text"
-    },
-    {
-      "type": "spectrum:anvil_crushing",
-      "recipe_id": "spectrum:mod_integration/farmersdelight/anvil_crushing/rice"
     },
     {
       "type": "modonomicon:spotlight",
@@ -56,6 +52,11 @@
         "item": "spectrum:amaranth_bushel"
       },
       "text": "book.spectrum.guidebook.mod_integration.farmersdelight.amaranth_cutting.text"
+    },
+    {
+      "type": "spectrum:anvil_crushing",
+      "recipe_id": "spectrum:mod_integration/farmersdelight/anvil_crushing/rice",
+      "text": "book.spectrum.guidebook.mod_integration.farmersdelight.rice_crushing.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -71,10 +72,10 @@
     },
     {
       "type": "spectrum:enchanter_crafting",
-      "recipe_id": "spectrum:mod_integration/farmersdelight/enchanter/backstabbing"
+      "recipe_id": "spectrum:mod_integration/farmersdelight/enchanter/book_backstabbing"
     },
     {
-      "type": "spectrum:pedestal",
+      "type": "spectrum:pedestal_crafting",
       "recipe_id": "spectrum:mod_integration/farmersdelight/pedestal/alt_enchantment_canvas"
     }
   ]

@@ -19,8 +19,8 @@
   "parents": [],
   "background_u_index": 0,
   "background_v_index": 0,
-  "x": 8,
-  "y": 4,
+  "x": 4,
+  "y": 8,
   "pages": [
     {
       "type": "modonomicon:text",
@@ -29,7 +29,7 @@
     },
     {
       "type": "spectrum:pedestal_crafting",
-      "recipe_id": "spectrum:mod_integration/waystones/pedestal_crafting/alt_sharestone"
+      "recipe_id": "spectrum:mod_integration/waystones/pedestal/alt_sharestone"
     }
 
   ]
