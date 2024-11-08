@@ -1,6 +1,8 @@
 package de.dafuqs.spectrum.compat.neepmeat;
 
+import com.neep.neepmeat.enlightenment.EnlightenmentManager;
 import com.neep.neepmeat.enlightenment.PlayerEnlightenmentManager;
+import com.neep.neepmeat.init.NMComponents;
 import de.dafuqs.spectrum.compat.SpectrumIntegrationPacks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -23,14 +25,16 @@ public class NEEPMeatCompat extends SpectrumIntegrationPacks.ModIntegrationPack 
     {
         if(user.isPlayer())
         {
-            PlayerEnlightenmentManager enlightenmentManager = new PlayerEnlightenmentManager((PlayerEntity) user);
-            NbtCompound tag = new NbtCompound();
-            enlightenmentManager.writeToNbt(tag);
-            double acuteEnlightenment = tag.getDouble("acute");
+            EnlightenmentManager manager = NMComponents.ENLIGHTENMENT_MANAGER.get(user);
+            double acuteEnlightenment = manager.getAcute();
+            double chronicEnlightenment = manager.getChronic();
             if(acuteEnlightenment>0)
             {
-                tag.putDouble("acute", Math.max(0, acuteEnlightenment*0.75 - 1));
-                enlightenmentManager.readFromNbt(tag);
+                manager.setAcute(Math.max(0, acuteEnlightenment*0.75 - 1));
+            }
+            if(chronicEnlightenment>0 && (Math.random()>0.9))
+            {
+                manager.setChronic(Math.max(0,chronicEnlightenment-5));
             }
         }
     }

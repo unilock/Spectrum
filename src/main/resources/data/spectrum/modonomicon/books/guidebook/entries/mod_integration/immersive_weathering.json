@@ -1,6 +1,6 @@
 {
   "name": "book.spectrum.guidebook.mod_integration.immersive_weathering.name",
-  "icon": "immersive_weathering:crushing_wheel",
+  "icon": "immersive_weathering:oak_bark",
   "condition": {
     "type": "modonomicon:and",
     "children": [
@@ -19,7 +19,7 @@
   "parents": [],
   "background_u_index": 0,
   "background_v_index": 0,
-  "x": 2,
+  "x": 7,
   "y": 2,
   "pages": [
     {
@@ -27,17 +27,17 @@
       "text": "book.spectrum.guidebook.mod_integration.immersive_weathering.page0.text",
       "title": "book.spectrum.guidebook.mod_integration.immersive_weathering.name"
     },
-
     {
-      "type": "spectrum:anvil_crushing",
-      "recipe_id": "spectrum:mod_integration/immersive_weathering/enchanter/enchanted_golden_moss"
+      "type": "spectrum:enchanter_crafting",
+      "recipe_id": "spectrum:mod_integration/immersive_weathering/enchanter/enchanted_golden_moss",
+      "text": "book.spectrum.guidebook.mod_integration.immersive_weathering.enchanted_golden_moss.text"
     },
     {
       "type": "spectrum:collection",
       "title": "book.spectrum.guidebook.mod_integration.immersive_weathering.charred_wood_resonance.title",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:hidden/collect_frostbite_crystal"
+        "advancement_id": "spectrum:unlocks/enchantments/resonance_usage"
       },
       "items": [
         "immersive_weathering:charred_log",
@@ -45,16 +45,16 @@
         "immersive_weathering:charred_stairs",
         "immersive_weathering:charred_slab",
         "immersive_weathering:charred_fence",
-        "immersive_weathering:charred_gate"
+        "immersive_weathering:charred_fence_gate"
       ],
       "text": "book.spectrum.guidebook.mod_integration.immersive_weathering.charred_wood_resonance.text"
     },
     {
-      "type": "modonomicon:spotlight",
+      "type": "spectrum:collection",
       "title": "book.spectrum.guidebook.mod_integration.immersive_weathering.sandy_stone_resonance.title",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:hidden/collect_frostbite_crystal"
+        "advancement_id": "spectrum:unlocks/enchantments/resonance_usage"
       },
       "items": [
         "immersive_weathering:sandy_stone",

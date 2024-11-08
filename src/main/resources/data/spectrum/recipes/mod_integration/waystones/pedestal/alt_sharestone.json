@@ -28,7 +28,7 @@
     "item": "waystones:sharestone",
     "count": 2
   },
-  "required_advancement": "spectrum:get_radiating_ender",
+  "required_advancement": "spectrum:collect_radiating_ender",
   "fabric:load_conditions": [
     {
       "condition": "fabric:all_mods_loaded",

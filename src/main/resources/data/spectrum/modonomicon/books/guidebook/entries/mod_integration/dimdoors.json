@@ -1,6 +1,6 @@
 {
   "name": "book.spectrum.guidebook.mod_integration.dimdoors.name",
-  "icon": "dimdoors:fabric",
+  "icon": "dimdoors:item_ag_dim_minecraft_oak_door",
   "condition": {
     "type": "modonomicon:and",
     "children": [
@@ -19,8 +19,8 @@
   "parents": [],
   "background_u_index": 0,
   "background_v_index": 0,
-  "x": 8,
-  "y": 4,
+  "x": 9,
+  "y": 6,
   "pages": [
     {
       "type": "modonomicon:text",
@@ -32,10 +32,10 @@
       "title": "book.spectrum.guidebook.mod_integration.dimdoors.altered_fabric_resonance.title",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:hidden/collect_frostbite_crystal"
+        "advancement_id": "spectrum:unlocks/enchantments/resonance_usage"
       },
       "item": {
-        "item": "dimdoors:fabric"
+        "item": "dimdoors:black_fabric"
       },
       "text": "book.spectrum.guidebook.mod_integration.dimdoors.altered_fabric_resonance.text"
     }
