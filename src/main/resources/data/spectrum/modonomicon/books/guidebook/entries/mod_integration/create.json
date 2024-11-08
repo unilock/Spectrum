@@ -51,9 +51,19 @@
     },
     {
       "type": "spectrum:fusion_shrine_crafting",
-      "text": "book.spectrum.guidebook.mod_integration.create.pure_brass_fusion.title",
+      "title": "book.spectrum.guidebook.mod_integration.create.pure_brass_fusion.title",
       "recipe_id": "spectrum:mod_integration/create/fusion_shrine/pure_brass_ingot",
       "text": "book.spectrum.guidebook.mod_integration.create.pure_brass_fusion.text"
+    },
+    {
+      "type": "spectrum:enchanter_crafting",
+      "title": "enchantment.create.potato_recovery",
+      "recipe_id": "spectrum:mod_integration/create/enchanter/book_capacity"
+    },
+    {
+      "type": "spectrum:enchanter_crafting",
+      "title": "container.spectrum.rei.enchantment_upgrading.title",
+      "recipe_id": "spectrum:mod_integration/create/enchanter/book_potato_recovery"
     },
     {
       "type": "modonomicon:spotlight",
@@ -162,14 +172,6 @@
     {
       "type": "spectrum:anvil_crushing",
       "recipe_id": "spectrum:mod_integration/create/anvil_crushing/zinc_ore_crushing"
-    },
-    {
-      "type": "spectrum:enchanter_crafting",
-      "recipe_id": "spectrum:mod_integration/create/enchanter/book_capacity"
-    },
-    {
-      "type": "spectrum:enchanter_crafting",
-      "recipe_id": "spectrum:mod_integration/create/enchanter/book_potato_recovery"
     },
     {
       "type": "spectrum:liquid_crystal_converting",

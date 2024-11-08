@@ -48,10 +48,54 @@
       "recipe_id": "spectrum:mod_integration/malum/pedestal/chorusless_ender_splice"
     },
     {
-      "type": "modonomicon:spotlight",
+      "type": "spectrum:nbt_spotlight",
       "title": "book.spectrum.guidebook.mod_integration.malum.scythe_enchants.title",
       "item": {
-        "item": "malum:crude_scythe"
+        "item": "malum:crude_scythe",
+        "nbt": {
+          "Enchantments": [
+            {
+              "id": "spectrum:clovers_favor",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:exuberance",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:first_strike",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:improved_critical",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:inventory_insertion",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:treasure_hunter",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:tight_grip",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:steadfast",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:indestructible",
+              "lvl": "1s"
+            },
+            {
+              "id": "spectrum:inexorable",
+              "lvl": "1s"
+            }
+          ]
+        }
       },
       "condition": {
         "type": "modonomicon:advancement",
@@ -82,20 +126,12 @@
     },
     {
       "type": "spectrum:potion_workshop_brewing",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:unlocks/blocks/potion_workshop"
-      },
-      "title": "book.spectrum.guidebook.mod_integration.malum.page1.title",
+      "title": "effect.minecraft.invisibility",
       "recipe_id": "spectrum:mod_integration/malum/potion_workshop_brewing/alt_invisibility"
     },
     {
       "type": "spectrum:potion_workshop_brewing",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:unlocks/blocks/potion_workshop"
-      },
-      "title": "book.spectrum.guidebook.mod_integration.malum.page2.title",
+      "title": "effect.minecraft.poison",
       "recipe_id": "spectrum:mod_integration/malum/potion_workshop_brewing/alt_poison"
     },
     {
@@ -121,10 +157,6 @@
     {
       "type": "spectrum:primordial_fire_burning",
       "title": "container.spectrum.rei.primordial_fire_burning.title",
-      "condition": {
-        "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:hidden/interact_with_doombloom"
-      },
       "text": "book.spectrum.guidebook.mod_integration.malum.crystal_burning.text",
       "recipe_id": "spectrum:mod_integration/malum/primordial_fire_burning/crystal_burning"
     },
