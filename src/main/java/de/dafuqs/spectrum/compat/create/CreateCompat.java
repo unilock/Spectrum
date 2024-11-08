@@ -1,26 +1,24 @@
 package de.dafuqs.spectrum.compat.create;
 
-import com.simibubi.create.Create;
 import com.simibubi.create.api.event.*;
-import de.dafuqs.spectrum.blocks.crystallarieum.SpectrumClusterBlock;
+import de.dafuqs.spectrum.blocks.crystallarieum.*;
 import de.dafuqs.spectrum.blocks.fluid.*;
 import de.dafuqs.spectrum.compat.*;
-import de.dafuqs.spectrum.registries.SpectrumItems;
+import de.dafuqs.spectrum.registries.*;
 import net.fabricmc.api.*;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
+import net.fabricmc.fabric.api.item.v1.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.minecraft.block.*;
-import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.block.piston.*;
+import net.minecraft.client.render.*;
 import net.minecraft.fluid.*;
-import net.minecraft.item.Item;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.DyeColor;
+import net.minecraft.item.*;
+import net.minecraft.util.*;
 import net.minecraft.world.*;
 import org.jetbrains.annotations.*;
 
-import static de.dafuqs.spectrum.registries.SpectrumBlocks.registerBlockWithItem;
+import static de.dafuqs.spectrum.registries.SpectrumBlocks.*;
 
 public class CreateCompat extends SpectrumIntegrationPacks.ModIntegrationPack {
 
@@ -43,10 +41,7 @@ public class CreateCompat extends SpectrumIntegrationPacks.ModIntegrationPack {
         registerBlockWithItem("zinc_cluster", ZINC_CLUSTER, settings, DyeColor.BROWN);
         registerBlockWithItem("pure_zinc_block", PURE_ZINC_BLOCK, settings, DyeColor.BROWN);
         SpectrumItems.register("pure_zinc", PURE_ZINC, DyeColor.BROWN);
-
-
-
-
+        
         PipeCollisionEvent.FLOW.register(event -> {
             final BlockState result = handleBidirectionalCollision(event.getLevel(), event.getFirstFluid(), event.getSecondFluid());
             if (result != null) event.setState(result);
