@@ -1,10 +1,7 @@
 {
   "name": "book.spectrum.guidebook.mod_integration.farmersdelight.name",
   "icon": {
-    "item": "farmersdelight:potion",
-    "nbt": {
-      "Potion": "minecraft:night_vision"
-    }
+    "item": "farmersdelight:iron_knife"
   },
   "condition": {
     "type": "modonomicon:and",
@@ -32,7 +29,18 @@
       "text": "book.spectrum.guidebook.mod_integration.farmersdelight.page0.text",
       "title": "book.spectrum.guidebook.mod_integration.farmersdelight.name"
     },
-
+    {
+      "type": "modonomicon:spotlight",
+      "title": "book.spectrum.guidebook.mod_integration.farmersdelight.page1.text",
+      "item": {
+        "item": "spectrum:multitool"
+      },
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "spectrum:build_basic_pedestal_structure"
+      },
+      "text": "book.spectrum.guidebook.mod_integration.farmersdelight.page1.text"
+    },
     {
       "type": "spectrum:anvil_crushing",
       "recipe_id": "spectrum:mod_integration/farmersdelight/anvil_crushing/rice"
@@ -42,7 +50,7 @@
       "title": "book.spectrum.guidebook.mod_integration.farmersdelight.amaranth_cutting.title",
       "condition": {
         "type": "modonomicon:advancement",
-        "advancement_id": "spectrum:hidden/collect_frostbite_crystal"
+        "advancement_id": "spectrum:collect_amaranth"
       },
       "item": {
         "item": "spectrum:amaranth_bushel"
@@ -62,7 +70,7 @@
       "text": "book.spectrum.guidebook.mod_integration.farmersdelight.gemstone_cutting.text"
     },
     {
-      "type": "spectrum:anvil_crushing",
+      "type": "spectrum:enchanter_crafting",
       "recipe_id": "spectrum:mod_integration/farmersdelight/enchanter/backstabbing"
     },
     {
