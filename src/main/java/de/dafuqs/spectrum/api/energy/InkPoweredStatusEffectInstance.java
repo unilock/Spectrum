@@ -111,7 +111,7 @@ public class InkPoweredStatusEffectInstance {
 	}
 	
 	public static void buildTooltip(List<Text> tooltip, List<InkPoweredStatusEffectInstance> effects, MutableText attributeModifierText, boolean showDuration) {
-		if (effects.size() > 0) {
+		if (!effects.isEmpty()) {
 			List<Pair<EntityAttribute, EntityAttributeModifier>> attributeModifiers = Lists.newArrayList();
 			for (InkPoweredStatusEffectInstance entry : effects) {
 				if (entry.isUnidentifiable()) {
@@ -120,6 +120,10 @@ public class InkPoweredStatusEffectInstance {
 				}
 
 				StatusEffectInstance effect = entry.getStatusEffectInstance();
+				if (effect == null) { // serialization error or removed effect
+					continue;
+				}
+				
 				InkCost cost = entry.getInkCost();
 				
 				MutableText mutableText = Text.translatable(effect.getTranslationKey());
