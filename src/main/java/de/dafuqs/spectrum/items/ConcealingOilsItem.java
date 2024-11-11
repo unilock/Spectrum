@@ -77,9 +77,13 @@ public class ConcealingOilsItem extends DrinkItem implements InkPoweredPotionFil
                 .anyMatch(e -> e.equals(effect.getStatusEffectInstance().getEffectType())))
             return false;
 
+        var instance = effect.getStatusEffectInstance();
+        if (instance == null)
+            return true;
+
         var compound = new NbtCompound();
         compound.putUuid(POISONER_KEY, user.getUuid());
-        effect.getStatusEffectInstance().writeNbt(compound);
+        instance.writeNbt(compound);
         food.getOrCreateNbt().put(OIL_EFFECT_ID, compound);
         return true;
     }
