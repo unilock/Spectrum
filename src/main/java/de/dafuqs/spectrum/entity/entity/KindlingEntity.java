@@ -392,6 +392,10 @@ public class KindlingEntity extends AbstractHorseEntity implements RangedAttackM
 			var distance = Math.sqrt(transmutePos.getSquaredDistance(getBlockPos()));
 			if (distance <= 6 * blastMod || random.nextFloat() < 1 / ((distance - 6) / 3)) {
 				var candidate = world.getBlockState(transmutePos);
+				
+				// Do not the bedrock nor the claims
+				if (candidate.getHardness(world, transmutePos) < 0 || !CommonProtectionApiCompat.canBreak(world, transmutePos, this))
+					continue;
 
 				if (candidate.isAir()) {
 					if (random.nextFloat() < 0.125F) {
