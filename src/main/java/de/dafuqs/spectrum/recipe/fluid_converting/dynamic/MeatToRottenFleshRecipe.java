@@ -1,5 +1,6 @@
 package de.dafuqs.spectrum.recipe.fluid_converting.dynamic;
 
+import com.neep.neepmeat.init.NMItems;
 import de.dafuqs.spectrum.recipe.*;
 import de.dafuqs.spectrum.recipe.fluid_converting.*;
 import net.minecraft.item.*;
