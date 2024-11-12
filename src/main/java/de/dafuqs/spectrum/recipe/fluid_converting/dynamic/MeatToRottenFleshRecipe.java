@@ -18,7 +18,7 @@ public class MeatToRottenFleshRecipe extends DragonrotConvertingRecipe {
 	private static Ingredient getMeatsIngredient() {
 		return Ingredient.ofStacks(Registries.ITEM.stream().filter(item -> {
 			FoodComponent foodComponent = item.getFoodComponent();
-			return item != Items.ROTTEN_FLESH && foodComponent != null && foodComponent.isMeat();
+			return item != Items.ROTTEN_FLESH && !(SpectrumIntegrationPacks.isIntegrationPackActive(SpectrumIntegrationPacks.NEEPMEAT_ID) && item == NMItems.MEAT_SCRAP) && foodComponent != null && foodComponent.isMeat();
 		}).map(ItemStack::new));
 	}
 	
