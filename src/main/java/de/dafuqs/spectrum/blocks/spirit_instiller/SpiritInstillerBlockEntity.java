@@ -1,6 +1,7 @@
 package de.dafuqs.spectrum.blocks.spirit_instiller;
 
 import de.dafuqs.matchbooks.recipe.*;
+import de.dafuqs.spectrum.*;
 import de.dafuqs.spectrum.api.block.*;
 import de.dafuqs.spectrum.api.color.*;
 import de.dafuqs.spectrum.blocks.*;
@@ -42,6 +43,8 @@ public class SpiritInstillerBlockEntity extends InWorldInteractionBlockEntity im
 		add(new Vec3i(2, 0, 0));
 		add(new Vec3i(-2, 0, 0));
 	}};
+
+	private static final Identifier JADE_VINE_CROSSBREEDING = SpectrumCommon.locate("spirit_instiller/secret/germinated_jade_vine_crossbreeding");
 	
 	private final Inventory autoCraftingInventory; // 0: instiller stack; 1-2: item bowl stacks
 	private boolean inventoryChanged;
@@ -218,7 +221,7 @@ public class SpiritInstillerBlockEntity extends InWorldInteractionBlockEntity im
 			}
 		}
 		// jade vine crossbreeding advancement
-		if (spiritInstillerRecipe.toString().equals("spectrum:spirit_instiller/secret/germinated_jade_vine_crossbreeding")) {
+		if (spiritInstillerRecipe.getId().equals(JADE_VINE_CROSSBREEDING)) {
 			Support.grantAdvancementCriterion(player, "lategame/create_jade_vine", "crossbred_jade_vine_bulb");
 		}
 	}
