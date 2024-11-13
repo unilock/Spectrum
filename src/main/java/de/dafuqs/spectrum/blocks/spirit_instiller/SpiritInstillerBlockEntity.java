@@ -202,20 +202,24 @@ public class SpiritInstillerBlockEntity extends InWorldInteractionBlockEntity im
 		}
 		
 		if (lastInteractedPlayer instanceof ServerPlayerEntity serverPlayerEntity) {
-			testAndUnlockUnlockBossMemoryAdvancement(serverPlayerEntity, spiritInstillerBlockEntity.currentRecipe, canCraft);
+			testAndUnlockRecipeAdvancements(serverPlayerEntity, spiritInstillerBlockEntity.currentRecipe, canCraft);
 		}
 		
 		return canCraft & spiritInstillerBlockEntity.currentRecipe.canPlayerCraft(lastInteractedPlayer) && spiritInstillerBlockEntity.currentRecipe.canCraftWithStacks(spiritInstillerBlockEntity.autoCraftingInventory);
 	}
 	
-	public static void testAndUnlockUnlockBossMemoryAdvancement(ServerPlayerEntity player, SpiritInstillerRecipe spiritInstillerRecipe, boolean canActuallyCraft) {
-		boolean isBossMemory = spiritInstillerRecipe.getGroup() != null && spiritInstillerRecipe.getGroup().equals("boss_memories");
-		if (isBossMemory) {
+	public static void testAndUnlockRecipeAdvancements(ServerPlayerEntity player, SpiritInstillerRecipe spiritInstillerRecipe, boolean canActuallyCraft) {
+		// boss memory advancements
+		if (spiritInstillerRecipe.getGroup() != null && spiritInstillerRecipe.getGroup().equals("boss_memories")) {
 			if (canActuallyCraft) {
 				Support.grantAdvancementCriterion(player, "midgame/craft_blacklisted_memory_success", "succeed_crafting_boss_memory");
 			} else {
 				Support.grantAdvancementCriterion(player, "midgame/craft_blacklisted_memory_fail", "fail_to_craft_boss_memory");
 			}
+		}
+		// jade vine crossbreeding advancement
+		if (spiritInstillerRecipe.toString().equals("spectrum:spirit_instiller/secret/germinated_jade_vine_crossbreeding")) {
+			Support.grantAdvancementCriterion(player, "lategame/create_jade_vine", "crossbred_jade_vine_bulb");
 		}
 	}
 	
