@@ -50,13 +50,13 @@ public class SpectrumIntegrationPacks {
 		registerIntegrationPack(AE2_ID, () -> new AE2Compat());
 		registerIntegrationPack(GOBBER_ID, () -> new GobberCompat());
 		registerIntegrationPack(ALLOY_FORGERY_ID, () -> new AlloyForgeryCompat());
-		registerIntegrationPack(TRAVELERS_BACKPACK_ID, () -> new TravelersBackpackCompat());
 		registerIntegrationPack(BOTANIA_ID, () -> new BotaniaCompat());
 		registerIntegrationPack(MODONOMICON_ID, () -> new ModonomiconCompat());
 		registerIntegrationPack(NEEPMEAT_ID, () -> new NEEPMeatCompat());
 		registerIntegrationPack(FARMERSDELIGHT_ID, () -> new FDCompat());
 		registerIntegrationPack(MALUM_ID, () -> new MalumCompat());
 		if (!FabricLoader.getInstance().isModLoaded("connectormod")) {
+			registerIntegrationPack(TRAVELERS_BACKPACK_ID, () -> new TravelersBackpackCompat());
 			registerIntegrationPack(CREATE_ID, () -> new CreateCompat());
 		}
 		
