@@ -46,7 +46,7 @@ public class PaintbrushItem extends Item implements SignChangingItem {
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 		super.appendTooltip(stack, world, tooltip, context);
 		
-		if (world.isClient) {
+		if (world != null && world.isClient) {
 			appendClientTooltips(stack, tooltip);
 		}
 	}
