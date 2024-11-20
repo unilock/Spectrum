@@ -26,7 +26,7 @@ public class SpectrumCompostableBlocks {
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.HIBERNATING_JADE_VINE_BULB, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.GERMINATED_JADE_VINE_BULB, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.JADE_VINE_PETALS, HIGH);
-		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADE_VINE_PETAL_BLOCK, HIGH);
+		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADE_VINE_PETAL_BLOCK, ALWAYS);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADE_VINE_PETAL_CARPET, HIGH);
 
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.VARIA_SPROUT, MEDIUM);
@@ -35,13 +35,15 @@ public class SpectrumCompostableBlocks {
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADEITE_LOTUS_BULB, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADEITE_LOTUS_FLOWER, HIGHER);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.JADEITE_PETALS, HIGH);
+		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADEITE_PETAL_BLOCK, ALWAYS);
+		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.JADEITE_PETAL_CARPET, HIGH);
 		
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.SWEET_PEA, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.APRICOTTI, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.HUMMING_BELL, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.RESONANT_LILY, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.MOSS_BALL, MEDIUM);
-		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.GIANT_MOSS_BALL, HIGHER);
+		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.GIANT_MOSS_BALL, ALWAYS);
 
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.NIGHTDEW_SPROUT, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.NECTARDEW_BURGEON, HIGHER);
@@ -49,11 +51,11 @@ public class SpectrumCompostableBlocks {
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.NEPHRITE_BLOSSOM_LEAVES, LOW);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.FISSURE_PLUM, HIGH);
 		
-		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.ALOE_LEAF, LOW);
+		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.ALOE_LEAF, MEDIUM);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.BRISTLE_SPROUTS, MEDIUM);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumItems.SAWBLADE_HOLLY_BERRY, HIGH);
 
-		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.SNAPPING_IVY, HIGHER);
+		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.SNAPPING_IVY, HIGH);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.SMALL_RED_DRAGONJAG, LOW);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.SMALL_YELLOW_DRAGONJAG, LOW);
 		CompostingChanceRegistry.INSTANCE.add(SpectrumBlocks.SMALL_PINK_DRAGONJAG, LOW);
