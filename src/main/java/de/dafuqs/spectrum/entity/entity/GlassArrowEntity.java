@@ -4,7 +4,6 @@ import de.dafuqs.spectrum.entity.*;
 import de.dafuqs.spectrum.items.tools.*;
 import de.dafuqs.spectrum.registries.*;
 import de.dafuqs.spectrum.spells.*;
-import net.minecraft.block.*;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.*;
 import net.minecraft.entity.data.*;
@@ -53,11 +52,6 @@ public class GlassArrowEntity extends PersistentProjectileEntity {
 				spawnParticles(1);
 			}
 		}
-	}
-	
-	@Override
-	public boolean hasNoGravity() {
-		return this.getVelocity().lengthSquared() > 0.1F;
 	}
 	
 	private void spawnParticles(int amount) {
@@ -136,22 +130,6 @@ public class GlassArrowEntity extends PersistentProjectileEntity {
 	@Override
 	protected ItemStack asItemStack() {
 		return dataTracker.get(VARIANT).getArrow().getDefaultStack();
-	}
-	
-	/**
-	 * Glass Arrows pass through translucent blocks as if it were air
-	 */
-	@Override
-	protected void onCollision(HitResult hitResult) {
-		HitResult.Type type = hitResult.getType();
-		if (type == HitResult.Type.BLOCK) {
-			BlockPos hitPos = ((BlockHitResult) hitResult).getBlockPos();
-			BlockState state = this.getWorld().getBlockState(hitPos);
-			if (!state.isSolidBlock(this.getWorld(), hitPos)) {
-				return;
-			}
-		}
-		super.onCollision(hitResult);
 	}
 	
 	/**
