@@ -76,7 +76,7 @@
     "java": ">=17",
     "revelationary": "*",
     "cloth-config": "*",
-    "modonomicon": "*",
+		"modonomicon": ">=1.77.3",
     "trinkets": "*",
     "matchbooks": "*",
     "exclusions_lib": "*"
