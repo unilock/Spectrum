@@ -2190,7 +2190,7 @@
   "book.spectrum.guidebook.base_trinkets.name": "Base Trinkets",
   "book.spectrum.guidebook.base_trinkets.page0.text": "These basic accessories will serve me well as a starting point for more advanced Trinkets.\\\nAll final Trinkets are created in the [Fusion Shrine](entry://general/fusion_shrine).",
   "book.spectrum.guidebook.bedrock_anvil.page0.text": "I've used my Anvil plenty (a lot of Anvils, actually). [Item Crushing](entry://general/item_crushing), repairing and enchanting are burning a hole in my iron supply.\\\nTo make the Anvil last longer - indestructible, in fact - Bedrock seems like the perfect choice.\\\n\\\nIt allows me to rename items for free and has no maximum repair limit.",
-  "book.spectrum.guidebook.bedrock_anvil.page1.text": "It also allows me to add descriptions to my items.\\\n\\\n*Pro tip: \"\\n\" will split the text into multiple lines.*",
+  "book.spectrum.guidebook.bedrock_anvil.page1.text": "It also allows me to add descriptions to my items, as well as a spark of color with some pigment.\\\n\\\n*Pro tip: \"\\n\" will split the text into multiple lines.*\\\n*Also, leaving the name field blank will reset the name.*",
   "book.spectrum.guidebook.bedrock_armor.page0.text": "The strongest material I could find so far was Netherite. However, repairing [#](bb00bb)Netherite Armor[#]() was more expensive than making the armor itself. Also, the protection decreased with each scratch. All this is less of a problem if the armor simply *cannot* be damaged in the first place.\\\n\\\n*Never wilt, stone blossom.*",
   "book.spectrum.guidebook.bedrock_armor.page1.text": "The Bedrock Helmet comes with **Projectile Protection V**.",
   "book.spectrum.guidebook.bedrock_armor.page2.text": "The Bedrock Chestplate comes with **Protection V**.",
@@ -4013,11 +4013,12 @@
   "commands.spectrum.progression_sanity.success": "Printed the sanity checks findings to the servers console",
   "commands.spectrum.spawn_shooting_star.success": "Spawned %d shooting stars for each player",
 
-  "container.spectrum.bedrock_anvil": "Repair & write Lore",
+  "container.spectrum.bedrock_anvil": "Repair & Customize",
   "container.spectrum.bedrock_anvil.lore": "Lore:",
   "container.spectrum.bedrock_anvil.tooltip": "Indestructible. Free renaming, unlimited",
   "container.spectrum.bedrock_anvil.tooltip2": "repair cap & able to add Lore to Items",
-  "container.spectrum.modonomicon.crystallarieum.catalyst": "Catalyst:\nAccel:\nInk Cons:\nUsed Up:",
+	"container.spectrum.bedrock_anvil.tooltip3": "Add pigment to items to color their name",
+	"container.spectrum.modonomicon.crystallarieum.catalyst": "Catalyst:\nAccel:\nInk Cons:\nUsed Up:",
 
   "container.spectrum.rei.anvil_crushing.high_force_required": "High force required",
   "container.spectrum.rei.anvil_crushing.low_force_required": "Low force required",
