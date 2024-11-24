@@ -388,15 +388,16 @@ public abstract class LivingEntityMixin {
 	@ModifyReturnValue(method = "handleFallDamage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;computeFallDamage(FF)I"))
 	private int spectrum$puffCircletDamageNegation(int original) {
 		LivingEntity thisEntity = (LivingEntity) (Object) this;
+		float cost = Math.min(original, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
 		// check if damage reduction is applicable to this entity
-		if (original < PuffCircletItem.FALL_DAMAGE_NEGATING_COST || thisEntity.isInvulnerableTo(thisEntity.getDamageSources().fall()) || AzureDikeProvider.getAzureDikeCharges(thisEntity) <= 0) return original;
+		if (original <= 0 || thisEntity.isInvulnerableTo(thisEntity.getDamageSources().fall()) || AzureDikeProvider.getAzureDikeCharges(thisEntity) <= cost) return original;
 
 		// check if this entity is protected by puff circlet
 		Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(thisEntity);
 		if (component.isEmpty() || component.get().getEquipped(SpectrumItems.PUFF_CIRCLET).isEmpty()) return original;
 
 		// do damage reduction
-		AzureDikeProvider.absorbDamage(thisEntity, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
+		AzureDikeProvider.absorbDamage(thisEntity, cost);
 
 		// yoink
 		Vec3d velocity = thisEntity.getVelocity();
