@@ -385,18 +385,19 @@ public abstract class LivingEntityMixin {
 		return (float) this.getAttributeValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS);
 	}
 
-	@Inject(method = "handleFallDamage", at = @At("HEAD"), cancellable = true)
-	private void spectrum$puffCircletDamageNegation(float fallDistance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
+	@ModifyReturnValue(method = "handleFallDamage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;computeFallDamage(FF)I"))
+	private int spectrum$puffCircletDamageNegation(int original) {
 		LivingEntity thisEntity = (LivingEntity) (Object) this;
+		float cost = Math.min(original, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
 		// check if damage reduction is applicable to this entity
-		if (thisEntity.isInvulnerableTo(thisEntity.getDamageSources().fall()) || AzureDikeProvider.getAzureDikeCharges(thisEntity) <= 0) return;
+		if (original <= 0 || thisEntity.isInvulnerableTo(thisEntity.getDamageSources().fall()) || AzureDikeProvider.getAzureDikeCharges(thisEntity) <= cost) return original;
 
 		// check if this entity is protected by puff circlet
 		Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(thisEntity);
-		if (component.isEmpty() || component.get().getEquipped(SpectrumItems.PUFF_CIRCLET).isEmpty()) return;
+		if (component.isEmpty() || component.get().getEquipped(SpectrumItems.PUFF_CIRCLET).isEmpty()) return original;
 
 		// do damage reduction
-		AzureDikeProvider.absorbDamage(thisEntity, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
+		AzureDikeProvider.absorbDamage(thisEntity, cost);
 
 		// yoink
 		Vec3d velocity = thisEntity.getVelocity();
@@ -411,8 +412,7 @@ public abstract class LivingEntityMixin {
 		}
 		thisEntity.getWorld().playSound(null, thisEntity.getBlockPos(), SpectrumSoundEvents.PUFF_CIRCLET_PFFT, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
-		// at last, cancel the function
-		cir.setReturnValue(false);
+		return 0;
 	}
 
 	@ModifyVariable(at = @At("HEAD"), method = "damage(Lnet/minecraft/entity/damage/DamageSource;F)Z", argsOnly = true)
