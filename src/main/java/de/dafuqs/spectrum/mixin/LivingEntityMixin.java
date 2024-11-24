@@ -389,7 +389,7 @@ public abstract class LivingEntityMixin {
 	private void spectrum$puffCircletDamageNegation(float fallDistance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
 		LivingEntity thisEntity = (LivingEntity) (Object) this;
 		// check if damage reduction is applicable to this entity
-		if (AzureDikeProvider.getAzureDikeCharges(thisEntity) <= 0) return;
+		if (thisEntity.isInvulnerableTo(thisEntity.getDamageSources().fall()) || AzureDikeProvider.getAzureDikeCharges(thisEntity) <= 0) return;
 
 		// check if this entity is protected by puff circlet
 		Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(thisEntity);
