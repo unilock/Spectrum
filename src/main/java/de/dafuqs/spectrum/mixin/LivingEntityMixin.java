@@ -126,7 +126,7 @@ public abstract class LivingEntityMixin {
 	
 	@Inject(method = "travel", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;hasNoDrag()Z"))
 	private void spectrum$travel(CallbackInfo ci, @Local(ordinal = 1) LocalFloatRef f) {
-		var talon = (DragonTalonItem) SpectrumItems.DRAGON_TALON;
+		var talon = SpectrumItems.DRAGON_TALON;
 		var entity = (LivingEntity) (Object) this;
 		var override = false;
 		var friction = -1F;
@@ -567,7 +567,9 @@ public abstract class LivingEntityMixin {
 				
 				boolean damaged = false;
 				for (Pair<DamageSource, Float> entry : composition.get()) {
+					int invincibilityFrameStore = target.timeUntilRegen;
 					damaged |= damage(entry.getLeft(), entry.getRight());
+					target.timeUntilRegen = invincibilityFrameStore;
 				}
 				
 				SpectrumDamageTypes.recursiveDamageFlag = false;
