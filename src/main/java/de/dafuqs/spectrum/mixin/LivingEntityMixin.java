@@ -24,7 +24,6 @@ import de.dafuqs.spectrum.registries.*;
 import de.dafuqs.spectrum.status_effects.*;
 import dev.emi.trinkets.api.*;
 import net.fabricmc.fabric.api.tag.convention.v1.*;
-import net.minecraft.block.*;
 import net.minecraft.enchantment.*;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.*;
@@ -334,7 +333,7 @@ public abstract class LivingEntityMixin {
 		return protection;
 	}
 	
-	@ModifyVariable(method = "applyArmorToDamage", at = @At("STORE"), ordinal = 0)
+	@ModifyVariable(method = "applyArmorToDamage", at = @At("STORE"), ordinal = 0, argsOnly = true)
 	private float spectrum$applyArmorToDamage(float amount, DamageSource source) {
 		float defense = getArmor();
 		float toughness = getToughness();
@@ -386,34 +385,34 @@ public abstract class LivingEntityMixin {
 		return (float) this.getAttributeValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS);
 	}
 
-	@Inject(at = @At("HEAD"), method = "fall(DZLnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;)V")
-	private void spectrum$fall(double heightDifference, boolean onGround, BlockState landedState, BlockPos landedPosition, CallbackInfo ci) {
-		if (onGround) {
-			LivingEntity thisEntity = (LivingEntity) (Object) this;
-			if (!thisEntity.isInvulnerableTo(thisEntity.getDamageSources().fall()) && thisEntity.fallDistance > thisEntity.getSafeFallDistance()) {
-				Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(thisEntity);
-				if (component.isPresent()) {
-					if (!component.get().getEquipped(SpectrumItems.PUFF_CIRCLET).isEmpty()) {
-						var charges = AzureDikeProvider.getAzureDikeCharges(thisEntity);
-						if (charges > 0) {
-							AzureDikeProvider.absorbDamage(thisEntity, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
-							
-							thisEntity.fallDistance = 0;
-							thisEntity.setVelocity(thisEntity.getVelocity().x, 0.5, thisEntity.getVelocity().z);
-							World world = thisEntity.getWorld();
-							if (world.isClient) { // it is split here so the particles spawn immediately, without network lag
-								ParticleHelper.playParticleWithPatternAndVelocityClient(thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.WHITE_CRAFTING, VectorPattern.EIGHT, 0.4);
-								ParticleHelper.playParticleWithPatternAndVelocityClient(thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.BLUE_CRAFTING, VectorPattern.EIGHT_OFFSET, 0.5);
-							} else if (thisEntity instanceof ServerPlayerEntity serverPlayerEntity) {
-								SpectrumS2CPacketSender.playParticleWithPatternAndVelocity(serverPlayerEntity, (ServerWorld) thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.WHITE_CRAFTING, VectorPattern.EIGHT, 0.4);
-								SpectrumS2CPacketSender.playParticleWithPatternAndVelocity(serverPlayerEntity, (ServerWorld) thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.BLUE_CRAFTING, VectorPattern.EIGHT_OFFSET, 0.5);
-							}
-							thisEntity.getWorld().playSound(null, thisEntity.getBlockPos(), SpectrumSoundEvents.PUFF_CIRCLET_PFFT, SoundCategory.PLAYERS, 1.0F, 1.0F);
-						}
-					}
-				}
-			}
+	@Inject(method = "handleFallDamage", at = @At("HEAD"), cancellable = true)
+	private void spectrum$puffCircletDamageNegation(float fallDistance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
+		LivingEntity thisEntity = (LivingEntity) (Object) this;
+		// check if damage reduction is applicable to this entity
+		if (AzureDikeProvider.getAzureDikeCharges(thisEntity) <= 0) return;
+
+		// check if this entity is protected by puff circlet
+		Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(thisEntity);
+		if (component.isEmpty() || component.get().getEquipped(SpectrumItems.PUFF_CIRCLET).isEmpty()) return;
+
+		// do damage reduction
+		AzureDikeProvider.absorbDamage(thisEntity, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
+
+		// yoink
+		Vec3d velocity = thisEntity.getVelocity();
+		thisEntity.setVelocity(velocity.getX(), 0.5, velocity.getZ());
+		World world = thisEntity.getWorld();
+		if (world.isClient) { // it is split here so the particles spawn immediately, without network lag
+			ParticleHelper.playParticleWithPatternAndVelocityClient(thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.WHITE_CRAFTING, VectorPattern.EIGHT, 0.4);
+			ParticleHelper.playParticleWithPatternAndVelocityClient(thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.BLUE_CRAFTING, VectorPattern.EIGHT_OFFSET, 0.5);
+		} else if (thisEntity instanceof ServerPlayerEntity serverPlayerEntity) {
+			SpectrumS2CPacketSender.playParticleWithPatternAndVelocity(serverPlayerEntity, (ServerWorld) thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.WHITE_CRAFTING, VectorPattern.EIGHT, 0.4);
+			SpectrumS2CPacketSender.playParticleWithPatternAndVelocity(serverPlayerEntity, (ServerWorld) thisEntity.getWorld(), thisEntity.getPos(), SpectrumParticleTypes.BLUE_CRAFTING, VectorPattern.EIGHT_OFFSET, 0.5);
 		}
+		thisEntity.getWorld().playSound(null, thisEntity.getBlockPos(), SpectrumSoundEvents.PUFF_CIRCLET_PFFT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+
+		// at last, cancel the function
+		cir.setReturnValue(false);
 	}
 
 	@ModifyVariable(at = @At("HEAD"), method = "damage(Lnet/minecraft/entity/damage/DamageSource;F)Z", argsOnly = true)
