@@ -30,6 +30,7 @@ import net.minecraft.server.network.*;
 import net.minecraft.server.world.*;
 import net.minecraft.sound.*;
 import net.minecraft.util.*;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.*;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
