@@ -2221,7 +2221,7 @@
   "book.spectrum.guidebook.bismuth.cluster_crushing.text": "When fully grown I can crush the cluster to get more flakes.\\\nI went through the calculations and it seems like the process is self-sustaining!",
   "book.spectrum.guidebook.bismuth.crystal_crushing.text": "*Well, if I disregard the catalysts and Ink required, at least...*",
   "book.spectrum.guidebook.bismuth.name": "Bismuth",
-  "book.spectrum.guidebook.bismuth.page0.text": "A metal that shimmers in all the colors of the rainbow.\\\nThe little seedlings I collected are far too small to be of any meaningful use.\\\n\\\nHow do I grow them without a budding block? One thing I noticed: they react to metallic blocks.",
+	"book.spectrum.guidebook.bismuth.page0.text": "A metal that shimmers in all the colors of the rainbow.\\\nThe little seedlings I collected are far too small to be of any meaningful use.\\\n\\\nHow do I grow them without a budding block? One thing I noticed: buds seem react to metallic blocks in close vicinity, just like a beacon.",
   "book.spectrum.guidebook.bismuth.page1.text": "Instead of sacrificing entire blocks of metal, the [Crystallarieum](entry://ink/crystallarieum) provides a controlled substrate that serves as a more efficient way to deliver nutrients.",
   "book.spectrum.guidebook.bismuth.page1.title": "Growing Bismuth",
   "book.spectrum.guidebook.bismuth_trinkets.page0.text": "Bismuth, this material immediately piqued my interest! The way it shines, it is predestined as a base for jewelry and with my now practiced skill, I was actually able to shape it. Beautiful.",
