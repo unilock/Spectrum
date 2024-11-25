@@ -11,8 +11,10 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.effect.*;
 import net.minecraft.network.packet.s2c.play.*;
 import net.minecraft.server.world.*;
+import org.jetbrains.annotations.*;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.*;
 
@@ -21,22 +23,40 @@ public abstract class LivingEntityPreventStatusClearMixin {
 	
 	@Shadow
 	public abstract void remove(Entity.RemovalReason reason);
-	
+
+	@Shadow
+	public abstract boolean addStatusEffect(StatusEffectInstance effect);
+
+	@Shadow
+	public abstract Map<StatusEffect,StatusEffectInstance> getActiveStatusEffects();
+
+	@Inject(method = "clearStatusEffects", at = @At("HEAD"))
+	private void spectrum$detectFatalSlumber(CallbackInfoReturnable<Boolean> cir, @Share("hasFatalSlumber") LocalBooleanRef hasFatalSlumber) {
+		hasFatalSlumber.set(getActiveStatusEffects().containsKey(SpectrumStatusEffects.FATAL_SLUMBER));
+	}
+
+	@Inject(method = "clearStatusEffects", at = @At("TAIL"))
+	private void spectrum$applyEternalSlumberIfFatalSlumberRemoved(CallbackInfoReturnable<Boolean> cir, @Share("hasFatalSlumber") LocalBooleanRef hasFatalSlumber) {
+		if (hasFatalSlumber.get()) {
+  			addStatusEffect(new StatusEffectInstance(SpectrumStatusEffects.ETERNAL_SLUMBER, 6000));
+		}
+	}
+
 	@WrapWithCondition(method = "clearStatusEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;onStatusEffectRemoved(Lnet/minecraft/entity/effect/StatusEffectInstance;)V"))
 	private boolean spectrum$preventStatusClear(LivingEntity instance, StatusEffectInstance effect, @Share("blockRemoval") LocalBooleanRef blockRemoval) {
 		if (Incurable.isIncurable(effect)) {
 			if (affectedByImmunity(instance, effect.getAmplifier()))
 				return true;
 			
-			if (effect.getDuration() > 1200) {
-				((StatusEffectInstanceAccessor) effect).setDuration(effect.getDuration() - 1200);
-				if (!instance.getWorld().isClient()) {
-					((ServerWorld) instance.getWorld()).getChunkManager().sendToNearbyPlayers(instance, new EntityStatusEffectS2CPacket(instance.getId(), effect));
-				}
-				
-				blockRemoval.set(true);
-				return false;
+			// new duration = duration - 1min OR duration * 0.4, whichever is the smaller reduction
+			int duration = effect.getDuration();
+			((StatusEffectInstanceAccessor) effect).setDuration(Math.max(duration - 1200, (int)(duration * 0.4)));
+			if (!instance.getWorld().isClient()) {
+				((ServerWorld) instance.getWorld()).getChunkManager().sendToNearbyPlayers(instance, new EntityStatusEffectS2CPacket(instance.getId(), effect));
 			}
+
+			blockRemoval.set(true);
+			return false;
 		}
 		return true;
 	}

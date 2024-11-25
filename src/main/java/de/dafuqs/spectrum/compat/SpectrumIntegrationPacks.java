@@ -5,6 +5,7 @@ import de.dafuqs.spectrum.compat.ae2.*;
 import de.dafuqs.spectrum.compat.alloy_forgery.*;
 import de.dafuqs.spectrum.compat.botania.*;
 import de.dafuqs.spectrum.compat.create.*;
+import de.dafuqs.spectrum.compat.exclusions_lib.*;
 import de.dafuqs.spectrum.compat.farmersdelight.*;
 import de.dafuqs.spectrum.compat.gobber.*;
 import de.dafuqs.spectrum.compat.malum.*;
@@ -44,6 +45,7 @@ public class SpectrumIntegrationPacks {
 	public static final String FARMERSDELIGHT_ID = "farmersdelight";
 	public static final String NEEPMEAT_ID = "neepmeat";
 	public static final String MALUM_ID = "malum";
+	public static final String EXCLUSIONS_LIB_ID = "exclusions_lib";
 
 	@SuppressWarnings("Convert2MethodRef")
 	public static void register() {
@@ -62,6 +64,10 @@ public class SpectrumIntegrationPacks {
 		
 		for (ModIntegrationPack container : INTEGRATION_PACKS.values()) {
 			container.register();
+		}
+		
+		if (!FabricLoader.getInstance().isModLoaded(EXCLUSIONS_LIB_ID)) {
+			ExclusionsLibCompat.registerNotPresent();
 		}
 	}
 	
