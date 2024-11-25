@@ -411,8 +411,8 @@ public abstract class LivingEntityMixin {
 	private float getToughness() {
 		return (float) this.getAttributeValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS);
 	}
-
-	@ModifyReturnValue(method = "handleFallDamage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;computeFallDamage(FF)I"))
+	
+	@ModifyExpressionValue(method = "handleFallDamage(FFLnet/minecraft/entity/damage/DamageSource;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;computeFallDamage(FF)I"))
 	private int spectrum$puffCircletDamageNegation(int original) {
 		LivingEntity thisEntity = (LivingEntity) (Object) this;
 		float cost = Math.min(original, PuffCircletItem.FALL_DAMAGE_NEGATING_COST);
