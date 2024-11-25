@@ -17,6 +17,7 @@ import de.dafuqs.spectrum.api.recipe.*;
 import de.dafuqs.spectrum.blocks.*;
 import de.dafuqs.spectrum.blocks.deeper_down.flora.*;
 import de.dafuqs.spectrum.blocks.gemstone.*;
+import de.dafuqs.spectrum.compat.modonomicon.pages.*;
 import de.dafuqs.spectrum.enchantments.*;
 import de.dafuqs.spectrum.items.*;
 import de.dafuqs.spectrum.items.trinkets.*;
@@ -445,7 +446,14 @@ public class SanityCommand {
 			}
 			for (BookPage page : entry.getValue().getPages()) {
 				if (!page.getCondition().test(context, source.getPlayer())) {
-					SpectrumCommon.logWarning("[SANITY: Guidebook] Entry '" + entry.getKey() + "' page " + page.getPageNumber() + " of type '" + page.getType() + "' is still locked for the executing player. Does the player have the required advancements? Can it be unlocked? Or is it only a missing mod compat recipe page?e");
+					SpectrumCommon.logWarning("[SANITY: Guidebook] Entry '" + entry.getKey() + "' page " + page.getPageNumber() + " of type '" + page.getType() + "' is still locked for the executing player. Does the player have the required advancements? Can it be unlocked? Or is it only a missing mod compat recipe page?");
+				}
+				if (page instanceof BookHintPage bookHintPage) {
+					Identifier completionAdvancement = bookHintPage.getCompletionAdvancement();
+					Advancement advancement = advancementLoader.get(completionAdvancement);
+					if (advancement == null) {
+						SpectrumCommon.logWarning("[SANITY: Guidebook] Hint Page '" + entry.getKey() + "' page " + page.getPageNumber() + " is missing it's completion advancement '" + completionAdvancement + "'");
+					}
 				}
 			}
 		}
