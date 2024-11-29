@@ -29,7 +29,7 @@
   "recipe.spectrum.potion_workshop_crafting.restoration_tea_milk.hint": "做一名茶道的门外汉",
   "recipe.spectrum.spirit_instiller.secret.germinated_jade_vine_crossbreeding.hint": "杂交两种植物",
   "recipe.spectrum.spirit_instiller.secret.chorus_flower.hint": "回响与共鸣",
-
+  
   "recipeGroup.spectrum.gemstone_chiseled_blocks": "雕纹宝石晶方块",
   "recipeGroup.spectrum.phantom_frames": "幻影展示框",
   "recipeGroup.spectrum.radiant_glass": "发光玻璃",
@@ -180,9 +180,9 @@
   "spectrum.tooltip.able_to_summon_warden": "召唤监守者",
   "spectrum.tooltip.biomemakeover_cursed": "被邪恶的祭坛诅咒了",
 
-  "spectrum.gui.guidebook.reveal_hint_button.text": "显示提示",
-  "spectrum.gui.guidebook.reveal_hint_button.tooltip.pay": "消耗一点点费用以解锁提示",
-  "spectrum.gui.guidebook.reveal_hint_button.tooltip.lacking_resource": "物品栏中没有可用的费用",
+  "spectrum.gui.guidebook.reveal_hint_button.text": "揭示智慧",
+  "spectrum.gui.guidebook.reveal_hint_button.tooltip.pay": "消耗一点点费用以揭示一种思路",
+  "spectrum.gui.guidebook.reveal_hint_button.tooltip.lacking_resource": "你的物品栏中没有此物品",
 
   "container.spectrum.rei.pedestal_crafting.title": "七彩基座合成",
   "container.spectrum.rei.pedestal_crafting.recipe_not_unlocked_line_1": "你尚未解锁",
@@ -240,56 +240,56 @@
   "container.spectrum.rei.fusion_recipe": "融合圣坛配方",
   "container.spectrum.rei.pedestal_recipe": "七彩基座配方",
 
-  "spectrum.rei.potion_workshop_reacting.minecraft.dragon_breath": "• 搭配火药作为试剂可以制作滞留型药水\n• 玻璃瓶替换成箭就可以制作药水箭",
-  "spectrum.rei.potion_workshop_reacting.minecraft.glowstone_dust": "• +1 效果等级",
-  "spectrum.rei.potion_workshop_reacting.minecraft.gunpowder": "• 合成喷溅型药水",
-  "spectrum.rei.potion_workshop_reacting.minecraft.redstone": "• +100% 持续时间",
-  "spectrum.rei.potion_workshop_reacting.spectrum.nectardew_burgeon": "• +100% 效果强度\n• +100% 持续时间\n• -3 产量\n• 使药水具有催眠功效",
-  "spectrum.rei.potion_workshop_reacting.spectrum.nightdew_sprout": "• +1 效果等级\n• +50% 持续时间\n• -1 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.bitter_oils": "• -4 产量\n• 使效果无法祛除",
-  "spectrum.rei.potion_workshop_reacting.spectrum.blackest_lotus": "• +3 随机正面效果\n• +1 随机负面效果\n• 使药水无法辨别.\n\n要来赌一把吗?",
-  "spectrum.rei.potion_workshop_reacting.spectrum.least_black_lotus": "• +1 随机正面效果\n• +3 随机负面效果\n• 使药水无法辨别.\n\n要来赌一把吗?",
-  "spectrum.rei.potion_workshop_reacting.spectrum.amethyst_powder": "• +60秒效果持续时间",
-  "spectrum.rei.potion_workshop_reacting.spectrum.bedrock_dust": "• +50%% 效果强度\n• -75%% 持续时间\n• -1 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.citrine_powder": "• +25%% 药水效果强度",
-  "spectrum.rei.potion_workshop_reacting.spectrum.four_leaf_clover": "• 大幅提升随机属性",
-  "spectrum.rei.potion_workshop_reacting.spectrum.moonstone_powder": "• 将负面效果转换为等效的正面效果",
-  "spectrum.rei.potion_workshop_reacting.spectrum.moonstruck_nectar": "• 使药水更加顺滑,从而饮用速度更快",
-  "spectrum.rei.potion_workshop_reacting.spectrum.neolith": "• 给药水添加一种非常奇怪的味道和气味,使其无法辨别。还会将其完全染成黑色",
-  "spectrum.rei.potion_workshop_reacting.spectrum.onyx_powder": "• +2 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.raw_azurite": "• 移除滞留药水和药水箭的持续时间惩罚",
-  "spectrum.rei.potion_workshop_reacting.spectrum.stardust": "• 如果继承,之前药水的主要效果强度和持续时间增加 50%",
-  "spectrum.rei.potion_workshop_reacting.spectrum.topaz_powder": "• 移除药水效果粒子",
-  "spectrum.rei.potion_workshop_reacting.spectrum.vegetal": "• +200% 持续时间\n• -25% 效果强度",
-  "spectrum.rei.potion_workshop_reacting.spectrum.bismuth_flake": "• +1 正面效果等级\n• 将药水染成随机颜色",
-  "spectrum.rei.potion_workshop_reacting.spectrum.bone_ash": "• 如果继承,则上一剂药水的主要效果强度和持续时间 +100%%",
-  "spectrum.rei.potion_workshop_reacting.spectrum.jadeite_petals": "• +120秒正面效果的持续时间",
-  "spectrum.rei.potion_workshop_reacting.spectrum.midnight_chip": "• +1 效果等级\n• +30秒 持续时间\n• -2 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.paltaeria_fragments": "• +1 随机正面效果",
-  "spectrum.rei.potion_workshop_reacting.spectrum.prickly_bayleaf": "• -2 负面效果等级",
-  "spectrum.rei.potion_workshop_reacting.spectrum.quitoxic_powder": "• +1 负面效果等级",
-  "spectrum.rei.potion_workshop_reacting.spectrum.raw_malachite": "• +100% 持续时间\n• 使药水饮用速度变慢",
-  "spectrum.rei.potion_workshop_reacting.spectrum.raw_bloodstone": "• +100% 效果强度\n• 使药水饮用速度变慢",
-  "spectrum.rei.potion_workshop_reacting.spectrum.shimmerstone_gem": "• +20% 效果强度\n• +20% 持续时间",
-  "spectrum.rei.potion_workshop_reacting.spectrum.star_fragment": "• 50% 的几率添加之前酿造的药水的主要效果\n• 如果继承,之前药水的主要效果的强度增加100%,持续时间减少33%",
-  "spectrum.rei.potion_workshop_reacting.spectrum.storm_stone": "• 一开始会显著提高药效,但会随着时间的推移迅速减弱药效——不会产生立竿见影的效果",
-  "spectrum.rei.potion_workshop_reacting.spectrum.stratine_fragments": "• +1 效果等级\n• +1 负面效果等级\n• -1 产量",
-  "spectrum.rei.potion_workshop_reacting.minecraft.echo_shard": "• 50% 几率添加之前酿造的药水的主要效果",
-  "spectrum.rei.potion_workshop_reacting.minecraft.lapis_lazuli": "• 50% 的几率 +1 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.ash_flakes": "• -120秒 负面效果持续时间",
-  "spectrum.rei.potion_workshop_reacting.spectrum.pure_lapis": "• +1 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.pure_redstone": "• +300%% 持续时间\n• -50%% 效果强度\n• -1 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.pure_glowstone": "• +2 效果等级 \n• -50%% 持续时间\n• -1 产量",
-  "spectrum.rei.potion_workshop_reacting.spectrum.pure_echo": "• 添加之前酿造的药水的主要效果",
-  "spectrum.rei.potion_workshop_reacting.spectrum.fissure_plum": "• 50%的几率 +1 持续时间\n• 50%的几率 +1 效果等级\n• 50%的几率 +1 产量\n• 对负面效果的属性修正会被反转",
+"spectrum.rei.potion_workshop_reacting.minecraft.dragon_breath": "• 搭配火药作为试剂可以制作滞留型药水\n• 玻璃瓶替换成箭就可以制作药水箭",
+"spectrum.rei.potion_workshop_reacting.minecraft.glowstone_dust": "• +1 效果等级",
+"spectrum.rei.potion_workshop_reacting.minecraft.gunpowder": "• 合成喷溅型药水",
+"spectrum.rei.potion_workshop_reacting.minecraft.redstone": "• +100% 持续时间",
+"spectrum.rei.potion_workshop_reacting.spectrum.nectardew_burgeon": "• +100% 效果强度\n• +100% 持续时间\n• -3 产量\n• 使药水具有催眠功效",
+"spectrum.rei.potion_workshop_reacting.spectrum.nightdew_sprout": "• +1 效果等级\n• +50% 持续时间\n• -1 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.bitter_oils": "• -4 产量\n• 使效果无法祛除",
+"spectrum.rei.potion_workshop_reacting.spectrum.blackest_lotus": "• +3 随机正面效果\n• +1 随机负面效果\n• 使药水无法辨别.\n\n要来赌一把吗?",
+"spectrum.rei.potion_workshop_reacting.spectrum.least_black_lotus": "• +1 随机正面效果\n• +3 随机负面效果\n• 使药水无法辨别.\n\n要来赌一把吗?",
+"spectrum.rei.potion_workshop_reacting.spectrum.amethyst_powder": "• +60秒效果持续时间",
+"spectrum.rei.potion_workshop_reacting.spectrum.bedrock_dust": "• +50%% 效果强度\n• -75%% 持续时间\n• -1 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.citrine_powder": "• +25%% 药水效果强度",
+"spectrum.rei.potion_workshop_reacting.spectrum.four_leaf_clover": "• 大幅提升随机属性",
+"spectrum.rei.potion_workshop_reacting.spectrum.moonstone_powder": "• 将负面效果转换为等效的正面效果",
+"spectrum.rei.potion_workshop_reacting.spectrum.moonstruck_nectar": "• 使药水更加顺滑,从而饮用速度更快",
+"spectrum.rei.potion_workshop_reacting.spectrum.neolith": "• 给药水添加一种非常奇怪的味道和气味,使其无法辨别。还会将其完全染成黑色",
+"spectrum.rei.potion_workshop_reacting.spectrum.onyx_powder": "• +2 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.raw_azurite": "• 移除滞留药水和药水箭的持续时间惩罚",
+"spectrum.rei.potion_workshop_reacting.spectrum.stardust": "• 如果继承,之前药水的主要效果强度和持续时间增加 50%",
+"spectrum.rei.potion_workshop_reacting.spectrum.topaz_powder": "• 移除药水效果粒子",
+"spectrum.rei.potion_workshop_reacting.spectrum.vegetal": "• +200% 持续时间\n• -25% 效果强度",
+"spectrum.rei.potion_workshop_reacting.spectrum.bismuth_flake": "• +1 正面效果等级\n• 将药水染成随机颜色",
+"spectrum.rei.potion_workshop_reacting.spectrum.bone_ash": "• 如果继承,则上一剂药水的主要效果强度和持续时间 +100%%",
+"spectrum.rei.potion_workshop_reacting.spectrum.jadeite_petals": "• +120秒正面效果的持续时间",
+"spectrum.rei.potion_workshop_reacting.spectrum.midnight_chip": "• +1 效果等级\n• +30秒 持续时间\n• -2 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.paltaeria_fragments": "• +1 随机正面效果",
+"spectrum.rei.potion_workshop_reacting.spectrum.prickly_bayleaf": "• -2 负面效果等级",
+"spectrum.rei.potion_workshop_reacting.spectrum.quitoxic_powder": "• +1 负面效果等级",
+"spectrum.rei.potion_workshop_reacting.spectrum.raw_malachite": "• +100% 持续时间\n• 使药水饮用速度变慢",
+"spectrum.rei.potion_workshop_reacting.spectrum.raw_bloodstone": "• +100% 效果强度\n• 使药水饮用速度变慢",
+"spectrum.rei.potion_workshop_reacting.spectrum.shimmerstone_gem": "• +20% 效果强度\n• +20% 持续时间",
+"spectrum.rei.potion_workshop_reacting.spectrum.star_fragment": "• 50% 的几率添加之前酿造的药水的主要效果\n• 如果继承,之前药水的主要效果的强度增加100%,持续时间减少33%",
+"spectrum.rei.potion_workshop_reacting.spectrum.storm_stone": "• 一开始会显著提高药效,但会随着时间的推移迅速减弱药效——不会产生立竿见影的效果",
+"spectrum.rei.potion_workshop_reacting.spectrum.stratine_fragments": "• +1 效果等级\n• +1 负面效果等级\n• -1 产量",
+"spectrum.rei.potion_workshop_reacting.minecraft.echo_shard": "• 50% 几率添加之前酿造的药水的主要效果",
+"spectrum.rei.potion_workshop_reacting.minecraft.lapis_lazuli": "• 50% 的几率 +1 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.ash_flakes": "• -120秒 负面效果持续时间",
+"spectrum.rei.potion_workshop_reacting.spectrum.pure_lapis": "• +1 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.pure_redstone": "• +300%% 持续时间\n• -50%% 效果强度\n• -1 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.pure_glowstone": "• +2 效果等级 \n• -50%% 持续时间\n• -1 产量",
+"spectrum.rei.potion_workshop_reacting.spectrum.pure_echo": "• 添加之前酿造的药水的主要效果",
+"spectrum.rei.potion_workshop_reacting.spectrum.fissure_plum": "• 50%的几率 +1 持续时间\n• 50%的几率 +1 效果等级\n• 50%的几率 +1 产量\n• 对负面效果的属性修正会被反转",
 
-  "spectrum.rei.potion_workshop_reacting.botania.black_lotus": "• +2 正面效果\n• +1 负面效果\n• 使药水无法辨别\n\n要来赌一把吗?",
-  "spectrum.rei.potion_workshop_reacting.botania.blacker_lotus": "• +3 正面效果\n• 50% 概率出现负面效果\n• 使药水无法辨别\n\n要来赌一把吗?",
-  "spectrum.rei.potion_workshop_reacting.botania.life_essence": "• +3 效果等级\n• -3 产量\n\n需要搭配其他试剂来增加产量,否则你将一无所获...",
-  "spectrum.rei.potion_workshop_reacting.botania.mana_powder": "• +25% 持续时间\n• 15% 概率添加最后一个效果",
-  "spectrum.rei.potion_workshop_reacting.botania.pixie_dust": "• 制作滞留药水和药水箭\n• -25% 效果强度",
-  "spectrum.rei.potion_workshop_reacting.hexcasting.charged_amethyst": "• +15-120秒持续时间。有时更多,有时更少",
-  "spectrum.rei.potion_workshop_reacting.malum.void_salts": "• +200% 持续时间\n• -2 产量",
+"spectrum.rei.potion_workshop_reacting.botania.black_lotus": "• +2 正面效果\n• +1 负面效果\n• 使药水无法辨别\n\n要来赌一把吗?",
+"spectrum.rei.potion_workshop_reacting.botania.blacker_lotus": "• +3 正面效果\n• 50% 概率出现负面效果\n• 使药水无法辨别\n\n要来赌一把吗?",
+"spectrum.rei.potion_workshop_reacting.botania.life_essence": "• +3 效果等级\n• -3 产量\n\n需要搭配其他试剂来增加产量,否则你将一无所获...",
+"spectrum.rei.potion_workshop_reacting.botania.mana_powder": "• +25% 持续时间\n• 15% 概率添加最后一个效果",
+"spectrum.rei.potion_workshop_reacting.botania.pixie_dust": "• 制作滞留药水和药水箭\n• -25% 效果强度",
+"spectrum.rei.potion_workshop_reacting.hexcasting.charged_amethyst": "• +15-120秒持续时间。有时更多,有时更少",
+"spectrum.rei.potion_workshop_reacting.malum.void_salts": "• +200% 持续时间\n• -2 产量",
 
   "multiblock.spectrum.pedestal.upgrade_available": "可升级当前多方块结构!",
   "multiblock.spectrum.abyssal_vines": "渊深藤",
@@ -382,7 +382,7 @@
   "entity.spectrum.lizard": "恶蜥",
   "entity.spectrum.eraser": "幽影蜘蛛",
   "entity.spectrum.glass_arrow": "宝石箭",
-
+  
   "commands.spectrum.spawn_shooting_star.success": "为选定的玩家各生成了%d个流星",
   "commands.spectrum.progression_sanity.success": "配方与进度合理性检验结果已输出到服务器控制台",
   "commands.spectrum.primordial_fire.put_on.success": "点燃了 %d 个实体",
@@ -440,7 +440,7 @@
   "spectrum.recipe.fusion_shrine.explanation.paltaeria_gem": "须在雷雨天进行",
   "spectrum.recipe.fusion_shrine.explanation.egg_laying_wooly_pig_head": "可在任何情况下进行",
   "spectrum.recipe.fusion_shrine.explanation.no_rgb": "看见你偷看了",
-
+  
   "spectrum.tooltip.dragon_and_wither_immune": "§7免疫末影龙和凋灵",
 
   "enchantment.minecraft.feather_falling": "摔落保护",
@@ -606,7 +606,7 @@
   "spectrum.subtitles.entity.lizard.hurt": "恶蜥:受伤",
   "spectrum.subtitles.entity.lizard.death": "恶蜥:死亡",
   "spectrum.subtitles.entity.lizard.ambient": "恶蜥:咕哝",
-
+  
   "spectrum.subtitles.block.citrine_block.chime": "黄水晶风铃:叮铃",
   "spectrum.subtitles.block.topaz_block.chime": "托帕石风铃:叮铃",
   "spectrum.subtitles.block.onyx_block.chime": "缟玛瑙风铃: 叮铃",
@@ -616,7 +616,7 @@
   "spectrum.subtitles.block.threat_conflux.prime": "模块化地雷:装置准备",
   "spectrum.subtitles.block.threat_conflux.disarm": "模块化地雷:装置解除",
   "spectrum.subtitles.block.modular_explosive.explode": "模块化炸药:爆炸",
-
+  
   "spectrum.toast.revelation.title": "你获得了这个世界的知识",
   "spectrum.toast.revelation.text": "新的事物展现在了你的面前",
   "spectrum.toast.anvil_crushing_recipe_unlocked.title": "新的粉碎配方:",
@@ -819,9 +819,9 @@
   "item.spectrum.memory.tooltip.short_time_to_manifest": "这份记忆将很快显现!",
   "item.spectrum.memory.tooltip.does_not_manifest": "你一生都无法显现这份记忆",
   "item.spectrum.bucket_of_eraser": "幽影蜘蛛桶",
-
+  
   "block.spectrum.black_materia": "黑暗物质",
-
+  
   "block.spectrum.downstone": "渊深石",
 
   "block.spectrum.preservation_stone": "保护石",
@@ -837,14 +837,14 @@
   "block.spectrum.dream_chiseled_preservation_stone": "幻梦雕纹保护石",
   "block.spectrum.deep_light_chiseled_preservation_stone": "深域之光雕纹保护石",
   "block.spectrum.deep_light_chiseled_preservation_stone.puzzle0": "纪念一位无名的占星师",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle1": "盗贼.教师.梦想家",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle2": "他两次受到以太的恩宠,追求更深的真理",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle3": "为了追寻深邃的光明,他航行到了荒芜的水域",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle4": "他受到了启示.",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle5": "潜入至水下.",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle6": "灵魂迷失于无尽的海洋之中.",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle1": "他曾是盗贼、教师、也是梦想家",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle2": "他两次受到以太的恩宠,让他追寻更深的真理",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle3": "他航行至荒芜的水域,只为追求那深邃的光辉。",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle4": "尽管他得到了启蒙；",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle5": "但却因过于深入；",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle6": "灵魂迷失在了无尽的精神之海。",
   "block.spectrum.deep_light_chiseled_preservation_stone.puzzle7": "你会为了追求真理而迷失吗?",
-  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle8": "只为见到那视线之外的真相?",
+  "block.spectrum.deep_light_chiseled_preservation_stone.puzzle8": "只为见到那超越视线之外的真相?",
   "block.spectrum.preservation_roundel": "保护圆盘",
   "block.spectrum.dike_gate": "蔚蓝立场",
   "block.spectrum.dike_gate_fountain": "蔚蓝力场源泉",
@@ -876,7 +876,7 @@
   "block.spectrum.red_chiseled_preservation_stone": "红色雕纹保护石",
   "block.spectrum.white_chiseled_preservation_stone": "白色雕纹保护石",
   "block.spectrum.yellow_chiseled_preservation_stone": "黄色雕纹保护石",
-
+  
   "block.spectrum.blackslag": "黑渣岩",
   "block.spectrum.blackslag_coal_ore": "黑渣煤矿石",
   "block.spectrum.blackslag_iron_ore": "黑渣铁矿石",
@@ -991,7 +991,7 @@
   "block.spectrum.pyrite_slab": "黄铁矿块台阶",
   "block.spectrum.pyrite_stairs": "黄铁矿块楼梯",
   "block.spectrum.pyrite_wall": "黄铁矿块墙",
-  "block.spectrum.pyrite_paneling": "黄铁矿镶板",
+  "block.spectrum.pyrite_panneling": "黄铁矿镶板",
   "block.spectrum.pyrite_paneling_slab": "黄铁矿镶板台阶",
   "block.spectrum.pyrite_paneling_stairs": "黄铁矿镶板楼梯",
   "block.spectrum.pyrite_paneling_wall": "黄铁矿镶板墙",
@@ -1027,7 +1027,6 @@
   "block.spectrum.effulgent_bed": "龙翎床",
 
   "item.spectrum.ash_flakes": "灰烬残渣",
-  "item.spectrum.ash_flakes.tooltip": "§o熔炼之后留下的残渣.",
   "block.spectrum.ash": "灰烬块",
   "block.spectrum.ash_pile": "灰烬",
 
@@ -1164,7 +1163,7 @@
   "block.spectrum.blazing_crystal": "炽热水晶",
   "block.spectrum.frostbite_crystal": "霜冻水晶",
   "block.spectrum.resonant_lily": "共振百合",
-
+  
   "block.spectrum.player_detector": "玩家探测器",
   "block.spectrum.player_detector.owner": "%s的玩家检测器",
   "block.spectrum.item_detector": "物品探测器",
@@ -1238,7 +1237,7 @@
   "block.spectrum.red_block": "红色方块",
   "block.spectrum.white_block": "白色方块",
   "block.spectrum.yellow_block": "黄色方块",
-
+  
   "block.spectrum.black_spore_blossom": "黑色孢子花",
   "block.spectrum.blue_spore_blossom": "蓝色孢子花",
   "block.spectrum.brown_spore_blossom": "棕色孢子花",
@@ -1502,7 +1501,7 @@
   "block.spectrum.stripped_red_wood": "去皮红色木",
   "block.spectrum.stripped_white_wood": "去皮白色木",
   "block.spectrum.stripped_yellow_wood": "去皮黄色木",
-
+  
   "item.spectrum.mud_bucket": "泥浆桶",
   "block.spectrum.mud": "泥浆",
   "block.spectrum.flowing_mud": "泥浆",
@@ -1626,7 +1625,7 @@
   "block.spectrum.hummingstone_glass": "嗡鸣石玻璃",
   "block.spectrum.hummingstone_glass_pane": "嗡鸣石玻璃板",
   "block.spectrum.waxed_hummingstone": "涂蜡的嗡鸣石",
-
+  
   "block.spectrum.small_red_dragonjag": "红色龙棘草",
   "block.spectrum.small_yellow_dragonjag": "黄色龙棘草",
   "block.spectrum.small_pink_dragonjag": "粉红色龙棘草",
@@ -1671,9 +1670,9 @@
   "block.spectrum.small_topaz_bud": "小型托帕石晶芽",
   "block.spectrum.medium_topaz_bud": "中型托帕石晶芽",
   "block.spectrum.large_topaz_bud": "大型托帕石晶芽",
-  "block.spectrum.small_zinc_bud": "小型锌晶芽",
-  "block.spectrum.large_zinc_bud": "大型锌晶芽",
-  "block.spectrum.zinc_cluster": "锌晶簇",
+  "block.spectrum.small_zinc_bud": "小型锌芽",
+  "block.spectrum.large_zinc_bud": "大型锌芽",
+  "block.spectrum.zinc_cluster": "锌簇",
   "block.spectrum.topaz_cluster": "托帕石晶簇",
   "block.spectrum.topaz_block": "托帕石晶块",
   "block.spectrum.budding_topaz": "托帕石母岩",
@@ -2030,9 +2029,9 @@
   "block.spectrum.small_certus_quartz_bud": "小型赛特斯石英芽",
   "block.spectrum.large_certus_quartz_bud": "大型赛特斯石英芽",
   "block.spectrum.certus_quartz_cluster": "赛特斯石英簇",
-  "block.spectrum.small_fluix_bud": "小型福鲁伊克斯芽",
-  "block.spectrum.large_fluix_bud": "大型福鲁伊克斯芽",
-  "block.spectrum.fluix_cluster": "福鲁伊克斯簇",
+  "block.spectrum.small_fluix_bud": "小型福鲁伊克斯水晶芽",
+  "block.spectrum.large_fluix_bud": "大型福鲁伊克斯水晶芽",
+  "block.spectrum.fluix_cluster": "福鲁伊克斯水晶簇",
   "block.spectrum.small_globette_bud": "小型戈伯矿芽",
   "block.spectrum.large_globette_bud": "大型戈伯矿芽",
   "block.spectrum.globette_cluster": "戈伯球簇",
@@ -2045,7 +2044,7 @@
   "block.spectrum.small_azurite_bud": "小型石青矿芽",
   "block.spectrum.large_azurite_bud": "大型石青矿芽",
   "block.spectrum.azurite_cluster": "石青矿簇",
-
+  
   "item.spectrum.pure_emerald": "原生绿宝石",
   "item.spectrum.pure_prismarine": "原生海晶石",
   "item.spectrum.pure_coal": "原生煤炭",
@@ -2061,31 +2060,31 @@
   "item.spectrum.pure_echo": "原生回响碎片",
   "item.spectrum.pure_iron": "原生铁",
   "item.spectrum.pure_certus_quartz": "原生赛特斯石英",
-  "item.spectrum.pure_fluix": "原生福鲁伊克斯",
+  "item.spectrum.pure_fluix": "原生福鲁伊克斯水晶",
   "item.spectrum.pure_globette": "原生戈伯",
   "item.spectrum.pure_globette_end": "原生末地戈伯",
   "item.spectrum.pure_globette_nether": "原生下界戈伯",
-
+  
   "block.spectrum.pure_coal_block": "原生煤块",
   "block.spectrum.pure_iron_block": "原生铁块",
   "block.spectrum.pure_gold_block": "原生金块",
   "block.spectrum.pure_diamond_block": "原生钻石块",
   "block.spectrum.pure_emerald_block": "原生绿宝石块",
   "block.spectrum.pure_redstone_block": "原生红石块",
-  "block.spectrum.pure_zinc_block": "原生锌晶块",
+  "block.spectrum.pure_zinc_block": "原生锌块",
   "block.spectrum.pure_lapis_block": "原生青金石块",
   "block.spectrum.pure_copper_block": "原生铜块",
   "block.spectrum.pure_quartz_block": "原生石英块",
   "block.spectrum.pure_glowstone_block": "原生萤石块",
   "block.spectrum.pure_prismarine_block": "原生海晶石块",
   "block.spectrum.pure_certus_quartz_block": "原生水晶石英块",
-  "block.spectrum.pure_fluix_block": "原生福鲁伊克斯块",
+  "block.spectrum.pure_fluix_block": "原生福鲁伊克斯水晶块",
   "block.spectrum.pure_globette_block": "原生戈伯块",
   "block.spectrum.pure_globette_nether_block": "原生下界戈伯块",
   "block.spectrum.pure_globette_end_block": "原生末地戈伯块",
   "block.spectrum.pure_netherite_scrap_block": "原生下界合金块",
   "block.spectrum.pure_echo_block": "原生回响碎片块",
-
+  
   "item.spectrum.least_black_lotus": "淡黑莲花",
   "item.spectrum.least_black_lotus.tooltip": "是不是洗掉色了?",
   "item.spectrum.blackest_lotus": "至暗莲花",
@@ -2127,7 +2126,7 @@
   "block.spectrum.incandescent_amalgam.tooltip": "§6⚠§r 高威力魔法炸药,小心轻放",
   "block.spectrum.incandescent_amalgam.tooltip_power": "爆炸威力:%d",
   "block.spectrum.incandescent_amalgam.tooltip.preview": "随着时间的推移变得更具爆炸性",
-
+  
   "item.spectrum.pipe_bomb": "管式炸弹",
   "item.spectrum.pipe_bomb.tooltip": "对生物造成高伤害 -不会破坏方块",
   "item.spectrum.pipe_bomb.tooltip2": "点燃周围环境",
@@ -2139,7 +2138,7 @@
   "block.spectrum.threat_conflux.tooltip2": "可使用 ",
   "item.spectrum.tooltip.explosives.remaining_slots": "已添加强化物: %d/%d",
   "item.spectrum.tooltip.explosives.modifiers": "使用七彩基座和其他物品融合来增加不同的属性",
-
+  
   "item.spectrum.tooltip.loom_pattern_available": "✿ 可用作旗帜图案",
   "item.spectrum.exchanging_staff": "替换法杖",
   "item.spectrum.exchanging_staff.tooltip.range": "替换半径%s格内的方块",
@@ -2305,7 +2304,7 @@
   "item.spectrum.slushslide": "巧克力奶油酒冻",
   "item.spectrum.slushslide.tooltip": "非常适合分享!",
   "item.spectrum.surstromming": "鲱鱼罐头",
-
+  
   "block.spectrum.blood_orchid": "血兰花",
   "item.spectrum.blood_orchid_petal": "血兰花瓣",
   "item.spectrum.bloodboil_syrup": "血沸糖浆",
@@ -2501,7 +2500,7 @@
   "item.spectrum.kindling_spawn_egg": "小火龙刷怪蛋",
   "item.spectrum.lizard_spawn_egg": "恶蜥刷怪蛋",
   "item.spectrum.eraser_spawn_egg": "幽影蜘蛛刷怪蛋",
-
+  
   "item.spectrum.spawner.tooltip.unknown_mob": "未知生物",
   "item.spectrum.spawner.tooltip.spawn_count": "生成数量:%d",
   "item.spectrum.spawner.tooltip.min_spawn_delay": "最小生成延迟:%d",
@@ -2712,7 +2711,7 @@
   "block.minecraft.banner.spectrum.astrologer.red": "红色占星师",
   "block.minecraft.banner.spectrum.astrologer.white": "白色占星师",
   "block.minecraft.banner.spectrum.astrologer.yellow": "黄色占星师",
-
+  
   "block.minecraft.banner.spectrum.velvet_astrologer.black": "黑色入梦占星师",
   "block.minecraft.banner.spectrum.velvet_astrologer.blue": "蓝色入梦占星师",
   "block.minecraft.banner.spectrum.velvet_astrologer.brown": "棕色入梦占星师",
@@ -2954,10 +2953,10 @@
   "trinkets.slot.chest.pin": "胸针",
   "trinkets.slot.head.crown": "王冠",
   "trinkets.slot.legs.pigment_palette": "调色板",
-
+  
   "info.spectrum.tooltip.adulterated.info": " [只有你能看到]",
   "info.spectrum.tooltip.adulterated.effect": "被 %s 污染",
-
+  
   "item.spectrum.creative_only": "创造模式专属",
   "item.spectrum.fanciful_stone_ring": "华美石戒指",
   "item.spectrum.fanciful_belt": "华美腰带",
@@ -3181,7 +3180,6 @@
   "item.spectrum.infused_beverage.tooltip.variant.crown_jewel": "皇冠之珠",
   "item.spectrum.infused_beverage.tooltip.variant.tequila": "龙舌兰酒",
   "item.spectrum.infused_beverage.tooltip.variant.sake": "清酒",
-  "item.spectrum.infused_beverage.tooltip.variant.sarsaparilla": "沙士",
   "item.spectrum.infused_beverage.tooltip.variant.ale": "淡色艾尔啤酒",
   "item.spectrum.infused_beverage.tooltip.variant.rum": "朗姆酒",
   "item.spectrum.infused_beverage.tooltip.variant.damassine": "达玛辛酒",
@@ -3247,13 +3245,13 @@
   "item.spectrum.bottle_of_ruin.tooltip": "§4⚠ 我大概会后悔这么做的",
   "item.spectrum.bottle_of_forfeiture": "畏怖之瓶",
   "item.spectrum.bottle_of_forfeiture.tooltip": "§4⚠ 我希望明白自己在做什么",
-  "item.spectrum.bottle_of_decay_away": "祛消解之瓶",
+  "item.spectrum.bottle_of_decay_away": "消蚀之瓶",
   "item.spectrum.bottle_of_decay_away.tooltip": "§2对受侵蚀的地域直接使用即可",
   "block.spectrum.fading": "褪解微生物",
   "block.spectrum.failing": "蚀解微生物",
   "block.spectrum.ruin": "坏灭微生物",
   "block.spectrum.forfeiture": "畏怖微生物",
-  "block.spectrum.decay_away": "祛消解微生物",
+  "block.spectrum.decay_away": "消蚀微生物",
   "block.spectrum.particle_spawner": "粒子生成器",
   "block.spectrum.particle_spawner.tooltip": "红石驱动,高度可配置的粒子显示",
   "block.spectrum.creative_particle_spawner": "创造粒子生成器",
@@ -3432,6 +3430,7 @@
   "tag.spectrum.onyx_crystals": "缟玛瑙晶体",
   "tag.spectrum.onyx_ores": "缟玛瑙矿石",
   "tag.spectrum.ores": "矿石",
+  "tag.spectrum.pastel_node_upgrades": "绘彩节点升级",
   "tag.spectrum.pedestals": "基座",
   "tag.spectrum.piglin_safe_equipment": "猪灵安全装备",
   "tag.spectrum.pigments": "颜料",
@@ -3449,6 +3448,7 @@
   "tag.spectrum.spawn_eggs": "刷怪蛋",
   "tag.spectrum.topaz_crystals": "托帕石晶体",
   "tag.spectrum.topaz_ores": "托帕石矿石",
+  "tag.spectrum.unlocks_bag_of_holding": "解锁末影袋",
   "tag.spectrum.water_meats": "水肉",
   "tag.spectrum.workstaffs": "工作杖",
   "tag.spectrum.basalts": "玄武岩",
@@ -3476,6 +3476,7 @@
   "tag.spectrum.pure_resource_blocks": "原生资源块",
   "tag.spectrum.shovels": "铲",
   "tag.spectrum.swords": "剑",
+  "tag.spectrum.tag_filtering_items": "标记过滤项目",
   "tag.spectrum.colored_wood": "彩色木材",
   "tag.spectrum.stripped_colored_logs": "剥皮彩色原木",
   "tag.spectrum.stripped_colored_wood": "剥皮彩色木材",
@@ -3507,7 +3508,7 @@
   "tag.spectrum.weeping_gala_logs": "乳脂垂柳原木",
 
   "tag.spectrum.requires_omni_accelerator_pvp_enabled": "需要启用全能发射器 PvP",
-
+  
   "tag.spectrum.mud": "泥浆",
   "tag.spectrum.dragonrot": "龙腐脓浆",
   "tag.spectrum.liquid_crystal": "液态水晶",
@@ -3519,16 +3520,17 @@
   "tag.spectrum.swimmable_fluid": "额外可游泳液体",
   "tag.spectrum.midnight_solution_converted": "转换后的午夜溶液",
   "tag.spectrum.effulgent_feathers": "龙翎",
+  "tag.spectrum.emissive": "自发光物品",
 
   "tag.trinkets.chest.pin": "胸针",
   "tag.trinkets.head.crown": "皇冠",
   "tag.trinkets.legs.pigment_palette": "调色板",
-
+  
   "explosion_archetype.spectrum.cosmetic": "无威胁性的爆炸",
   "explosion_archetype.spectrum.destroy_blocks": "爆炸会破坏方块",
   "explosion_archetype.spectrum.damage_entities": "爆炸会对生物造成伤害",
   "explosion_archetype.spectrum.all": "爆炸会破坏方块并对生物造成伤害",
-
+  
   "explosion_modifier.spectrum.explosion_boost": "增强爆炸半径",
   "explosion_modifier.spectrum.fire": "爆炸会引起火焰",
   "explosion_modifier.spectrum.primordial_fire": "爆炸会引起原初火焰",
@@ -3578,7 +3580,7 @@
 
   "book.spectrum.guidebook.knotted_sword.page0.text": "一把活体剑！挥舞起来也同样充满活力！\\\n我利用[夜露嫩芽](entry://general/nightdew_sprout)的能力再加上我创造的[植本质](entry://general/vegetal)成功地制作出了这把[#](bb00bb)轻型大剑[#]().我可以用这把剑来格挡攻击,甚至可以格挡攻击后加强反击。\\\n如果取消格挡时处于空中会向前突刺一段距离！",
   "book.spectrum.guidebook.knotted_sword.page1.text": "在突刺过程中被击中的话,大概会非常痛——尤其是因为这种力量可能足以让剑刃渗出一些毒素。\\\n\\\n*我的这把剑可是涂满了毒药的毒刃（舔）*",
-
+  
   "book.spectrum.guidebook.nectar_lance.page0.text": "我久久地凝视着曼西的日记,面对着无尽的痕迹,我无法用语言来描述。\\\n这便是最终的成果。一把崭新的[#](bb00bb)轻型大剑[#](),比以往更加锋利,精雕细琢,完美平衡；它的突刺比之前更远、打击更准确,格挡防御也更加坚实。\\\n\\\n突刺刺穿敌人时,会立即消耗剩余的状态效果。",
   "book.spectrum.guidebook.nectar_lance.page1.text": "持续伤害效果（DoT）会造成它原本应造成的一部分伤害；如果没有DoT效果,那么受到催眠影响的敌人将始终受到暴击。如果这两种情况都没有发生,那么将会偷取敌人身上的正面效果。\\\n\\\n*这次刀刃可没毒了哟*",
 
@@ -3634,7 +3636,7 @@
   "book.spectrum.guidebook.amaranth.page3.text": "充满奶油的美味小蛋糕.\\\n\\\n*配茶喝完美无缺.*",
   "book.spectrum.guidebook.amaranth.page3.title": "奶油司康",
   "book.spectrum.guidebook.amaranth.page4.text": "非常顶饱的肉夹馍\\\n\\\n*脂肪碳水嗯造*",
-
+  
   "book.spectrum.guidebook.another_roll.page0.text": "影响使用[#](449900)时运[#]()挖掘矿石,[#](449900)抢夺[#]()击杀怪物或其他基于运气的附魔时的掉落.\\\n每一级的重骰都会增加我获得最大数量的几率.",
 
   "book.spectrum.guidebook.anvil_crushing.page0.text": "*\"不破不立\\\n有破才有立\"  ——某人*",
@@ -3717,7 +3719,7 @@
   "book.spectrum.guidebook.bismuth.cluster_crushing.text": "完全长成后,在粉碎铋晶簇可以获得更多的铋晶.\\\n我算了一下,似乎这个过程是可以自给自足的!",
   "book.spectrum.guidebook.bismuth.crystal_crushing.text": "*嗯....如果我忽略所需的催化剂和墨水的话,至少...*",
 
-  "book.spectrum.guidebook.bismuth_trinkets.name": "华美铋戒指",
+  "book.spectrum.guidebook.bismuth_trinkets.name":"华美铋戒指",
   "book.spectrum.guidebook.bismuth_trinkets.page0.text": "铋,这种材料立刻引起了我的兴趣!它的光泽注定是成为珠宝的理想材料.凭借我如今娴熟的技艺,我竟能将其塑形,真是美不胜收.",
   "book.spectrum.guidebook.bismuth_trinkets.page1.text": "摸起来总是微微发热,甚至在黑暗中也会柔和地散发光芒.我觉得还是不要去探究为好.",
 
@@ -3807,7 +3809,7 @@
   "book.spectrum.guidebook.brewers_handbook.page14.text": "*这让我费了好大劲才研究透了这个配方.通过这个配方你可以更加有效的使用血兰花提取物.如果出现最坏的情况,它应该能给你带来优势.*",
   "book.spectrum.guidebook.brewers_handbook.page15.title": "[隐藏页 2]",
   "book.spectrum.guidebook.brewers_handbook.page15.text": " ...阿斯特拉斯\\\n希望你能收到这封信.自从我们上次交谈以来,情况变得更加糟糕了,贵族们仍然在针对你,但更令人担忧的是……他们正在准备战争,这一点现在已经很明显了.他们想要花石,并且愿意为此付出很大的代价.情况会变得很糟糕,请一定要注意安全.\\\n*...我想你了.*",
-
+  
   "book.spectrum.guidebook.poisoners_handbook.page0.title": "织梦",
   "book.spectrum.guidebook.poisoners_handbook.page0.text": "梦见深邃的光芒,梦见和平的时代……那是很久以前的事了,但我仍然记忆犹新。\\\n\\\n如此美丽的景象,闪烁的银线交织在梦幻般的海洋中。它轻柔地抚摸着我,指引着我,让我得以仰望荒芜的星空。\\\n天上的赐礼降临于我,但我不知道该如何运用,直到我遇到了一位奇异的人。",
   "book.spectrum.guidebook.poisoners_handbook.page1.title": "追忆",
@@ -3900,7 +3902,7 @@
   "book.spectrum.guidebook.color_mixing_white.name": "混合白色",
   "book.spectrum.guidebook.color_mixing_white.page0.text": "*色彩宏图*",
   "book.spectrum.guidebook.color_mixing_white.page1.text": "\\\n\\\n**太不可思议了!**\\\n\\\n在经历了如此漫长而艰辛的旅程和失败之后,看到完整的色谱让我有种苦尽甘来的感觉.我迫不及待地想看看接下来我的画笔会带来什么创意创新.",
-
+  
   "book.spectrum.guidebook.color_picker.page0.text": "将[颜料](entry://general/pigment)转化为[墨水](entry://ink/ink),这样我就可以将其装到容器中,比如[墨水瓶](entry://ink/ink_flask).\\\n\\\n不幸的是 -[由于墨水的传输方式](entry://ink/ink@transfer) -总会有一些剩余.有点烦人……虽然我也看到了其中的一些好处:容器之间的差异越大,传输速度越快!",
   "book.spectrum.guidebook.color_picker.page1.text": "*莫养难承之志,心如书蠹蚀.*",
 
@@ -4014,7 +4016,7 @@
 
   "book.spectrum.guidebook.deep_barrens.page0.text": "满是荒芜岩石的黑暗之地",
   "book.spectrum.guidebook.deep_barrens.page1.text": "乍一看,这里没值得注意的东西,仔细一看就会发现:矿石从每个角落向我招手—就在我能看到的最远处(其实看的并不远)\\\n\\\n在某些地方,巨大的矿脉在这个群系中纵横交错.一条矿脉可能供我用上好几年.",
-
+  
   "book.spectrum.guidebook.deep_dripstone_caves.page0.text": "熟悉,却又不同.",
   "book.spectrum.guidebook.deep_dripstone_caves.page1.text": "从钟乳石的大小来看,这些洞穴一定自古以来就存在了.我想知道这里的巨型钟乳石能长多大.我见过最大的钟乳石能跨越数百个方块.\\\n地面上满是[#](bb00bb)水坑[#]().",
 
@@ -4056,11 +4058,12 @@
   "book.spectrum.guidebook.draconic_twinsword.page3.text": "在投掷匕首后,我可以随时右键召回它们——将我向前抛出,或者将击中的怪物向我抛来.有很多因素影响谁向谁奔赴,也可能会双向奔赴?所以我应该多玩一会.",
   "book.spectrum.guidebook.draconic_twinsword.page4.text": "顺带一提,这把武器具有一些独特的附魔改进.\n-[惯性](entry://enchanting/enchantments/inertia)每次反弹时都会增强双剑的力量,而龙爪的抓取效果会变得更强.\n-[暴击增强](entry://enchanting/enchantments/improved_critical)提高对空中目标的命中.\n-引雷提高横扫攻击范围,并将单目标远程伤害转化为范围伤害.\n-穿透正如我所预料的那样.",
 
-  "book.spectrum.guidebook.dragonbone.page0.text": "这些巨大的遗骸真的是龙留下来的吗?\\\n老实说我并不知道,但看这个大小真的很有可能是龙的遗骨!\\\n\\\n即使是现在,这些骨头也被一种神秘光环所保护,保护它免受公然的*破坏*.我只是用手指在它们粗糙的表面上划过就感到非常兴奋.",
+  "book.spectrum.guidebook.dragonbone.page0.text": "这些巨大的遗骸真的是巨龙留下来的吗?\\\n老实说我并不知道,但看这个大小真的很有可能是龙的遗骨!\\\n\\\n即使是现在,这些骨头也被一种神秘光环所保护,保护它免受公然的*破坏*.我只是用手指在它们粗糙的表面上划过就感到非常兴奋.",
   "book.spectrum.guidebook.dragonbone.page1.text": "也许力大砖飞的用[#](449900)爆炸[#]()破坏龙骨似乎可以突破保护光环, 让我最终能够挖掘它.\\\n掉落的碎片仍然保留了一些古老的魔法.",
   "book.spectrum.guidebook.dragonbone.page2.title": "尘归尘",
   "book.spectrum.guidebook.dragonbone.page2.text": "[炼化炉](entry://ink/cinderhearth)是唯一能产生足够热量将这些骨头变成灰烬的东西",
   "book.spectrum.guidebook.dragonbone.page6.text": "大多数方块可以通过[炼化炉](entry://ink/cinderhearth)恢复到其磨制状态.",
+  "book.spectrum.guidebook.dragonbone.anvil_crushing.text": "尽管这些骨头相当坚硬,但施加足够的力量仍然能够把骨头粉碎,制成绝佳的肥料.",
 
   "book.spectrum.guidebook.dragonjags.name": "龙棘草",
   "book.spectrum.guidebook.dragonjags.page0.text": "这些野蛮的植物几乎可以在任何地方生长,甚至可以长在普通的岩石上.",
@@ -4077,7 +4080,7 @@
 
   "book.spectrum.guidebook.dreamflayer.page0.text": "论外级武器.“进攻就是最好的防御”的完美诠释.\"离梦利刃的本质是平衡力量:\"\\\n我的对手盔甲越是坚固,它造成的伤害就越大.\\\n想化身裸装近战大神?[#]()\\\n\\\n潜行使用即可将其充能,期间会快速消耗大量[#](8f2121)红色墨水[#]().区区削铁如泥破甲如风,不过如此!",
   "book.spectrum.guidebook.dreamflayer.page1.text": "需要满月之夜才能制作.\\\n\\\n*若需轻装上阵,这便是我最好的理由.*",
-
+  
   "book.spectrum.guidebook.effect_prolonging.name": "效果延长 （叠加）",
   "book.spectrum.guidebook.effect_prolonging.page0.text": "当我获得其他状态效果时,只要这个效果激活,其他效果的持续时间就会延长.",
   "book.spectrum.guidebook.effect_prolonging.page1.text": "相反,当我再次获得效果延长效果时,将会在现有等级之上叠加额外等级,增加效果的强度,而不是重置其持续时间.",
@@ -4143,7 +4146,7 @@
 
   "book.spectrum.guidebook.everpromise_ribbon.page0.text": "一条给宠物的丝带,作为永恒的承诺来照顾和关爱它们.\\\n我可以给丝带命名并戴在生物身上.如果它死了,会掉落一个[#](bb00bb)破碎的承诺[#]().\\\n\\\n如果我的宠物还不信任我,那么戴上丝带后它会立即信任我.",
   "book.spectrum.guidebook.everpromise_ribbon.page1.text": "命名后,可以使用[#](bb00bb)工作台[#]()在[#](bb00bb)丝带[#]()上涂上[颜料](entry://general/pigment)来给宠物的名字上色.",
-
+  
   "book.spectrum.guidebook.extra_salty": "*咸到齁得慌*",
 
   "book.spectrum.guidebook.exuberance.page0.text": "我的那个附魔台虽然有点用,但对经验的渴求却贪婪无度.\\\n\\\n去榨干敌人的最后一点经验是一个不错的主意.",
@@ -4222,7 +4225,7 @@
   "book.spectrum.guidebook.gemstone_powder.page1.title": "混合颜色",
   "book.spectrum.guidebook.gemstone_powder.page1.text": "新晋画师的第一课便是学会调配正确的颜色.\\\n然而,我发现宝石晶粉末的混合似乎并不像我以为的那么容易.*粉末不太容易混合*,最后只能得到一坨五颜六色的混杂物,而不是纯净的颜色.\\\n\\\n所以有什么好点子吗?",
   "book.spectrum.guidebook.gemstone_powder.page2.text": "宝石晶粉末可以压缩便于存储或装饰.",
-
+  
   "book.spectrum.guidebook.gemstone_runes.name": "雕纹宝石晶岩石方块",
   "book.spectrum.guidebook.gemstone_runes.page0.text": "可以肯定的是,只要[#](bb00bb)方解石[#]()和[#](bb00bb)玄武岩[#]()将晶洞牢牢包围住,就能抑制宝石晶的能量,然而,经过几个世纪积累的能量似乎强大到足以在晶洞中撕开一个洞.\\\n\\\n我在微型模型中重现了整个过程.",
   "book.spectrum.guidebook.gemstone_runes.page1.text": "雕纹宝石晶岩石方块的材质取决于选用的宝石晶材料.可以用[磨制方解石或磨制玄武岩](entry://decoration/block_variants@chiseled_and_notched)作为合成原料.",
@@ -4287,7 +4290,7 @@
   "book.spectrum.guidebook.gleaming_pin.page0.text": "探索的途中我总会被箭矢偷袭一次又一次,慌张之中连忙打探四周却已经捕捉不到敌人的残影.\\\n\\\n戴上闪耀胸针,它就会在我受击时向四周发出一道穿透性的魔法脉冲,以此助力我追踪附近的敌人.",
   "book.spectrum.guidebook.gleaming_pin.page1.text": "*无处遁形,别想逃!*",
   "book.spectrum.guidebook.gleaming_pin.page2.text": "狙击附魔可以加强魔法脉冲的穿透性,进一步提升探测范围.",
-
+  
   "book.spectrum.guidebook.glistering_jelly_tea.page0.text": "我了解到[玉藤](entry://general/jade_vines)[#]()具有再生特性,类似于[#](bb00bb)闪烁的西瓜[#]().巧合的是,将它们混合在一起会产生一种极其和谐、甜美的味道.\\\n\\\n饮用后获得小幅生命提升",
 
   "book.spectrum.guidebook.glistering_melons.name": "闪烁的西瓜",
@@ -4308,7 +4311,7 @@
 
   "book.spectrum.guidebook.greater_potion_pendant.page0.text": "它的工作原理与其[小老弟](entry://brewing/lesser_potion_pendant)非常相似.\\\n这个版本有三个分离的腔室,各可以填充一种药水效果.然而,每一个的腔室容积较小,仅能容纳效果强度为I级的药水.",
 
-  "book.spectrum.guidebook.use_in_potion_workshop_bottle_slot": "使用[药水工作站](entry://brewing/potion_workshop)即可灌注药水,就像灌注[#](bb00bb)玻璃瓶[#]()一样.\\\n\\\n若要清除效果,将其放入合成栏中即可.",
+  "book.spectrum.guidebook.use_in_potion_workshop_bottle_slot": "使用[药水工作站](entry://brewing/potion_workshop)即可灌注药水,就像灌注[#](bb00bb)玻璃瓶[#]()一样.\\\n\\\n若要清除效果,将其放入合成栏中即可.\\\n存储的效果每15秒重新生效一次。",
 
   "book.spectrum.guidebook.hardcore_revival.name": "极限复活",
   "book.spectrum.guidebook.hardcore_revival.page0.title": "复活极限玩家",
@@ -4325,76 +4328,76 @@
   "book.spectrum.guidebook.heartsingers_reward.page0.text": "如此纤巧的戒指,功能却实在不俗:在一点点（或很多）[#](d6658f)粉红色墨水[#]()的帮助下,由内而外地增强了我的力量,并赋予生命上限.",
   "book.spectrum.guidebook.heartsingers_reward.page1.text": "在[颜色选取器](entry://ink/color_picker)中注入[粉红色墨水](entry://ink/ink)可以增加提供的额外生命值.",
 
-  "book.spectrum.guidebook.hints.a_gemstone": "新宝石",
-  "book.spectrum.guidebook.hints.a_new_ore": "新矿石",
-  "book.spectrum.guidebook.hints.a_new_resource": "新资源",
-
-  "book.spectrum.guidebook.hints.concise_instructions": "简要说明",
-  "book.spectrum.guidebook.hints.where_to_find": "去哪里找",
-  "book.spectrum.guidebook.hints.where_to_look": "怎么找到",
-  "book.spectrum.guidebook.hints.amethyst.page0.text": "这些晶洞可以在地底下找到.",
-  "book.spectrum.guidebook.hints.azurite.page0.text": "在主世界的所有生物群系中都可以找到一种新的蓝色矿石.",
-  "book.spectrum.guidebook.hints.azurite.page1.text": "这种深蓝色矿石在只在地下深处少量生成.",
-  "book.spectrum.guidebook.hints.citrine.page0.text": "这些晶洞可以在接近地表的地层找到.最有可能暴露在峡谷或湖泊中.",
-  "book.spectrum.guidebook.hints.clover.page0.text": "在平原上闲逛会不会收获好运呢!",
-  "book.spectrum.guidebook.hints.clover.page1.text": "平原生物群系会生成三叶草.四叶草的外形和三叶草有所不同.直接采集即可,可以使用骨粉或自然法杖进行增殖.",
-  "book.spectrum.guidebook.hints.downstone_fragments.page0.text": "你挖得越深,就越会遇到看似坚不可摧的岩石.在这个岩石层中,有一个结构等待你发现.",
-  "book.spectrum.guidebook.hints.downstone_fragments.page1.text": "在渊深之域的最低层附近,你可能会遇到以前的人用来雕刻这种石头的结构.在这个结构中的一个箱子里,你会找到一种新的资源.",
-  "book.spectrum.guidebook.hints.dragonbone.page0.text": "在龙腐沼地中,你可以找到一种巨型生物的遗骸.这些方块似乎无法用传统方式开采,因为它们被魔法光环保护着.那么有没有非常规的方法可以破坏这种光环呢?也许可以使用某些巨大的能量?",
-  "book.spectrum.guidebook.hints.dragonbone.page1.text": "龙骨方块的魔法光环可以通过强大的爆炸来破坏.你需要一些比TNT更猛的爆炸物,比如白炽汞合金.强大的魔法爆炸也有同样的效果.",
-  "book.spectrum.guidebook.hints.fading.name": "实验#1",
-  "book.spectrum.guidebook.hints.fading.page0.text": "褪解微生物渺小而微弱,以放置在其旁边的有机方块为食.右键将其放置为方块；你可以使用空瓶回收.",
-  "book.spectrum.guidebook.hints.fading.page1.text": "将诸如南瓜,西瓜,树叶这样的有机方块放在褪解微生物旁边稍作等待,这些方块就会被微生物寄生吞噬,外表上产生变化.采集这些方块即可获得新资源.",
-  "book.spectrum.guidebook.hints.failing.name": "实验#2",
-  "book.spectrum.guidebook.hints.failing.page0.text": "和褪解微生物一样,它们只吃附近的东西.不过这次你需要一些相当坚硬的东西,就像“这玩意儿挖的真tm慢”这样的坚硬,嗯.",
-  "book.spectrum.guidebook.hints.failing.page1.text": "它们最喜欢的食物是黑曜石.但要小心它们的饥饿永无止境.一旦找到机会,它们会吃掉很多很多……",
-  "book.spectrum.guidebook.hints.malachite.page0.text": "这种矿石可以在渊深之域中找到.",
-  "book.spectrum.guidebook.hints.malachite.page1.text": "亮绿色的矿石,可以在渊深之域的最深处找到.由于不常暴露在空气中,所以获取资源的最佳方法是鱼骨挖矿法.",
-  "book.spectrum.guidebook.hints.mermaids_gems.page0.text": "海面上偶尔会有随波浪而起伏的某种晶石可见哦,试着找一个?",
-  "book.spectrum.guidebook.hints.mermaids_gems.page1.text": "海底原来是有一小群伪装成海草的花朵在产生这种晶石啊.等它慢慢开花或者骨粉催熟,它自然地会吐露这份宝藏.只有亲自端详才能看清它的本来面貌……",
-  "book.spectrum.guidebook.hints.midnight_chip.page0.title": "一个小提示",
-  "book.spectrum.guidebook.hints.midnight_chip.page0.text": "这种液体是在制作午夜像差的过程中产生的……它会伤害一切靠近之物.",
-  "book.spectrum.guidebook.hints.midnight_chip.page1.text": "午夜溶液的效果取决于落入其中的物品.附魔的物品会失去魔力、某些物品会完全改变、被其浸泡而死的生物会掉落某种残片.",
-  "book.spectrum.guidebook.hints.moonstone_cores.page0.text": "渊深之域的平原曾经似乎是一个文明高度发达的家园.",
-  "book.spectrum.guidebook.hints.moonstone_cores.page1.text": "一些遗留下来的城市中可能会有一个重兵把守的结构.它们的守护者似乎是机械的,由精密的魔法科技驱动.非常的不友好.",
-  "book.spectrum.guidebook.hints.name": "进度提示",
-  "book.spectrum.guidebook.hints.nightdew_sprout.page0.text": "土壤中有一种芳香的味道,但你无法准确找到味道的来源.毫无疑问,更敏锐的嗅觉会有所帮助.",
-  "book.spectrum.guidebook.hints.nightdew_sprout.page1.text": "你脚下的土壤中散布着一种罕见藤蔓的休眠枝条.虽然枝条不仅脆弱还难以捉摸位置,无法挖掘,但嗅探兽天生适合这项任务.",
-  "book.spectrum.guidebook.hints.paltaeria.page0.text": "在末地中可以找到这种矿石.",
-  "book.spectrum.guidebook.hints.paltaeria.page1.text": "这种矿石在末地主岛与外围群岛都会生成,它很少暴露在空气中.到手的矿石可不能飞了,赶紧抓住它呀!",
-  "book.spectrum.guidebook.hints.preservation_ruins.name": "三种结构",
-  "book.spectrum.guidebook.hints.preservation_ruins.page0.text": "在主世界的所有生物群系的深板岩起始层中,隐藏着三种不同类型的被保护的结构.它们似乎是由一种不可破坏的石头搭建的.",
-  "book.spectrum.guidebook.hints.preservation_ruins.page1.title": "蓝色心形结构",
-  "book.spectrum.guidebook.hints.preservation_ruins.page1.text": "入口似乎被一个强大的力场阻挡.然而,建造它的人很友好地给你留下了一些线索!力场两侧的心形标志表明你需要激活[#](2c2e8e)蔚蓝护盾[#]().",
-  "book.spectrum.guidebook.hints.preservation_ruins.page2.title": "彩色孢子花结构",
-  "book.spectrum.guidebook.hints.preservation_ruins.page2.text": "天花板上的彩色孢子花和墙壁上的粉凿方块暗示了解决方案.粉末和‘? + ?’.你需要混合宝石晶粉末.",
-  "book.spectrum.guidebook.hints.preservation_ruins.page3.title": "基岩封印",
-  "book.spectrum.guidebook.hints.preservation_ruins.page3.text": "有没有什么办法破解基岩?一旦你进入内部,最好查看书中相关的页面,了解你在那里看到的方块.另一个提示:随身带一些染料没什么坏处.",
-  "book.spectrum.guidebook.hints.quitoxic_reeds.page0.text": "是时候在地表冒险旅行一次了.进发——前往沼泽地!",
-  "book.spectrum.guidebook.hints.quitoxic_reeds.page1.text": "在各种温暖潮湿的地方,都可以看到长相奇怪的植物生长在黏土或泥浆上的浅水中。为了生长,它们会消耗周围的黏土/泥浆,将其转化成泥土。",
-  "book.spectrum.guidebook.hints.radiating_ender.page0.text": "末影人手里拿的每个方块乍一看并非就是看起来的那样.",
-  "book.spectrum.guidebook.hints.radiating_ender.page1.text": "主世界的末影人偶尔会手持某种末地小遗物的方块.如果某个末影人手持的是圆石,那兴许并不是圆石,宰一个看看.这种末影人在末地也会生成,但更稀有.",
-  "book.spectrum.guidebook.hints.resonance_shards.page0.text": "在液态水晶湖之间,经常可以找到由方块组成的晶体结构,这些方块在互动时会呈现出有趣的特性.",
-  "book.spectrum.guidebook.hints.resonance_shards.page1.text": "水晶花园生物群系中的晶体形成的一部分,嗡鸣石在受到干扰时会开始振动,如果附近有其他嗡鸣石也会连带着一起振动.嗡鸣石越多,回声就越强.",
-  "book.spectrum.guidebook.hints.resonant_lily.page0.text": "在[水晶花园](entry://dimension/crystal_gardens)中,生长在[液态水晶](entry://general/liquid_crystal)附近的花朵具有奇特的特性.它们是否沾染了灵气而改变了呢?",
-  "book.spectrum.guidebook.hints.resonant_lily.page1.text": "我没时间来培育新植物.但如果我把手里现有的植物扔进液体中来加速这个过程呢?",
-  "book.spectrum.guidebook.hints.ruin.name": "实验#3",
-  "book.spectrum.guidebook.hints.ruin.page0.text": "坏灭微生物,顾名思义,能够消化无论多么强硬的材料,甚至是你没法破坏的材料……",
-  "book.spectrum.guidebook.hints.ruin.page1.text": "还能有比基岩更坚硬的材料吗?记住留好后手,别让场面失控.",
-  "book.spectrum.guidebook.hints.shimmerstone.page0.text": "主世界海平面以上能找到这种新矿石.",
-  "book.spectrum.guidebook.hints.shimmerstone.page1.text": "这种矿石在主世界中层与上层大量生成,常常在山峦表面暴露.",
-  "book.spectrum.guidebook.hints.small_clue": "一点小线索",
-  "book.spectrum.guidebook.hints.stargazing.page0.title": "要找什么",
-  "book.spectrum.guidebook.hints.stargazing.page0.text": "流星只在夜晚降临.拥有能够增进夜间视觉的东西会有所帮助.流星的尾迹粒子效果也相当显眼.",
-  "book.spectrum.guidebook.hints.stargazing.page1.text": "用夜视和望远镜是看到流星的最佳机会.如果你看到一个流星直冲地面,你可以顺着轨迹前往落点.流星的粒子效果如同光束一般,非常显眼.",
-  "book.spectrum.guidebook.hints.storm_stones.page0.text": "雷暴是大自然的力量,其中展现着不可抗拒的巨大能量.",
-  "book.spectrum.guidebook.hints.storm_stones.page1.text": "闪电击中的地方似乎有奇怪的晶石碎片产生.应该有某种办法集中闪电的落点,这样捡起来就方便多了.",
-  "book.spectrum.guidebook.hints.stratine.page0.text": "在下界中有一种红色矿石.",
-  "book.spectrum.guidebook.hints.stratine.page1.text": "下界所有生物群系的低层都会生成这种矿石,位于熔岩海以下.挖掘还有可能掉落稀有材料.",
-  "book.spectrum.guidebook.hints.topaz.page0.text": "这些晶洞可以在高处找到,一般位于山峰之中.",
+  "book.spectrum.guidebook.idea": "一种想法",
+  "book.spectrum.guidebook.ideas.a_gemstone": "关于新的宝石",
+  "book.spectrum.guidebook.ideas.a_new_ore": "关于新的矿石",
+  "book.spectrum.guidebook.ideas.a_new_resource": "关于新的资源",
+  
+  "book.spectrum.guidebook.ideas.concise_instructions": "简要说明",
+  "book.spectrum.guidebook.ideas.where_to_find": "去哪里找",
+  "book.spectrum.guidebook.ideas.where_to_look": "怎么找到",
+  "book.spectrum.guidebook.ideas.amethyst.page0.text": "这些晶洞通常可以在地底下找到.",
+  "book.spectrum.guidebook.ideas.azurite.page0.text": "在接近基岩的某些区域,我注意到了一种引人注目的蓝色光环。我想知道是什么引起了这种现象。",
+  "book.spectrum.guidebook.ideas.azurite.page1.text": "这些光环伴随着轻柔的嗡嗡声,似乎是由周围巨大且富含蓝色矿石的矿脉引起的！它们以非常少见成矿簇形式埋藏在岩石中。",
+  "book.spectrum.guidebook.ideas.citrine.page0.text": "我环游世界的时候,看到一些晶洞从地面探出,接近地表,最常见的是在海岸或峡谷附近。",
+  "book.spectrum.guidebook.ideas.clover.page0.text": "我曾在平原上见过一些普通的植物！以前我的运气不太好,不知道这次如何?",
+  "book.spectrum.guidebook.ideas.clover.page1.text": "我看到在平原生物群系的一小块区域里生长着三叶草,这些植物通常是三片叶子,但偶尔也会有四叶的！看来我还能用骨粉或自然法杖来繁殖它们。",
+  "book.spectrum.guidebook.ideas.downstone_fragments.page0.text": "我越深入渊深之域,就越常遇到那些似乎坚不可摧的岩石。难道这里真的只有这些,还是有人曾在这里建造过什么?",
+  "book.spectrum.guidebook.ideas.downstone_fragments.page1.text": "绝对不止这些！看起来先前的居民曾建造了这座庞大的结构来雕刻这些岩石。我敢肯定他们还剩下了一些。我觉得他们已经不再需要这些了。",
+  "book.spectrum.guidebook.ideas.dragonbone.page0.text": "当我偶然来到龙腐沼泽时,发现了一只巨型生物的遗骸。这些骨块似乎无法用传统的方式开采,因为它们被一种会自行重建的魔法光环保护着。有没有什么非常规的方式可以破坏这种光环,比如使用极大的力量?",
+  "book.spectrum.guidebook.ideas.dragonbone.page1.text": "当然,如果我事先一举攻破这个光环,让它再也无法重建,那么开采这些骨块肯定就轻而易举了！无论是一次强大的魔法性爆炸,还是威力比TNT更强的物理爆炸,比如白炽汞合金,应该能起到作用。",
+  "book.spectrum.guidebook.ideas.fading.name": "实验#1",
+  "book.spectrum.guidebook.ideas.fading.page0.text": "褪解微生物渺小微弱却又非常活跃,何不试试在旁边放置有机方块来喂养它呢?\\\n我能把瓶子里的生物以方块的形式放置下来,自然也可以把它们重新装回瓶中。",
+  "book.spectrum.guidebook.ideas.fading.page1.text": "它们也可以和我享受同样的食物！像南瓜或西瓜这样的有机方块怎么样?甚至可以是树叶！（并不是说我很喜欢这些）。我应该把其中一种放在褪解微生物旁边,然后静静等一会儿。\\\n我很想知道它们会产出什么样的代谢物。",
+  "book.spectrum.guidebook.ideas.failing.name": "实验#2",
+  "book.spectrum.guidebook.ideas.failing.page0.text": "和褪解微生物一样,它们也只吃附近的食物.不过这次要求更高,要那种“我很烦挖这种东西”的程度。",
+  "book.spectrum.guidebook.ideas.failing.page1.text": "它们似乎有永不满足的饥饿感——只要有机会,它们就会大吃特吃...但看起来它们最喜欢的食物是黑曜石！品味有点奇怪,但还行。",
+  "book.spectrum.guidebook.ideas.malachite.page0.text": "在渊深之域探索的时候,我看到石头中嵌有一些小矿物。那时我并没有多想,但现在....",
+  "book.spectrum.guidebook.ideas.malachite.page1.text": "这种亮绿色的矿石可以在渊深之域的最深处找到.由于不常暴露在空气中,因此获取资源的最佳方法是鱼骨挖矿法.",
+  "book.spectrum.guidebook.ideas.mermaids_gems.page0.text": "在一本从附近村庄“借”来的书中,我看到这样一幅图,描绘了闪闪发光的宝石漂浮在海面上,被海浪推动着。\\\n这只是童话的一部分,还是其中蕴含一丝真相呢?",
+  "book.spectrum.guidebook.ideas.mermaids_gems.page1.text": "海底原来是有一小群伪装成海草的花朵在产生这种宝石啊.等它慢慢开花或者骨粉催熟,它自然地会吐露这份宝藏.只有亲自端详才能看清它的本来面貌……",
+  "book.spectrum.guidebook.ideas.midnight_chip.page0.title": "一个想法",
+  "book.spectrum.guidebook.ideas.midnight_chip.page0.text": "这种液体是在制作午夜像差的过程中产生的……它会伤害一切靠近之物.",
+  "book.spectrum.guidebook.ideas.midnight_chip.page1.text": "午夜溶液的效果取决于落入其中的物品.附魔的物品会失去魔力、某些物品会完全改变、被其浸泡而死的生物会掉落某种残片.",
+  "book.spectrum.guidebook.ideas.moonstone_cores.page0.text": "渊深之域的平原曾经似乎是一个文明高度发达的家园.",
+  "book.spectrum.guidebook.ideas.moonstone_cores.page1.text": "一些遗留下来的城市中可能会有一个重兵把守的结构.它们的守护者似乎是机械的,由精密的魔法科技驱动.非常的不友好.",
+  "book.spectrum.guidebook.ideas.nightdew_sprout.page0.text": "土壤中有一种芳香的味道,但我无法准确找到味道的来源....毫无疑问,更敏锐的嗅觉会有所帮助.",
+  "book.spectrum.guidebook.ideas.nightdew_sprout.page1.text": "一种特殊藤蔓的休眠的枝条零散地分布在我脚下的土壤中.这些枝条过于娇嫩还难以捉摸位置,我没法挖出来,但嗅探兽天生就适合这项任务.",
+  "book.spectrum.guidebook.ideas.paltaeria.page0.text": "即使一开始看起来是这样；但终点并不仅仅只是末地石。",
+  "book.spectrum.guidebook.ideas.paltaeria.page1.text": "我在末地主岛和末地外岛区域都看到了这种矿石,只有很少部分暴露在空气中,因此挖掘其中一种岛屿可能是我最好的选择。挖掘还有可能掉落稀有材料。",
+  "book.spectrum.guidebook.ideas.preservation_ruins.name": "三种结构",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page0.text": "一位村民告诉我,他们在主世界的深板岩上层附近发现了一种由牢不可破的石头建成的不同类型的建筑物。",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page1.title": "蓝色心形结构",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page1.text": "入口似乎被一个强大的力场阻挡.然而,建造它的人很友好地给我留下了一些线索!力场两侧的心形标志表明我需要激活[#](2c2e8e)蔚蓝护盾[#]().",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page2.title": "彩色孢子花结构",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page2.text": "天花板上的彩色孢子花和其后方墙壁上的雕刻暗示了解决方案。粉末形的雕刻暗示了$(l:general/color_mixing)宝石粉末的混合$(),我之前就猜到了。",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page3.title": "基岩封印",
+  "book.spectrum.guidebook.ideas.preservation_ruins.page3.text": "有没有什么办法破解基岩?\\\n一旦进入内部,最好查阅书中的相关页面,了解我在那里的发现。",
+  "book.spectrum.guidebook.ideas.quitoxic_reeds.page0.text": "是时候去地表探险了。像沼泽或红树林沼泽这样湿润温暖的地方似乎注定会有新的发现！",
+  "book.spectrum.guidebook.ideas.quitoxic_reeds.page1.text": "我在各种温暖潮湿的地方注意到了长相奇怪的植物生长在黏土或泥土上的浅水中。为了生长,它们会消耗周围的黏土/泥土,将其转化成泥土。",
+  "book.spectrum.guidebook.ideas.radiating_ender.page0.text": "最近我看到一个末影人抱着一个方块。不是普通的方块。感觉有些....不对劲。",
+  "book.spectrum.guidebook.ideas.radiating_ender.page1.text": "一些末影人似乎搬着的方块很可能是末地本身的小遗物。起初我以为那是圆石,看起来很像一块放置下的圆石,宰掉一个手里拿着这种方块的末影人,我就能得到这种方块。末影人拿着这些方块的情况在末地也有,尽管更稀有。",
+  "book.spectrum.guidebook.ideas.resonance_shards.page0.text": "在[液态水晶](entry://general/liquid_crystal)湖之间,我常常可以找到由方块组成的晶体结构,这些方块在互动时会呈现出有趣的特性。",
+  "book.spectrum.guidebook.ideas.resonance_shards.page1.text": "嗡鸣石是[水晶花园](entry://dimension/crystal_gardens)中水晶构造的一部分,当受到干扰时会开始震动,导致附近的其他嗡鸣石也会随之震动。嗡鸣石越多,回响似乎就越强。",
+  "book.spectrum.guidebook.ideas.resonant_lily.page0.text": "在[水晶花园](entry://dimension/crystal_gardens)中,生长在[液态水晶](entry://general/liquid_crystal)附近的花朵具有奇特的特性.它们是否沾染了灵气而改变了呢?",
+  "book.spectrum.guidebook.ideas.resonant_lily.page1.text": "我没时间来培育新植物.但如果我把手里现有的花扔进液体中来加速这个过程,会怎么样?",
+  "book.spectrum.guidebook.ideas.ruin.name": "实验#3",
+  "book.spectrum.guidebook.ideas.ruin.page0.text": "坏灭微生物,顾名思义,能够消化无论多么强硬的材料,甚至是我没法破坏的材料...",
+  "book.spectrum.guidebook.ideas.ruin.page1.text": "还能有比基岩更坚硬的材料吗?最好在手头上备一些消蚀之物,以防场面失控。",
+  "book.spectrum.guidebook.ideas.shimmerstone.page0.text": "随着我对世界的了解不断加深,我感知异常的能力也不断增强。我确信我在地表以上的地方看到了一种未知的黄色矿石。",
+  "book.spectrum.guidebook.ideas.shimmerstone.page1.text": "这种矿石在主世界中层与上层大量生成,常常在山峦表面暴露。",
+  "book.spectrum.guidebook.ideas.small_clue": "一次观察",
+  "book.spectrum.guidebook.ideas.stargazing.page0.title": "要找什么",
+  "book.spectrum.guidebook.ideas.stargazing.page0.text": "晚上散步时,我在离我不远的地方看到了一颗流星！那景象太美了。若能有一个让我在黑暗中看清流星的工具,肯定就能发现下一颗流星。流星会产生明显的粒子轨迹。",
+  "book.spectrum.guidebook.ideas.stargazing.page1.text": "用夜视和望远镜是看到流星的最佳机会.如果我看到一颗流星直冲地面,可以尝试顺着轨迹前往落点.落地的流星会射出类似光束形状的粒子,非常显眼。",
+  "book.spectrum.guidebook.ideas.storm_stones.page0.text": "雷暴是大自然的力量,其中展现着不可抗拒的巨大能量.",
+  "book.spectrum.guidebook.ideas.storm_stones.page1.text": "在闪电击中的地方似乎发生了一些奇异的现象。事实上,有一种简单的方法可以集中闪电的落点,这样就能更高效地复现这种现象。",
+  "book.spectrum.guidebook.ideas.stratine.page0.text": "我注意到有一些地狱岩比其他的更红。",
+  "book.spectrum.guidebook.ideas.stratine.page1.text": "看上去像是一种矿石,在下界所有生物群系的低层都会生成,位于熔岩海以下.挖掘还有可能掉落稀有材料。",
+  "book.spectrum.guidebook.ideas.topaz.page0.text": "我从来不知道原来在高处,比如在山顶和高耸入云的山峰上也能找到晶洞。",
 
   "book.spectrum.guidebook.hoverblock.page0.text": "由会往下掉的[绯红悬浮方块](entry://general/stratine)和会往上飞的[苍绿悬浮方块](entry://general/paltaeria)的碰撞而产生,这个方块就这么……漂浮在空中振动.",
-  "book.spectrum.guidebook.hoverblock.page1.text": "……好吧,虽然其他大多数方块也能忽略物理定律一样的在空中放置,但这个方块可不一样: [#](449900)它保留了我赋予它的任何动量[#](),比如使用[#](bb00bb)活塞[#]()推动时,即使我站在上面也能往上飞或往下坠落.\\\n\\\n潜行+右键可以再次收回.",
+  "book.spectrum.guidebook.hoverblock.page1.text": "...好吧,虽然其他大多数方块也能忽略物理定律一样的在空中放置,但这个方块可不一样: [#](449900)它保留了我赋予它的任何动量[#](),比如使用[#](bb00bb)活塞[#]()推动时,即使我站在上面也能往上飞或往下坠落.\\\n\\\n潜行+右键可以再次收回.",
 
   "book.spectrum.guidebook.howling_spires.page0.text": "银色的雾气将大地隐藏在一片白色的面纱中； 这些被风雕刻的洞穴冰冷刺骨,但这里却没有一丝雪迹.",
   "book.spectrum.guidebook.howling_spires.ashen_blackslag.text": "起初看起来像是雪,但其实目光所及之处都被一种白色的灰烬覆盖.狂风呼啸,带来一场如同温柔且永恒的雪花般的灰烬雨.\\\n\\\n我想知道这些灰烬来自哪里.",
@@ -4521,28 +4524,28 @@
   "book.spectrum.guidebook.the_art_of_brewing.drinking_age.text": "[发酵桶](entry://cuisine/titration_barrel)可以酿造酒精饮料.如果您已达到所在国家/地区的法定饮酒年龄,并且想要了解提及酒精的配方,您可以按下方的按钮来解锁这些配方.\\\n如果没有,不用担心——您不会错过任何重要的东西.",
   "book.spectrum.guidebook.the_art_of_brewing.drinking_age.button_text": "我确认",
   "book.spectrum.guidebook.the_art_of_brewing.drinking_age.button_text_confirmed": "已确认 ✔",
-
+  
   "book.spectrum.guidebook.infused_beverages.name": "瓶装饮品",
   "book.spectrum.guidebook.infused_beverages.page0.text": "酿造是一门艺术!\\\n其中变化之多,尝试之广,恐怕我一生都无法试遍所有可能的组合.\\\n它们不仅在味道上各有千秋,效果上也各不相同.",
   "book.spectrum.guidebook.infused_beverages.page3.text": "麦芽啤酒既能填饱肚子,尝起来又甜又香.多好的组合啊.",
-  "book.spectrum.guidebook.infused_beverages.page5.text": "带有肉桂味的苹果汁",
-  "book.spectrum.guidebook.infused_beverages.page6.text": "让我昏昏欲睡,被子一盖直接睡上一整天。",
-  "book.spectrum.guidebook.infused_beverages.page7.text": "除了给予急迫之外,它还可以根据发酵的时间提供一些饱和度.",
+  "book.spectrum.guidebook.infused_beverages.page4.text": "带有肉桂味的苹果汁",
+  "book.spectrum.guidebook.infused_beverages.page5.text": "让我昏昏欲睡,被子一盖直接睡上一整天。",
+  "book.spectrum.guidebook.infused_beverages.page6.text": "除了给予急迫之外,它还可以根据发酵的时间提供一些饱和度.",
+  "book.spectrum.guidebook.infused_beverages.page7.text": "只是...不要酿造太久,否则它们会变质,味道会变得糟糕.",
   "book.spectrum.guidebook.infused_beverages.page8.text": "只是...不要酿造太久,否则它们会变质,味道会变得糟糕.",
-  "book.spectrum.guidebook.infused_beverages.page9.text": "只是...不要酿造太久,否则它们会变质,味道会变得糟糕.",
-  "book.spectrum.guidebook.infused_beverages.page10.text": "由[苋菜](entry://cuisine/amaranth)制成,给予[#](449900)幸运[#]()和[#](449900)急迫[#]()效果.",
-  "book.spectrum.guidebook.infused_beverages.page11.text": "强烈的味道,通过彩色木材的影响变得更加强烈,给予[#](449900)伤害吸收[#]()和[#](449900)抗性提升[#]()效果.",
-  "book.spectrum.guidebook.infused_beverages.page12.text": "蜂蜜中的大量糖分非常适合用于发酵.发酵后是一种味道强烈但仍然很甜美的饮品.",
-  "book.spectrum.guidebook.infused_beverages.page13.text": "发酵的苹果,通常很甜还带点气泡,略带酸味——如果我不尽快品尝的话.",
-  "book.spectrum.guidebook.infused_beverages.page14.text": "与普通苹果酒相比要强得多.不会随时间推移变质,味道极佳.",
-  "book.spectrum.guidebook.infused_beverages.page15.text": "比苹果酒更有果味.会发光的品种似乎发酵得更快一些,但也......嗯...让我亮起来了.",
-  "book.spectrum.guidebook.infused_beverages.page16.text": "浆果也可以用来制作利口酒.质地更粘稠,味道甜美又强烈,但发酵时间更长.",
-  "book.spectrum.guidebook.infused_beverages.page17.text": "*液体状的幸运*",
-  "book.spectrum.guidebook.infused_beverages.page20.text": "随着时间的推移只会变得越来越烈.只有一个问题:今天我想要它有多致命?",
-  "book.spectrum.guidebook.infused_beverages.page21.text": "随着时间的推移只会变得越来越烈.味道就像在酒吧打架.",
-  "book.spectrum.guidebook.infused_beverages.page22.text": "在口中感觉非常轻盈.柔和、甜美的灼烧感,让我暂时忘记了烦恼.\\\n\\\n*味道像在月球上漫步.*",
-  "book.spectrum.guidebook.infused_beverages.page23.text": "比看起来更辣.",
-  "book.spectrum.guidebook.infused_beverages.page24.text": "融合了渊深之域味道的奇妙组合,最好趁热喝!",
+  "book.spectrum.guidebook.infused_beverages.page9.text": "由[苋菜](entry://cuisine/amaranth)制成,给予[#](449900)幸运[#]()和[#](449900)急迫[#]()效果.",
+  "book.spectrum.guidebook.infused_beverages.page10.text": "强烈的味道,通过彩色木材的影响变得更加强烈,给予[#](449900)伤害吸收[#]()和[#](449900)抗性提升[#]()效果.",
+  "book.spectrum.guidebook.infused_beverages.page11.text": "蜂蜜中的大量糖分非常适合用于发酵.发酵后是一种味道强烈但仍然很甜美的饮品.",
+  "book.spectrum.guidebook.infused_beverages.page12.text": "发酵的苹果,通常很甜还带点气泡,略带酸味——如果我不尽快品尝的话.",
+  "book.spectrum.guidebook.infused_beverages.page13.text": "与普通苹果酒相比要强得多.不会随时间推移变质,味道极佳.",
+  "book.spectrum.guidebook.infused_beverages.page14.text": "比苹果酒更有果味.会发光的品种似乎发酵得更快一些,但也......嗯...让我亮起来了.",
+  "book.spectrum.guidebook.infused_beverages.page15.text": "浆果也可以用来制作利口酒.质地更粘稠,味道甜美又强烈,但发酵时间更长.",
+  "book.spectrum.guidebook.infused_beverages.page16.text": "*液体状的幸运*",
+  "book.spectrum.guidebook.infused_beverages.page19.text": "随着时间的推移只会变得越来越烈.只有一个问题:今天我想要它有多致命?",
+  "book.spectrum.guidebook.infused_beverages.page20.text": "随着时间的推移只会变得越来越烈.味道就像在酒吧打架.",
+  "book.spectrum.guidebook.infused_beverages.page21.text": "在口中感觉非常轻盈.柔和、甜美的灼烧感,让我暂时忘记了烦恼.\\\n\\\n*味道像在月球上漫步.*",
+  "book.spectrum.guidebook.infused_beverages.page22.text": "比看起来更辣.",
+  "book.spectrum.guidebook.infused_beverages.page23.text": "融合了渊深之域味道的奇妙组合,最好趁热喝!",
   "book.spectrum.guidebook.infused_beverages.poisonous_vodka.title": "...和一个特殊的变种",
 
   "book.spectrum.guidebook.pure_alcohol.page0.text": "我的记性越来越差了,不知道在哪弄到的这瓶酒.但是这瓶酒显然比我想象的要*更烈一些*……",
@@ -4585,7 +4588,7 @@
 
   "book.spectrum.guidebook.item_detector.page0.text": "物品探测器用于计算10格半径内地面上的物品数量.\\\n\\\n[#](449900)红石信号[#]()的强度取决于周围物品的数量.",
   "book.spectrum.guidebook.item_detector.page1.text": "64个物品会产生最大强度的信号.",
-
+  
   "book.spectrum.guidebook.item_roundel.page0.text": "我立刻喜欢上了那些古老建筑中的旋转圆盘,所以我复制了它们的设计.绝对是展示或存储物品的好方法.\\\n\\\n*希望这些专利已经过期了.*",
   "book.spectrum.guidebook.item_roundel.page1.text": "我拼凑出来的玄武岩和方解石版本可以容纳最多6组物品.",
 
@@ -4794,7 +4797,7 @@
 
   "book.spectrum.guidebook.moving_budding_blocks": "移动母岩",
 
-  "book.spectrum.guidebook.mud.page0.text": "泥浆.泥,浆.本身没什么特别好玩的地方.\\\n有用的是泥浆与其他液体的碰撞,例如[#](bb00bb)水[#]()或者[#](bb00bb)熔岩[#]().与泥浆碰撞会分别产出[#](bb00bb)泥土[#]()或者[#](bb00bb)砂土[#]().",
+  "book.spectrum.guidebook.mud.page0.text": "泥浆.泥,浆.本身没什么特别好玩的地方.\\\n有用的是泥浆与其他液体的碰撞,例如[#](bb00bb)水[#]()或者[#](bb00bb)熔岩[#]().这将会分别产出[](item://minecraft:dirt)或[固体泥浆](item://minecraft:mud).",
   "book.spectrum.guidebook.mud.page1.text": "*泥浆浴虽然听上去很舒服但还是不要尝试的比较好哦!*",
   "book.spectrum.guidebook.mud.page2.text": "一些与泥浆接触的物品会被鞣制.\\\n例如,[#](bb00bb)腐肉[#]()会变成一小块[#](bb00bb)皮革[#]().",
   "book.spectrum.guidebook.mud.page3.text": "其他物品则会固化.\\\n为什么小麦会变成线呢?怎么会事呢? 莫非是米线?（笑）",
@@ -5157,7 +5160,7 @@
   "book.spectrum.guidebook.radiance_staff.page1.text": "右键单击放置的光源可以调整亮度.\\\n甚至可以在水下放置光源.",
 
   "book.spectrum.guidebook.radiant_glass.page0.text": "有没有什么更有效的办法来照明我的住宅和建筑物呢?\\\n\\\n还有什么比使用[火花石](entry://general/shimmerstone)的发光特性更好的呢?与[火花石](entry://general/shimmerstone)结合的玻璃可以由内而外散发光芒.",
-
+  
   "book.spectrum.guidebook.radiating_ender.page0.text": "那些讨厌的末影人!\\\n\\\n他们总是在晚上出来,在我家门前从地上偷走方块.我感觉这个区域在一个月内就会变成一个大坑.",
   "book.spectrum.guidebook.radiating_ender.page1.text": "末影人来到这个世界是为了放置这些方块. *但这是什么东西* ? 而且他们 *为什么* 要把它留在这里?\\\n\\\n现在我手里就拿着一个……而且这东西到处都是!我以前怎么没注意到呢?但无论如何,我觉得我可以以某种方式利用这种有趣的材料.",
 
@@ -5214,7 +5217,7 @@
 
   "book.spectrum.guidebook.ring_of_aerial_grace.page0.text": "我深知自己常常心在云端.\\\n\\\n不过这次,*真的是字面意义上的云端*!",
   "book.spectrum.guidebook.ring_of_aerial_grace.page1.text": "*今日心情轻盈如羽*",
-
+  
   "book.spectrum.guidebook.ring_of_denser_steps.page0.text": "你可曾想过,当我将墨水注入小饰品时,那些墨水都去了哪里?是否像美酒渗入葡萄般,渗入了材料中?\\\n我本想打造一个天平,但未能如愿.不过,我不会让我的发现白费.\\\n\\\n请看: *这枚戒指*!",
   "book.spectrum.guidebook.ring_of_denser_steps.page1.text": "*可能是我迄今为止最愚钝的想法*",
 
@@ -5364,7 +5367,7 @@
 
   "book.spectrum.guidebook.storage_node.name": "存储节点",
   "book.spectrum.guidebook.storage_node.page0.text": "存储节点与[发送节点](entry://pastel_network/sender_node)（将物品推送到该节点）和[收集节点](entry://pastel_network/gather_node)（将物品从中取出来）结合使用时,可发挥最大作用.\\\n\\\n其[#](449900)过滤器[#]()可以指定存储节点能够接收和提供哪些物品.否则,它将作为所有类型物品的通用存储.",
-
+  
   "book.spectrum.guidebook.storm_stones.name": "风暴之石",
   "book.spectrum.guidebook.storm_stones.page0.title": "雷暴",
   "book.spectrum.guidebook.storm_stones.page0.text": "所谓“怒如雷霆”,便是对大自然的力量最有力的说明.\\\n我在使用[融合圣坛](entry://general/fusion_shrine)[制作一些资源](entry://general/onyx_shards)的时候,偶尔可能会产生雷暴.\\\n\\\n毫无疑问,我会找一些与它们相关的东西,可以在我的旅程中帮助我.",
@@ -5541,21 +5544,26 @@
   "book.spectrum.guidebook.pastel_upgrades.redstone.pure_glowstone.text": "让这些东西发光的想法确实很不错,但如果我想用它们当床头灯的话,就得需要它们能够关闭.原生荧石可以实现这一点,接上红石供电就可以关闭了.\\\n\\\n*相对比较昂贵*",
 
   "book.spectrum.guidebook.mod_integration.ae2.name": "AE2",
-  "book.spectrum.guidebook.mod_integration.ae2.page0.text": "\"我曾听说,\" 任何足够先进的技术都与魔法无异.\\\n我不清楚这个系统是怎么在这么小的空间里存储这么多方块的,但是一想到我不也经常随身带个数百平方米的泥土,我也就释然了.",
+  "book.spectrum.guidebook.mod_integration.ae2.page0.text": "\"我曾听说\", 任何足够先进的技术都与魔法无异.\\\n我不清楚这个系统是怎么在这么小的空间里存储这么多方块的,但是一想到我不也经常随身带个数百平方米的泥土,我也就释然了.",
   "book.spectrum.guidebook.mod_integration.ae2.page1.title": "加速生长",
   "book.spectrum.guidebook.mod_integration.ae2.page1.text": "看起来[#](bb00bb)催生器[#]()也能加速各种宝石晶芽的生长!",
   "book.spectrum.guidebook.mod_integration.ae2.page2.title": "自动收集石英",
   "book.spectrum.guidebook.mod_integration.ae2.page2.text": "[水晶收集器](entry://ink/crystal_apothecary)也能自动收集[#](bb00bb)赛特斯石英[#]().",
   "book.spectrum.guidebook.mod_integration.ae2.page3.title": "采集石英母岩",
   "book.spectrum.guidebook.mod_integration.ae2.page3.text": "附有[共振](entry://enchanting/enchantments/resonance)附魔的工具能够完整的采掘[#](bb00bb)石英母岩[#](),甚至能保持*完美*状态.",
-  "book.spectrum.guidebook.mod_integration.ae2.page4.text": "许多AE2的物品可以用[铁砧粉碎成粉末](entry://general/item_crushing):比如[#](bb00bb)赛特斯石英[#]()、[#](bb00bb)福鲁伊克斯[#]()、[#](bb00bb)陨石[#]()和[#](bb00bb)末影珍珠[#]().",
+  "book.spectrum.guidebook.mod_integration.ae2.page4.text": "许多AE2的物品可以用[铁砧粉碎成粉末](entry://general/item_crushing):比如[#](bb00bb)赛特斯石英[#]()、[#](bb00bb)福鲁伊克斯水晶[#]()、[#](bb00bb)陨石[#]()和[#](bb00bb)末影珍珠[#]().",
   "book.spectrum.guidebook.mod_integration.ae2.page5.text": "急需[#](bb00bb)充能赛特斯石英[#]()?[风暴之石](entry://general/storm_stones)会在瞬间为其完成充能.",
-  "book.spectrum.guidebook.mod_integration.ae2.page6.text": "...如果我不耐烦,还可以用它来制造[#](bb00bb)福鲁伊克斯水晶[#]().",
-  "book.spectrum.guidebook.mod_integration.ae2.page7.title": "培育赛特斯石英",
-  "book.spectrum.guidebook.mod_integration.ae2.page7.text": "作为晶体结构,[#](bb00bb)赛特斯石英[#]()和[#](bb00bb)福鲁伊克斯水晶[#]()可以在[结晶室](entry://ink/crystallarieum)中生长.",
+  "book.spectrum.guidebook.mod_integration.ae2.page6.text": "...如果等的不耐烦,还可以用它来制造[#](bb00bb)福鲁伊克斯水晶[#]().",
 
   "book.spectrum.guidebook.mod_integration.ae2.silicon_from_rock_crystal.title": "高效硅",
-  "book.spectrum.guidebook.mod_integration.ae2.silicon_from_rock_crystal.text": "石英晶体是硅的极好来源",
+  "book.spectrum.guidebook.mod_integration.ae2.silicon_from_rock_crystal.text": "看起来石英晶体是硅的重要来源!",
+
+  "book.spectrum.guidebook.mod_integration.ae2.pure_resources.title": "原生赛特斯石英和福鲁伊克斯水晶",
+  "book.spectrum.guidebook.mod_integration.ae2.pure_resources.text": "作为晶体结构,[#](bb00bb)塞特斯石英[#]()和[#](bb00bb)福鲁伊克斯水晶[#]()可以在[晶洞](entry://ink/crystallarieum)中生长。",
+  "book.spectrum.guidebook.mod_integration.ae2.pure_certus_quartz_growing.title": "种植原生赛特斯石英",
+  "book.spectrum.guidebook.mod_integration.ae2.pure_certus_quartz_growing.text": "",
+  "book.spectrum.guidebook.mod_integration.ae2.pure_fluix_crystal_growing.title": "种植原生福鲁伊克斯水晶",
+  "book.spectrum.guidebook.mod_integration.ae2.pure_fluix_crystal_growing.text": "",
 
   "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller": "锻炉控制器",
   "book.spectrum.guidebook.mod_integration.alloy_forgery.name": "合金锻造",
@@ -5614,7 +5622,7 @@
   "book.spectrum.guidebook.mod_integration.chalk.page2.title": "坚不可摧的荧光粉笔",
   "book.spectrum.guidebook.mod_integration.chalk.page2.text": "当然,[#](bb00bb)荧光粉笔[#]()也可以.",
   "book.spectrum.guidebook.mod_integration.chalk.page3.title": "彩色粉笔附加",
-  "book.spectrum.guidebook.mod_integration.chalk.page3.text": "哦,对了,*彩色*粉笔!当然不会少了你.",
+  "book.spectrum.guidebook.mod_integration.chalk.page3.text": "哦,对了,*彩色*粉笔!当然不会少了你.", 
 
   "book.spectrum.guidebook.mod_integration.conjuring.name": "Conjuring",
   "book.spectrum.guidebook.mod_integration.conjuring.page0.text": "*灵魂,精神,牢笼*\\\n如果这不是精妙的神秘学作品,那还有什么是呢?",
@@ -5637,6 +5645,17 @@
   "book.spectrum.guidebook.mod_integration.create.page6.text": "碾磨[霜冻水晶](entry://general/crystallisation)会产出大量的[#](bb00bb)冰霜精华[#]().",
   "book.spectrum.guidebook.mod_integration.create.page7.title": "碾磨炽热水晶",
   "book.spectrum.guidebook.mod_integration.create.page7.text": "碾磨[炽热水晶](entry://general/crystallisation)会产出大量的[#](bb00bb)炽热精华[#]().",
+  "book.spectrum.guidebook.mod_integration.create.pure_zinc.title": "原生锌",
+  "book.spectrum.guidebook.mod_integration.create.pure_zinc.text": "",
+  "book.spectrum.guidebook.mod_integration.create.pure_zinc_growing.title": "种植原生锌",
+  "book.spectrum.guidebook.mod_integration.create.pure_zinc_growing.text": "",
+  "book.spectrum.guidebook.mod_integration.create.pure_brass_fusion.title": "熔化黄铜",
+  "book.spectrum.guidebook.mod_integration.create.pure_brass_fusion.text": "",
+
+  "book.spectrum.guidebook.mod_integration.dimdoors.name": "次元门",
+  "book.spectrum.guidebook.mod_integration.dimdoors.page0.text": "我四处闲逛着,准备出发再次寻找晶洞,但并没有找到什么好玩的东西。后来我偶然发现了一个...星状裂缝..裂隙....随便怎么称呼吧。\\\n\\\n你知不知道那句老话：天无绝人之路...",
+  "book.spectrum.guidebook.mod_integration.dimdoors.altered_fabric_resonance.title": "最精细的采集",
+  "book.spectrum.guidebook.mod_integration.dimdoors.altered_fabric_resonance.text": "无论我多么小心地挖掘还是很容易破碎,然后什么都不会留下,我以前好像在哪里见过这种情况?\\\n 果不其然,共振起了作用。",
 
   "book.spectrum.guidebook.mod_integration.ecologics.name": "丰富的生态",
   "book.spectrum.guidebook.mod_integration.ecologics.page0.text": "新生物群系带来新机遇.但有哪些呢?\\\n*是时候找出答案了!*",
@@ -5661,6 +5680,16 @@
   "book.spectrum.guidebook.mod_integration.extraalchemy.page15.title": "航行药水",
   "book.spectrum.guidebook.mod_integration.extraalchemy.page16.title": "缩小药水",
 
+  "book.spectrum.guidebook.mod_integration.farmersdelight.name": "农夫乐事",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.page0.text": "工作完成后,看着植物生长是一件很放松的事情。砧板准备好了,调料也备好了。\\\n\\\n我们在下一个丰收节见吧,到时我们会有一场盛大的晚宴。",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.page1.title": "切削工具",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.page1.text": "这款多功能工具确实名副其实。尽管它的形状很别扭,但它完全可以当做一把刀,可以轻松地屠宰和收割。\\\n此外,它在砧板上也能发挥*神奇*的作用,能够砍、剁或切我放在上面的任何东西。",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.amaranth_cutting.title": "切削苋菜",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.amaranth_cutting.text": "苋菜,这种颜色鲜艳的谷物真是太棒了。有时候并不需要野蛮的将其砸成谷粒,只要像对待米饭一样温柔地处理就可以了。\\\n用刀一切就能轻松地将苋菜切碎,而且还能留下草秆。",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.rice_crushing.text": "*砸砸砸,全都砸成谷粒,管他什么温不温柔的*",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.gemstone_cutting.title": "切割宝石",
+  "book.spectrum.guidebook.mod_integration.farmersdelight.gemstone_cutting.text": "晶洞里有那么多宝石,挤在一起都形成了块状...我真的不能把它们敲出来吗?好吧,我得再想点办法。\\\n把宝石块放在砧板上用任何镐子敲一敲,就能得到里面的碎片。",
+
   "book.spectrum.guidebook.mod_integration.geode_plus.name": "晶洞 Plus",
   "book.spectrum.guidebook.mod_integration.gobber.name": "戈伯2",
   "book.spectrum.guidebook.mod_integration.gobber.page0.text": "这种材料虽然常见,却拥有惊人的力量.这正是我给它起这个有趣名字的原因.让我们看看能用它做些什么吧.",
@@ -5684,14 +5713,43 @@
   "book.spectrum.guidebook.mod_integration.hexcasting.page3.text": "我可以使用[融合圣坛](entry://general/fusion_shrine)为[#](bb00bb)紫水晶碎片[#]()充能.",
   "book.spectrum.guidebook.mod_integration.hexcasting.page4.text": "-+15-120秒持续时间.忽长忽短.\\\n\\\n正如我所料,[#](bb00bb)使用充能紫水晶[#]()作为延长持续时间的试剂,效果要比[#](bb00bb)紫水晶[#]()更强大,但也更不稳定.",
 
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.name": "沉浸式风化",
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.page0.text": "这确实让我沉浸在风化之中。",
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.enchanted_golden_moss.text": "*既不混乱也不守序的苔藓。*",
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.charred_wood_resonance.title": "烧焦的木头",
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.charred_wood_resonance.text": "用带有共振附魔的工具开采燃烧的残木似乎依然会在我的背包中持续燃烧。\\\n\\\n*...这样就好了。*",
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.sandy_stone_resonance.title": "砂石",
+  "book.spectrum.guidebook.mod_integration.immersive_weathering.sandy_stone_resonance.text": "就像燃烧的木头一样,多余的沙子也随我而来。有点偏门,但很方便！",
+
   "book.spectrum.guidebook.mod_integration.little_ants.name": "小蚂蚁",
-  "book.spectrum.guidebook.mod_integration.little_ants.page0.text": "这些勤劳的小家伙不断从树上收集叶子.他们的劳动成果体现在他们的产品中.虽然他们主要生产[#](449900)黏土[#](),但可能还有其他的惊喜……\\\n\\\n感谢MastroCaleb的这个伟大模组!",
+  "book.spectrum.guidebook.mod_integration.little_ants.page0.text": "这些勤劳的小家伙不断从树上收集叶子.他们的劳动成果体现在他们的产品中.虽然他们主要生产[#](449900)黏土[#](),但可能还有其他的惊喜...\\\n\\\n感谢MastroCaleb的这个伟大模组!",
   "book.spectrum.guidebook.mod_integration.little_ants.page1.text": "蚂蚁从[#](bb00bb)翡翠花瓣[#]()中生产出了一种几乎像丝绸一样的材料.",
   "book.spectrum.guidebook.mod_integration.little_ants.page2.text": "我铲起了一个收集过彩色树叶的完整蚁丘,在里面发现了很多[#](bb00bb)染料[#]().",
   "book.spectrum.guidebook.mod_integration.little_ants.page3.text": "更棒的是,如果我用[#](449900)植本质[#]()贿赂它们,我可以得到纯净的[#](449900)颜料[#]().",
 
+  "book.spectrum.guidebook.mod_integration.malum.name": "灵灾",
+  "book.spectrum.guidebook.mod_integration.malum.page0.text": "我没想到奥术竟是如此...阴暗的研究领域。\\\n\\\n让我们投入其中吧,希望我能理智地回来。",
+  "book.spectrum.guidebook.mod_integration.malum.scythe_enchants.title": "附魔镰刀",
+  "book.spectrum.guidebook.mod_integration.malum.scythe_enchants.text": "像对待任何武器一样,我设计的新附魔可以附魔在镰刀上。然而,有些附魔...存在一些*不兼容*的问题。",
+  "book.spectrum.guidebook.mod_integration.malum.scythe_incompats.text": "- 即使被魔法附着,当我紧握镰刀时也很难将其投掷出去\n- 正如我所预料的一样,灵魂收割如同抢夺一样,不兼容与抢夺冲突的附魔。\n- 同样地,任何与锋利冲突的附魔也不会喜欢。",
+  "book.spectrum.guidebook.mod_integration.malum.void_salts_reagent.text": "- +200%% 持续时间\n- -2 产量",
+  "book.spectrum.guidebook.mod_integration.malum.crystal_burning.text": "一种烧灼灵魂的火焰...结晶碎片的处理方式也是如此,能量会在火焰中消耗。",
+  "book.spectrum.guidebook.mod_integration.malum.silenced.text": "一种强大的反魔法效果,好像还能阻止我使用墨水。",
+
   "book.spectrum.guidebook.mod_integration.more_geodes.name": "更多晶洞",
+
+  "book.spectrum.guidebook.mod_integration.mythicmetals.name": "神话金属",
+  "book.spectrum.guidebook.mod_integration.mythicmetals.page0.text": "没想到地下居然还蕴藏着这么多的秘密,真是让人难以置信！每次我深入挖掘都会发现一大堆新鲜玩意儿——每次的发现都比之前更妙。\\\n不仅仅是铜、铁和金——地下还有许多等待发现的东西。",
+
   "book.spectrum.guidebook.mod_integration.mythicupgrades.name": "晶洞 Plus",
+
+  "book.spectrum.guidebook.mod_integration.neepmeat.name": "NEEPMeat",
+  "book.spectrum.guidebook.mod_integration.neepmeat.page0.text": "我没意识到要成为一名屠夫还得需要接受机械师的培训。",
+  "book.spectrum.guidebook.mod_integration.neepmeat.kindling_vivisection.title": "长出更多羽毛。",
+  "book.spectrum.guidebook.mod_integration.neepmeat.kindling_vivisection.text": "...\\\n\\\n\\\n\\\n*但代价是什么?*",
+  "book.spectrum.guidebook.mod_integration.neepmeat.whisper_brass_instilling.text": "我有很多将生命注入材料的经验....看来我终于可以更有效地做到这一点了",
+  "book.spectrum.guidebook.mod_integration.neepmeat.sedatives.title": "通向心灵的药物",
+  "book.spectrum.guidebook.mod_integration.neepmeat.sedatives.text": "我的研究让我接触到了一些...未知的恐怖\\\n\\\n 当我服下这些药物时,幻觉消失了,我感觉更像我自己了。",
 
   "book.spectrum.guidebook.mod_integration.paginatedadvancements.name": "分页进度",
   "book.spectrum.guidebook.mod_integration.paginatedadvancements.page0.text": "我是一个有风格的进度猎人!\\\n\\\n有了分页进度,光谱世界的进度将使用新的独特的框架.",
@@ -5706,11 +5764,21 @@
   "book.spectrum.guidebook.mod_integration.paginatedadvancements.page5.title": "恶搞进展",
   "book.spectrum.guidebook.mod_integration.paginatedadvancements.page5.text": "因做了一些非常愚蠢的事情而获得的进度.\\\n这些纯粹是可选的恶搞进度,没有解锁.",
 
+  "book.spectrum.guidebook.mod_integration.sandwichable.name": "Sandwichable",
+  "book.spectrum.guidebook.mod_integration.sandwichable.page0.text": "今天的早餐吃什么?\\\n\\\n一块面包加上128块牛排配上甜菜根怎么样?",
+  "book.spectrum.guidebook.mod_integration.sandwichable.salty_resonance.title": "最精细的采集",
+  "book.spectrum.guidebook.mod_integration.sandwichable.salty_resonance.text": "无论我多么小心地挖掘还是很容易破碎,然后什么都不会留下,我以前好像在哪里见过这种情况?\\\n 果不其然,共振起了作用。",
+
+  "book.spectrum.guidebook.mod_integration.spelunkery.name": "Spelunkery",
+  "book.spectrum.guidebook.mod_integration.spelunkery.page0.text": "通过我的洞穴探险之眼,我看到了什么东西在那里闪闪发光?\\\\\\n一个闪亮的新玩意儿！\\\n\\\n我太喜欢这些玩意儿了！",
+  "book.spectrum.guidebook.mod_integration.spelunkery.black_materia_sluice.title": "洗刷你的错误",
+  "book.spectrum.guidebook.mod_integration.spelunkery.black_materia_sluice.text": "失败带来了这种...*物质*。它散发着不祥的气息,带有枯萎的味道,但...也许有办法从中筛选出一些东西?\\\n\\\n蜘蛛蜘蛛蜘蛛全是蜘蛛,能不能离我远点,烦死了...\\\n肯定还有别的东西。也许我可以仔细筛选一下?类似性质的....",
+
   "book.spectrum.guidebook.mod_integration.starry_skies.name": "Starry Skies",
   "book.spectrum.guidebook.mod_integration.starry_skies.page0.text": "在主世界数百公里的上方存在一个截然不同的维度:这里充满了像小行星一样漂浮的无数球体.\\\n\\\n我可以通过[#](bb00bb)浮冰[#]()建造一个传送门到达那里（如果模组包没有改变的话）.",
-  "book.spectrum.guidebook.mod_integration.starry_skies.page1.text": "在那里,我可以找到在主世界难以获得的众多资源:晶洞球体、光谱世界的矿石,以及我心之所向的任何东西——除非我从行星上掉下来,坠入必死的深渊.",
+  "book.spectrum.guidebook.mod_integration.starry_skies.page1.text": "在那里,我可以找到在主世界难以获得的众多资源:晶洞球体、光谱世界的矿石,以及我心之所向的任何东西——我最好不要从行星上掉下来,否则会坠入必死的深渊.",
 
-  "book.spectrum.guidebook.mod_integration.tconstruct.name": "匠魂 / 匠神",
+  "book.spectrum.guidebook.mod_integration.tconstruct.name": "匠神",
   "book.spectrum.guidebook.mod_integration.tconstruct.page0.text": "模块化工具一直是我感兴趣的领域.看看我能想出什么办法让生活更轻松.",
 
   "book.spectrum.guidebook.mod_integration.tech_reborn.name": "科技复兴",
@@ -5724,11 +5792,16 @@
   "book.spectrum.guidebook.mod_integration.tech_reborn.page3.title": "宝石研磨",
   "book.spectrum.guidebook.mod_integration.tech_reborn.page3.text": "当然,也可以研磨碎片!\\\n\\\n*我讨厌游戏中的研磨*",
 
+  "book.spectrum.guidebook.mod_integration.the_bumblezone.name": "蜜蜂领域",
+  "book.spectrum.guidebook.mod_integration.the_bumblezone.page0.text": "蜂蜜吃多了点,以至于忘了为什么要把末影珍珠扔进蜂箱里。\\\n\\\n我没骗你,我最后到了一个非常奇怪的地方。",
+  "book.spectrum.guidebook.mod_integration.the_bumblezone.essence_ink.title": "色彩与混乱",
+  "book.spectrum.guidebook.mod_integration.the_bumblezone.essence_ink.text": "这些精华...内部绝对充满了能量。对我来说非常有用,但这也可以作为墨水的宝库……如果我愿意牺牲的话。\\\n我尽力尝试了,但蜜蜂的混沌精华仍然无法稳定下来以转化为墨水...",
+
   "book.spectrum.guidebook.mod_integration.vein_mining.name": "连锁采集",
   "book.spectrum.guidebook.mod_integration.vein_mining.page0.text": "*还在一个个地手挖矿石?重力可能会使其事半功倍.*\\\n\\\n采掘矿石时会连锁所有相连的方块.\\\n\\\n最大等级:1\\\n适用于所有工具.",
 
   "book.spectrum.guidebook.mod_integration.victus.name": "Victus",
-  "book.spectrum.guidebook.mod_integration.victus.page0.text": "我收集了一颗心……一颗又一颗.现在我的心脏跟改造人一样五颜六色的.是不是很激动人心?",
+  "book.spectrum.guidebook.mod_integration.victus.page0.text": "我收集了一颗又一颗的心....现在我的心脏跟改造人一样五颜六色的.是不是很“独具匠心”?",
   "book.spectrum.guidebook.mod_integration.victus.page1.title": "回心",
   "book.spectrum.guidebook.mod_integration.victus.page2.title": "心脏出血",
 
@@ -5940,7 +6013,7 @@
   "advancements.spectrum.upgrade_enchanted_book_to_fortune4.title": "时运更济",
   "advancements.spectrum.upgrade_enchanted_book_to_fortune4.description": "使用附魔基座将时运III附魔升级至时运IV",
   "advancements.spectrum.craft_bottle_of_decay_away.title": "谨言慎行不吃亏,轻率莽撞必后悔",
-  "advancements.spectrum.craft_bottle_of_decay_away.description": "为自己准备一个祛消解之瓶以防出现什么差错",
+  "advancements.spectrum.craft_bottle_of_decay_away.description": "为自己准备一个消蚀之瓶以防出现什么差错",
   "advancements.spectrum.enchant_book.title": "无损压缩",
   "advancements.spectrum.enchant_book.description": "使用附魔基座从其他附魔书上复制附魔.会很昂贵的",
   "advancements.spectrum.craft_and_get_25_xp.title": "经验满满艺术家",
@@ -6167,7 +6240,7 @@
   "advancements.spectrum.fail_to_glitch_into_preservation_ruin.description": "发现你没有资格进入",
   "advancements.spectrum.tame_lizard.title": "亦敌亦友",
   "advancements.spectrum.tame_lizard.description": "“驯服”一只恶蜥",
-
+  
   "advancements.spectrum.find_forgotten_city.title": "昔日遗迹",
   "advancements.spectrum.find_forgotten_city.description": "进入一座被遗忘的城市",
   "advancements.spectrum.find_excavation_site.title": "施工场地",
@@ -6202,18 +6275,18 @@
   "advancements.spectrum.eat_each_cookbook_heavy_meal.description": "品尝地下食谱中的所有美味佳肴",
   "advancements.spectrum.dip_something_into_liquid_crystal.title": "晶化蜕变",
   "advancements.spectrum.dip_something_into_liquid_crystal.description": "有些东西在接触液态水晶时会变成其他东西",
-
+  
   "______special_named_items_and_lore": "特殊物品名称:",
   "named_item.spectrum.dirt_of_shame": "耻辱之土",
   "lore.spectrum.probably_sugar": "糖...大概?",
   "lore.spectrum.time_travel_tap": "不愧为时间旅行者",
   "lore.spectrum.evernectar": "...永恒甘露?",
-
+  
   "______food_tooltips": "食物提示:",
   "spectrum.food.withChance": "%s [%d%%概率]",
   "spectrum.food.whenEaten": "食用时:",
   "spectrum.food.whenDrunk": "喝醉时:",
-
+  
   "______structure_translations": "结构翻译:",
   "structure.spectrum.city_below": "地下之城",
   "structure.spectrum.excavation_site": "挖掘场地",
@@ -6325,5 +6398,4 @@
   "book.spectrum.guidebook.mysterious_locket.page4.text": "里面还有一张小纸条……它可能属于谁呢?",
   "book.spectrum.guidebook.mysterious_locket.page5.text": "现在我理解了德雷顿语言,解读背面的铭文对我来说很容易:\\\n\\\n*别傻了, 阿斯特拉斯——月亮不能发光,它只能反射太阳的光芒.*",
   "book.spectrum.guidebook.mysterious_locket.page5.title": "未识别的纸条"
-
-}
+  }
