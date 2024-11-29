@@ -80,7 +80,7 @@ public class BlockAuraSoundInstance extends AbstractSoundInstance implements Tic
 		int y = 0;
 		int z = 0;
 		for (BlockPos source : sources) {
-			if (!world.isChunkLoaded(source) || !world.getBlockState(source).isIn(SpectrumBlockTags.AZURITE_ORES)) {
+			if (!world.isChunkLoaded(source) || !world.getBlockState(source).isIn(SpectrumBlockTags.AZURITE_ORES)) { // tag is hardcoded for now. But should we have more blocks like that, we can easily split it
 				toRemove.add(source);
 			} else {
 				x += source.getX();
@@ -94,9 +94,11 @@ public class BlockAuraSoundInstance extends AbstractSoundInstance implements Tic
 		toRemove.clear();
 		
 		int count = sources.size();
-		this.x = (double) x / count;
-		this.y = (double) y / count;
-		this.z = (double) z / count;
+		if (count > 0) {
+			this.x = (double) x / count;
+			this.y = (double) y / count;
+			this.z = (double) z / count;
+		}
 	}
 	
 	@Override
