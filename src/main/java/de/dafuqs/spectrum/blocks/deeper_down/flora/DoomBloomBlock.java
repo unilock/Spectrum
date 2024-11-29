@@ -112,9 +112,11 @@ public class DoomBloomBlock extends FlowerBlock implements Fertilizable, Explosi
 	
 	@Override
 	public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-		var velocity = entity.getVelocity().length();
-		if (velocity > 0.235 && world.random.nextInt(20) <= velocity * 20 || entity.isOnFire()) {
-			explode(world, pos, state);
+		if (!world.isClient()) {
+			var velocity = entity.getVelocity().length();
+			if (velocity > 0.235 && world.random.nextInt(20) <= velocity * 20 || entity.isOnFire()) {
+				explode(world, pos, state);
+			}
 		}
 	}
 	
