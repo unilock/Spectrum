@@ -493,15 +493,16 @@ public abstract class LivingEntityMixin {
 
 			var damage = Float.MAX_VALUE;
 			if (SleepStatusEffect.isImmuneish(entity)) {
-				if (entity instanceof PlayerEntity player) {
+				if (entity instanceof PlayerEntity player)
 					damage = entity.getHealth() * 0.95F;
-					Support.grantAdvancementCriterion((ServerPlayerEntity) player, "lategame/survive_fatal_slumber", "get_slumbered_idiot");
-				}
-				else {
+				else
 					damage = entity.getMaxHealth() * 0.3F;
-				}
 			}
+
 			entity.damage(SpectrumDamageTypes.sleep(entity.getWorld(), null), damage);
+			if (entity.isAlive() && entity instanceof ServerPlayerEntity serverPlayerEntity && !serverPlayerEntity.isCreative()) {
+				Support.grantAdvancementCriterion(serverPlayerEntity, "lategame/survive_fatal_slumber", "survived_fatal_slumber");
+			}
 		}
 	}
 
