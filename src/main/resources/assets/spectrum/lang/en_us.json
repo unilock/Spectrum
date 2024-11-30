@@ -3767,7 +3767,7 @@
   "book.spectrum.guidebook.sender_node.name": "Sender Node",
   "book.spectrum.guidebook.sender_node.page0.text": "The Sender Node will actively try to keep the connected inventory empty.\\\n\\\nThe order, in which it will push items, is as follows:\n1. [Gather Nodes](entry://pastel_network/gather_node)\n2. [Buffer Nodes](entry://pastel_network/buffer_node)\n3. [Storage Nodes](entry://pastel_network/storage_node)",
   "book.spectrum.guidebook.serendipity_reel.name": "Serendipity Reel",
-  "book.spectrum.guidebook.serendipity_reel.page0.text": "To be honest, I do not have to fishing any more to feed myself. Still a guilty pleasure of mine. Sitting at my pond and watching the soft waves makes me feel calm.\\\n\\\nDoesn't mean I don't appreciate the occasional catch. Or two. Or three. Or...",
+	"book.spectrum.guidebook.serendipity_reel.page0.text": "To be honest, I no longer have to go fishing to feed myself. It is still a guilty pleasure of mine. Sitting by my pond and watching the gentle waves makes me feel calm.\\\n\\\nDoesn't mean I don't appreciate the occasional catch. Or two. Or three. Or...",
   "book.spectrum.guidebook.serendipity_reel.page1.text": "Chance to reel in double the loot. Or more!\\\n\\\nMax Level: 2\\\nApplicable to Spectrum's Fishing Rods.",
   "book.spectrum.guidebook.seven_league_boots.name": "Seven League Boots",
   "book.spectrum.guidebook.seven_league_boots.page0.text": "Getting from A to B is tedious and my travel time only seems to increase, especially with [Geodes](entry://general/geodes) scattered across the land as they are.\\\n\\\nTo solve this problem, I designed the Seven League Boots, which make me much more mobile than before.",
