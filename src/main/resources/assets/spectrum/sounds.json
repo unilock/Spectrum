@@ -393,16 +393,19 @@
   "primordial_fire_crackle": {
     "subtitle": "spectrum.subtitles.primordial_fire_crackle",
     "sounds": [
-      "spectrum:cracker1",
-      "spectrum:cracker2",
-      "spectrum:cracker3",
-      "spectrum:cracker4",
-      "spectrum:cracker5",
-      "spectrum:cracker6",
-      "spectrum:cracker7",
-      "spectrum:cracker8"
+			"spectrum:primfire0",
+			"spectrum:primfire1",
+			"spectrum:primfire2",
+			"spectrum:primfire3",
+			"spectrum:primfire4"
     ]
   },
+	"primordial_fire_dot": {
+		"subtitle": "spectrum.subtitles.primordial_fire_dot",
+		"sounds": [
+			"spectrum:primfire_dot"
+		]
+	},
   "radiance_staff_charging": {
     "subtitle": "spectrum.subtitles.radiance_staff_charging",
     "sounds": [
