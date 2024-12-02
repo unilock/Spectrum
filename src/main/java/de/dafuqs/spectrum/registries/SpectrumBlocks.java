@@ -1328,7 +1328,7 @@ public class SpectrumBlocks {
 	public static final Block PURE_PRISMARINE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.PRISMARINE));
 
 	private static Settings preservationBlock() {
-		return settings(MapColor.LIGHT_BLUE_GRAY, BlockSoundGroup.STONE, -1.0F, 3600000.0F).instrument(Instrument.BASEDRUM).dropsNothing().allowsSpawning(SpectrumBlocks::never);
+		return settings(MapColor.LIGHT_BLUE_GRAY, BlockSoundGroup.STONE, -1.0F, 3600000.0F).instrument(Instrument.BASEDRUM).dropsNothing().allowsSpawning(SpectrumBlocks::never).solid();
 	}
 
 	public static final Block PRESERVATION_CONTROLLER = new PreservationControllerBlock(preservationBlock().luminance(state -> 1).emissiveLighting(SpectrumBlocks::always).postProcess(SpectrumBlocks::always));
@@ -1351,7 +1351,7 @@ public class SpectrumBlocks {
 	public static final Block PRESERVATION_BRICKS = new Block(preservationBlock());
 	public static final Block SHIMMERING_PRESERVATION_BRICKS = new Block(FabricBlockSettings.copyOf(preservationBlock()).luminance(5));
 	public static final Block COURIER_STATUE = new StatueBlock(preservationBlock());
-	public static final Block MANXI = new ManxiBlock(preservationBlock().nonOpaque().noCollision().dropsNothing());
+	public static final Block MANXI = new ManxiBlock(preservationBlock().nonOpaque().noCollision());
 
 	public static final Block BLACK_CHISELED_PRESERVATION_STONE = new Block(preservationBlock());
 	public static final Block BLUE_CHISELED_PRESERVATION_STONE = new Block(preservationBlock());
@@ -1372,7 +1372,7 @@ public class SpectrumBlocks {
 
 	public static final Block PRESERVATION_GLASS = new GlassBlock(preservationBlock().sounds(BlockSoundGroup.GLASS).nonOpaque().solidBlock(SpectrumBlocks::never).suffocates(SpectrumBlocks::never).blockVision(SpectrumBlocks::never));
 	public static final Block TINTED_PRESERVATION_GLASS = new TintedGlassBlock(FabricBlockSettings.copyOf(PRESERVATION_GLASS));
-	public static final Block PRESERVATION_ROUNDEL = new PreservationRoundelBlock(preservationBlock().nonOpaque());
+	public static final Block PRESERVATION_ROUNDEL = new PreservationRoundelBlock(preservationBlock().nonOpaque().solid());
 	public static final Block PRESERVATION_BLOCK_DETECTOR = new PreservationBlockDetectorBlock(preservationBlock());
 
 	private static Settings shootingStar() {
