@@ -394,7 +394,7 @@ public class KindlingEntity extends AbstractHorseEntity implements RangedAttackM
 				var candidate = world.getBlockState(transmutePos);
 				
 				// Do not the bedrock nor the claims
-				if (candidate.getHardness(world, transmutePos) < 0 || !CommonProtectionApiCompat.canBreak(world, transmutePos, this))
+				if (candidate.getHardness(world, transmutePos) < 0 || !GenericClaimModsCompat.canBreak(world, transmutePos, this))
 					continue;
 
 				if (candidate.isAir()) {
