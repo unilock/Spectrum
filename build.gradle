@@ -30,11 +30,11 @@ repositories {
 
 dependencies {
 	// jetbrains annotations
-	implementation ("org.jetbrains:annotations:24.0.1")
+	implementation ("org.jetbrains:annotations:26.0.1")
 
 	// graph api and its dependencies
-	implementation include("org.jgrapht:jgrapht-core:1.5.1")
-	implementation include("org.jheaps:jheaps:0.13")
+	implementation include("org.jgrapht:jgrapht-core:1.5.2")
+	implementation include("org.jheaps:jheaps:0.14")
 
 	// Some other dependency is adding annotations, and it throws an error without this
 	compileOnly ("com.demonwav.mcdev:annotations:1.0")
@@ -47,7 +47,7 @@ dependencies {
 
 	// ours
 	modImplementation("maven.modrinth:exclusions-lib:${project.exclusionslib_version}") // soft impl via json
-	modImplementation ("maven.modrinth:Revelationary:${project.revelationary_version}")
+	modImplementation("maven.modrinth:Revelationary:${project.revelationary_version}")
 	modImplementation include("maven.modrinth:AdditionalEntityAttributes:${project.additional_entity_attributes_version}")
 	modImplementation include("com.github.DaFuqs:Arrowhead:${project.arrowhead_version}")
 	modImplementation include("com.github.DaFuqs:DimensionalReverb:${project.dimensional_reverb_version}")
