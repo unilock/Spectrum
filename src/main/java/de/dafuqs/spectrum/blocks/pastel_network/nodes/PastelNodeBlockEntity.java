@@ -361,10 +361,9 @@ public class PastelNodeBlockEntity extends BlockEntity implements FilterConfigur
 		super.readNbt(nbt);
 		if (nbt.contains("Network")) {
 			UUID networkUUID = nbt.getUuid("Network");
-			if (this.getWorld() == null) {
-				this.parentID = Optional.of(networkUUID);
-			} else {
-				this.parentNetwork = Pastel.getInstance(world.isClient).JoinOrCreateNetwork(this, networkUUID);
+			this.parentID = Optional.of(networkUUID);
+			if (this.getWorld() != null) {
+				this.parentNetwork = Pastel.getInstance(world.isClient).joinOrCreateNetwork(this, networkUUID);
 			}
 		}
 		if (nbt.contains("Triggered")) {
