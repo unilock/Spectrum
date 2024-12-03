@@ -24,12 +24,12 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page0.text",
-      "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.name"
+			"title": "book.spectrum.guidebook.mod_integration.alloy_forgery.name",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.intro0.text"
     },
     {
       "type": "modonomicon:text",
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page1.text"
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.intro1.text"
     },
     {
       "type": "modonomicon:multiblock",
@@ -39,7 +39,7 @@
     },
     {
       "type": "spectrum:pedestal_crafting",
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page3.text",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.basalt_alloy_forge.text",
       "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller",
       "recipe_id": "spectrum:mod_integration/alloy_forgery/pedestal/polished_basalt_alloy_forge"
     },
@@ -51,7 +51,7 @@
     },
     {
       "type": "spectrum:pedestal_crafting",
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page5.text",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.calcite_alloy_forge.text",
       "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller",
       "recipe_id": "spectrum:mod_integration/alloy_forgery/pedestal/polished_calcite_alloy_forge"
     },
@@ -71,7 +71,7 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:hidden/collect_blackslag"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page7.text",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.blackslag_alloy_forge.text",
       "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller",
       "recipe_id": "spectrum:mod_integration/alloy_forgery/pedestal/polished_blackslag_alloy_forge"
     },
@@ -91,7 +91,7 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:hidden/collect_shale_clay"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page9.text",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.shale_clay_alloy_forge.text",
       "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller",
       "recipe_id": "spectrum:mod_integration/alloy_forgery/pedestal/polished_shale_clay_alloy_forge"
     },
@@ -111,7 +111,7 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:hidden/collect_pyrite"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page11.text",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.pyrite_alloy_forge.text",
       "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller",
       "recipe_id": "spectrum:mod_integration/alloy_forgery/pedestal/pyrite_alloy_forge"
     },
@@ -131,7 +131,7 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:break_cracked_dragonbone"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page13.text",
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.bone_ash_alloy_forge.text",
       "title": "book.spectrum.guidebook.mod_integration.alloy_forgery.forge_controller",
       "recipe_id": "spectrum:mod_integration/alloy_forgery/pedestal/polished_bone_ash_alloy_forge"
     },
@@ -144,7 +144,7 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:lategame/collect_pure_resource"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page14.text"
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.pure_resources.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -155,7 +155,7 @@
       "item": {
         "item": "spectrum:stratine_ore"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page15.text"
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.stratine_ore.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -166,7 +166,7 @@
         "type": "modonomicon:advancement",
         "advancement_id": "spectrum:lategame/collect_paltaeria"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page16.text"
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.paltaeria_ore.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -177,7 +177,7 @@
       "item": {
         "item": "spectrum:wet_lava_sponge"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page17.text"
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.wet_lava_sponge.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -188,7 +188,7 @@
       "item": {
         "item": "spectrum:incandescent_essence"
       },
-      "text": "book.spectrum.guidebook.mod_integration.alloy_forgery.page18.text"
+			"text": "book.spectrum.guidebook.mod_integration.alloy_forgery.incandescent_essence.text"
     }
   ]
 }
