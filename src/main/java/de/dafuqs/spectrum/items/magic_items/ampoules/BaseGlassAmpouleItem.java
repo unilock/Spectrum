@@ -17,25 +17,31 @@ public abstract class BaseGlassAmpouleItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
-		if (trigger(stack, user, null, user.getEyePos())) {
+		if (trigger(user.getWorld(), stack, user, null, user.getEyePos())) {
             if (!user.isCreative()) {
                 stack.decrement(1);
             }
+			return TypedActionResult.success(stack);
         }
-        return user.isCreative() ? super.use(world, user, hand) : TypedActionResult.consume(stack);
+		
+		return world.isClient() ? TypedActionResult.fail(stack) : TypedActionResult.pass(stack);
     }
     
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-		if (trigger(stack, user, entity, user.getEyePos())) {
-            if (!(user.isCreative())) {
-                stack.decrement(1);
-            }
-			return ActionResult.success(user.getWorld().isClient);
-        }
-        return super.useOnEntity(stack, user, entity, hand);
+		World world = user.getWorld();
+		if (trigger(user.getWorld(), stack, user, entity, user.getEyePos())) {
+			if (!user.getWorld().isClient) {
+				if (!(user.isCreative())) {
+					stack.decrement(1);
+				}
+			}
+			return ActionResult.success(world.isClient);
+		}
+		
+		return world.isClient() ? ActionResult.FAIL : ActionResult.PASS;
     }
 	
-	public abstract boolean trigger(ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target, Vec3d position);
+	public abstract boolean trigger(World world, ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target, Vec3d position);
     
 }

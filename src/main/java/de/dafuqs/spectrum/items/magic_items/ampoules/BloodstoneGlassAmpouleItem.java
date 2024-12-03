@@ -4,10 +4,12 @@ import com.google.common.collect.*;
 import com.jamieswhiteshirt.reachentityattributes.*;
 import de.dafuqs.spectrum.api.item.*;
 import de.dafuqs.spectrum.entity.entity.*;
+import de.dafuqs.spectrum.registries.*;
 import net.minecraft.client.item.*;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.*;
 import net.minecraft.item.*;
+import net.minecraft.sound.*;
 import net.minecraft.text.*;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
@@ -38,14 +40,9 @@ public class BloodstoneGlassAmpouleItem extends BaseGlassAmpouleItem implements 
 	}
 	
 	@Override
-	public boolean trigger(ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target, Vec3d position) {
-		World world = attacker.getWorld();
-		if (target == null) {
-			return false;
-		}
-		if (!world.isClient) {
-			LightSpearEntity.summonBarrage(attacker.getWorld(), attacker, target, LightShardBaseEntity.MONSTER_TARGET, position, LightShardBaseEntity.DEFAULT_COUNT_PROVIDER);
-		}
+	public boolean trigger(World world, ItemStack stack, LivingEntity attacker, @Nullable LivingEntity target, Vec3d position) {
+		world.playSoundAtBlockCenter(BlockPos.ofFloored(position), SpectrumSoundEvents.LIGHT_CRYSTAL_RING, SoundCategory.PLAYERS, 0.35F, 0.9F + world.getRandom().nextFloat() * 0.334F, true);
+		LightSpearEntity.summonBarrage(world, attacker, target, LightShardBaseEntity.MONSTER_TARGET, position, LightShardBaseEntity.DEFAULT_COUNT_PROVIDER);
 		return true;
 	}
 
