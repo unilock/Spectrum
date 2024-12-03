@@ -72,7 +72,7 @@ public class ServerPastelNetworkManager extends PersistentState implements Paste
 
 	@Override
 	@Contract("_, null -> new")
-	public PastelNetwork JoinOrCreateNetwork(PastelNodeBlockEntity node, @Nullable UUID uuid) {
+	public PastelNetwork joinOrCreateNetwork(PastelNodeBlockEntity node, @Nullable UUID uuid) {
 		if (uuid != null) {
 			//noinspection ForLoopReplaceableByForEach
 			for (int i = 0; i < this.networks.size(); i++) {

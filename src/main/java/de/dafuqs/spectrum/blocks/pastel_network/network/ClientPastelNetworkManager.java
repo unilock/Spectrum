@@ -20,7 +20,7 @@ public class ClientPastelNetworkManager implements PastelNetworkManager {
 	private final List<PastelNetwork> networks = new ArrayList<>();
 	
 	@Override
-	public PastelNetwork JoinOrCreateNetwork(PastelNodeBlockEntity node, UUID uuid) {
+	public PastelNetwork joinOrCreateNetwork(PastelNodeBlockEntity node, UUID uuid) {
 		PastelNetwork foundNetwork = null;
 		for (int i = 0; i < this.networks.size(); i++) {
 			PastelNetwork network = this.networks.get(i);
@@ -126,7 +126,7 @@ public class ClientPastelNetworkManager implements PastelNetworkManager {
 				matrices.push();
 				matrices.translate(-pos.x, -pos.y, -pos.z);
 				PastelRenderHelper.renderLineTo(context.matrixStack(), context.consumers(), colors, source.getPos(), target.getPos());
-				PastelRenderHelper.renderLineTo(context.matrixStack(), context.consumers(), colors, target.getPos(), source.getPos());
+				// PastelRenderHelper.renderLineTo(context.matrixStack(), context.consumers(), colors, target.getPos(), source.getPos());
 				
 				if (client.options.debugEnabled) {
 					Vec3d offset = Vec3d.ofCenter(target.getPos()).subtract(Vec3d.of(source.getPos()));

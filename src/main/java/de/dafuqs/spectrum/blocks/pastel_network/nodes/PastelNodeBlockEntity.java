@@ -40,8 +40,8 @@ import net.minecraft.world.*;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
-import java.util.*;
 import java.util.Optional;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.*;
 
@@ -302,7 +302,7 @@ public class PastelNodeBlockEntity extends BlockEntity implements FilterConfigur
 
 		if (!world.isClient) {
 			if (this.parentID.isPresent() && parentNetwork == null) {
-				this.parentNetwork = Pastel.getServerInstance().JoinOrCreateNetwork(this, this.parentID.get());
+				this.parentNetwork = Pastel.getServerInstance().joinOrCreateNetwork(this, this.parentID.get());
 				this.parentID = Optional.empty();
 			}
 		}
