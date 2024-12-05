@@ -58,7 +58,7 @@
     {
       "type": "spectrum:enchanter_crafting",
       "title": "enchantment.create.potato_recovery",
-      "recipe_id": "spectrum:mod_integration/create/enchanter/book_capacity"
+      "recipe_id": "spectrum:mod_integration/create/enchanter/book_potato_recovery"
     },
     {
       "type": "spectrum:enchanter_upgrading",
