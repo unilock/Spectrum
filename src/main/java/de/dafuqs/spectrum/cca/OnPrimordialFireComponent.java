@@ -9,6 +9,7 @@ import dev.onyxstudios.cca.api.v3.component.sync.*;
 import dev.onyxstudios.cca.api.v3.component.tick.*;
 import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.tag.convention.v1.*;
+import net.fabricmc.loader.api.*;
 import net.minecraft.client.*;
 import net.minecraft.enchantment.*;
 import net.minecraft.entity.*;
@@ -36,7 +37,11 @@ public class OnPrimordialFireComponent implements AutoSyncedComponent, ServerTic
 	public static final float FIRE_PROT_DAMAGE_RESISTANCE = 0.05F;
 	
 	@Environment(EnvType.CLIENT)
-	private static Optional<OnPrimordialFireSoundInstance> soundInstance = Optional.empty();
+	private static Optional<OnPrimordialFireSoundInstance> soundInstance;
+	/* prevent the static initializer from attempting to write to the client-only field in common code */
+	static {
+		if (EnvType.CLIENT == FabricLoader.getInstance().getEnvironmentType()) soundInstance = Optional.empty();
+	}
 
 	public static final ComponentKey<OnPrimordialFireComponent> ON_PRIMORDIAL_FIRE_COMPONENT = ComponentRegistry.getOrCreate(SpectrumCommon.locate("on_primordial_fire"), OnPrimordialFireComponent.class);
 	
