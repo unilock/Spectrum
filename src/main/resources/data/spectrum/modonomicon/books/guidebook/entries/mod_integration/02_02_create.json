@@ -61,9 +61,19 @@
       "recipe_id": "spectrum:mod_integration/create/enchanter/book_capacity"
     },
     {
-      "type": "spectrum:enchanter_crafting",
+      "type": "spectrum:enchanter_upgrading",
       "title": "container.spectrum.rei.enchantment_upgrading.title",
-      "recipe_id": "spectrum:mod_integration/create/enchanter/book_potato_recovery"
+      "recipe_id": "spectrum:mod_integration/create/enchantment_upgrade/potato_recovery"
+    },
+    {
+      "type": "spectrum:enchanter_crafting",
+      "title": "enchantment.create.capacity",
+      "recipe_id": "spectrum:mod_integration/create/enchanter/book_capacity"
+    },
+    {
+      "type": "spectrum:enchanter_upgrading",
+      "title": "container.spectrum.rei.enchantment_upgrading.title",
+      "recipe_id": "spectrum:mod_integration/create/enchantment_upgrade/capacity"
     },
     {
       "type": "modonomicon:spotlight",
