@@ -132,7 +132,7 @@ public class TotalCappedElementalMixingInkStorage extends TotalCappedInkStorage 
 	
 	public static TotalCappedElementalMixingInkStorage fromNbt(@NotNull NbtCompound compound) {
 		long maxEnergyTotal = compound.getLong("MaxEnergyTotal");
-		Map<InkColor, Long> energy = InkStorage.readEnergy(compound.getCompound("Energy"));
+		Map<InkColor, Long> energy = InkStorage.readEnergy(compound.contains("Energy") ? compound.getCompound("Energy") : compound);
 		return new TotalCappedElementalMixingInkStorage(maxEnergyTotal, energy);
 	}
 	

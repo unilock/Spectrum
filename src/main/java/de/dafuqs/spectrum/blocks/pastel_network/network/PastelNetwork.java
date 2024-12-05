@@ -340,6 +340,10 @@ public class PastelNetwork {
     }
 
     public PastelNodeBlockEntity getNodeAt(BlockPos blockPos) {
+		if (!this.getWorld().isChunkLoaded(blockPos)) {
+			return null; // hmmmmm
+		}
+		
         BlockEntity blockEntity = this.getWorld().getBlockEntity(blockPos);
         if (blockEntity instanceof PastelNodeBlockEntity pastelNodeBlockEntity) {
             return pastelNodeBlockEntity;

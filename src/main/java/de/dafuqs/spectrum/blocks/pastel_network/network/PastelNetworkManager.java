@@ -8,8 +8,8 @@ import java.util.*;
 public interface PastelNetworkManager {
     
     //PastelNetwork createNetwork(World world, UUID uuid);
-    
-    PastelNetwork JoinOrCreateNetwork(PastelNodeBlockEntity node, @Nullable UUID uuid);
+	
+	PastelNetwork joinOrCreateNetwork(PastelNodeBlockEntity node, @Nullable UUID uuid);
 
     void connectNodes(PastelNodeBlockEntity node, PastelNodeBlockEntity parent);
     

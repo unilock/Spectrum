@@ -35,6 +35,7 @@ public class SpectrumIntegrationPacks {
 		}
 	}
 	
+	public static final String CONNECTOR_ID = "connectormod";
 	public static final String AE2_ID = "ae2";
 	public static final String GOBBER_ID = "gobber2";
 	public static final String ALLOY_FORGERY_ID = "alloy_forgery";
@@ -49,25 +50,28 @@ public class SpectrumIntegrationPacks {
 
 	@SuppressWarnings("Convert2MethodRef")
 	public static void register() {
-		registerIntegrationPack(AE2_ID, () -> new AE2Compat());
-		registerIntegrationPack(GOBBER_ID, () -> new GobberCompat());
-		registerIntegrationPack(ALLOY_FORGERY_ID, () -> new AlloyForgeryCompat());
-		registerIntegrationPack(BOTANIA_ID, () -> new BotaniaCompat());
 		registerIntegrationPack(MODONOMICON_ID, () -> new ModonomiconCompat());
-		registerIntegrationPack(NEEPMEAT_ID, () -> new NEEPMeatCompat());
-		registerIntegrationPack(FARMERSDELIGHT_ID, () -> new FDCompat());
-		registerIntegrationPack(MALUM_ID, () -> new MalumCompat());
-		if (!FabricLoader.getInstance().isModLoaded("connectormod")) {
+		
+		if (!FabricLoader.getInstance().isModLoaded(EXCLUSIONS_LIB_ID)) {
+			ExclusionsLibCompat.registerNotPresent();
+		}
+		
+		if (!FabricLoader.getInstance().isModLoaded(CONNECTOR_ID)) {
+			// Connector on forge causes a lot of issues since most
+			// code bases of force mods differ quite a lot from their fabric counterparts
+			registerIntegrationPack(AE2_ID, () -> new AE2Compat());
+			registerIntegrationPack(GOBBER_ID, () -> new GobberCompat());
+			registerIntegrationPack(ALLOY_FORGERY_ID, () -> new AlloyForgeryCompat());
+			registerIntegrationPack(BOTANIA_ID, () -> new BotaniaCompat());
+			registerIntegrationPack(NEEPMEAT_ID, () -> new NEEPMeatCompat());
+			registerIntegrationPack(FARMERSDELIGHT_ID, () -> new FDCompat());
+			registerIntegrationPack(MALUM_ID, () -> new MalumCompat());
 			registerIntegrationPack(TRAVELERS_BACKPACK_ID, () -> new TravelersBackpackCompat());
 			registerIntegrationPack(CREATE_ID, () -> new CreateCompat());
 		}
 		
 		for (ModIntegrationPack container : INTEGRATION_PACKS.values()) {
 			container.register();
-		}
-		
-		if (!FabricLoader.getInstance().isModLoaded(EXCLUSIONS_LIB_ID)) {
-			ExclusionsLibCompat.registerNotPresent();
 		}
 	}
 	
