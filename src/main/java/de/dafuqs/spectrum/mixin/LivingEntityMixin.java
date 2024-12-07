@@ -101,6 +101,9 @@ public abstract class LivingEntityMixin {
 	@Shadow
 	protected abstract float getSoundVolume();
 	
+	@Shadow
+	protected boolean dead;
+	
 	// FabricDefaultAttributeRegistry seems to only allow adding full containers and only single entity types?
 	@Inject(method = "createLivingAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", require = 1, allow = 1, at = @At("RETURN"))
 	private static void spectrum$addAttributes(final CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
@@ -588,7 +591,7 @@ public abstract class LivingEntityMixin {
 			target.setHealth(h - amount);
 			target.getDamageTracker().onDamage(source, amount);
 			if (target.isDead()) {
-				if (!target.isInPose(EntityPose.DYING)) {
+				if (!dead) {
 					var deathSound = getDeathSound();
 					if (deathSound != null)
 						target.playSound(deathSound, getSoundVolume(), target.getSoundPitch());
