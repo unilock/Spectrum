@@ -1563,8 +1563,8 @@ public class SpectrumBlocks {
 		registerPastelNetworkNodes(IS.of(16));
 		registerStoneBlocks(IS.of());
 		registerGemBlocks(IS.of());
-
-		registerShootingStarBlocks(IS.of(1, Rarity.UNCOMMON));
+		
+		registerShootingStarBlocks();
 
 		registerGemOreBlocks(IS.of());
 		registerOreBlocks(IS.of(), IS.of().fireproof());
@@ -2600,15 +2600,16 @@ public class SpectrumBlocks {
 		registerBlockWithItem("deepslate_shimmerstone_light", DEEPSLATE_SHIMMERSTONE_LIGHT, settings, DyeColor.YELLOW);
 		registerBlockWithItem("blackslag_shimmerstone_light", BLACKSLAG_SHIMMERSTONE_LIGHT, settings, DyeColor.YELLOW);
 	}
-
-	public static void registerShootingStarBlocks(FabricItemSettings settings) {
-		registerBlockWithItem("glistering_shooting_star", GLISTERING_SHOOTING_STAR, new ShootingStarItem(GLISTERING_SHOOTING_STAR, settings), DyeColor.PURPLE);
-		registerBlockWithItem("fiery_shooting_star", FIERY_SHOOTING_STAR, new ShootingStarItem(FIERY_SHOOTING_STAR, settings), DyeColor.PURPLE);
-		registerBlockWithItem("colorful_shooting_star", COLORFUL_SHOOTING_STAR, new ShootingStarItem(COLORFUL_SHOOTING_STAR, settings), DyeColor.PURPLE);
-		registerBlockWithItem("pristine_shooting_star", PRISTINE_SHOOTING_STAR, new ShootingStarItem(PRISTINE_SHOOTING_STAR, settings), DyeColor.PURPLE);
-		registerBlockWithItem("gemstone_shooting_star", GEMSTONE_SHOOTING_STAR, new ShootingStarItem(GEMSTONE_SHOOTING_STAR, settings), DyeColor.PURPLE);
-
-		registerBlockWithItem("stardust_block", STARDUST_BLOCK, settings, DyeColor.BLACK);
+	
+	public static void registerShootingStarBlocks() {
+		Item.Settings shootingStarSettings = IS.of(1, Rarity.UNCOMMON);
+		registerBlockWithItem("glistering_shooting_star", GLISTERING_SHOOTING_STAR, new ShootingStarItem(GLISTERING_SHOOTING_STAR, shootingStarSettings), DyeColor.PURPLE);
+		registerBlockWithItem("fiery_shooting_star", FIERY_SHOOTING_STAR, new ShootingStarItem(FIERY_SHOOTING_STAR, shootingStarSettings), DyeColor.PURPLE);
+		registerBlockWithItem("colorful_shooting_star", COLORFUL_SHOOTING_STAR, new ShootingStarItem(COLORFUL_SHOOTING_STAR, shootingStarSettings), DyeColor.PURPLE);
+		registerBlockWithItem("pristine_shooting_star", PRISTINE_SHOOTING_STAR, new ShootingStarItem(PRISTINE_SHOOTING_STAR, shootingStarSettings), DyeColor.PURPLE);
+		registerBlockWithItem("gemstone_shooting_star", GEMSTONE_SHOOTING_STAR, new ShootingStarItem(GEMSTONE_SHOOTING_STAR, shootingStarSettings), DyeColor.PURPLE);
+		
+		registerBlockWithItem("stardust_block", STARDUST_BLOCK, IS.of(), DyeColor.BLACK);
 	}
 
 	public static void registerPastelNetworkNodes(FabricItemSettings settings) {
