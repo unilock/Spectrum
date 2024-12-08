@@ -587,10 +587,13 @@ public abstract class LivingEntityMixin {
 			float h = target.getHealth();
 			target.setHealth(h - amount);
 			target.getDamageTracker().onDamage(source, amount);
-			if (target.isDead() && !target.isInPose(EntityPose.DYING)) {
-				var deathSound = getDeathSound();
-				if (deathSound != null)
-					target.playSound(deathSound, getSoundVolume(), target.getSoundPitch());
+			if (target.isDead()) {
+				if (!target.isInPose(EntityPose.DYING)) {
+					var deathSound = getDeathSound();
+					if (deathSound != null)
+						target.playSound(deathSound, getSoundVolume(), target.getSoundPitch());
+				}
+				target.onDeath(source);
 			}
 			cir.setReturnValue(true);
 			return;
