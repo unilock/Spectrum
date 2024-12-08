@@ -1,6 +1,6 @@
 {
   "name": "book.spectrum.guidebook.mod_integration.biomemakeover.name",
-  "icon": "biomemakeover:bm_icon",
+	"icon": "biomemakeover:cladded_chestplate",
   "condition": {
     "type": "modonomicon:and",
     "children": [
