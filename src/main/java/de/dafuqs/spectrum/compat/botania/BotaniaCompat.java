@@ -1,7 +1,9 @@
 package de.dafuqs.spectrum.compat.botania;
 
+import de.dafuqs.fractal.api.*;
 import de.dafuqs.spectrum.api.color.*;
 import de.dafuqs.spectrum.api.interaction.*;
+import de.dafuqs.spectrum.api.item_group.*;
 import de.dafuqs.spectrum.compat.*;
 import de.dafuqs.spectrum.registries.*;
 import net.fabricmc.api.*;
@@ -55,6 +57,11 @@ public class BotaniaCompat extends SpectrumIntegrationPacks.ModIntegrationPack {
 					return 0;
 				}
 			});
+		});
+		
+		ItemSubGroupEvents.modifyEntriesEvent(ItemGroupIDs.SUBTAB_EQUIPMENT).register(entries -> {
+			entries.add(LEAST_BLACK_LOTUS);
+			entries.add(BLACKEST_LOTUS);
 		});
 	}
 	
