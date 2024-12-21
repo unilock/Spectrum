@@ -107,6 +107,7 @@
     "compat.connectormod.absent.PlayerEntityMixin",
     "compat.connectormod.present.ExplosionMixin",
     "compat.connectormod.present.PlayerEntityMixin",
+    "compat.lootr.present.ConfigManagerMixin",
     "compat.quilt_status_effect.absent.LivingEntityPreventStatusClearMixin",
     "compat.quilt_status_effect.present.SpectrumEventListenersMixin"
   ],
