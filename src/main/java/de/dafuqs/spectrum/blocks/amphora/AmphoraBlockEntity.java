@@ -43,14 +43,19 @@ public class AmphoraBlockEntity extends LootableContainerBlockEntity {
 			
 			@Override
 			protected boolean isPlayerViewing(PlayerEntity player) {
-				if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
-					Inventory inventory = ((GenericContainerScreenHandler)player.currentScreenHandler).getInventory();
-					return inventory == AmphoraBlockEntity.this;
-				} else {
-					return false;
-				}
+				return AmphoraBlockEntity.this.isPlayerViewing(player);
 			}
 		};
+	}
+	
+	// This is a separate method to make Lootr integration easier
+	protected boolean isPlayerViewing(PlayerEntity player) {
+		if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
+			Inventory inventory = ((GenericContainerScreenHandler)player.currentScreenHandler).getInventory();
+			return inventory == this;
+		} else {
+			return false;
+		}
 	}
 	
 	@Override

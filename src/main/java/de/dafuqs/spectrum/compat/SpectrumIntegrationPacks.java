@@ -8,6 +8,7 @@ import de.dafuqs.spectrum.compat.create.*;
 import de.dafuqs.spectrum.compat.exclusions_lib.*;
 import de.dafuqs.spectrum.compat.farmersdelight.*;
 import de.dafuqs.spectrum.compat.gobber.*;
+import de.dafuqs.spectrum.compat.lootr.*;
 import de.dafuqs.spectrum.compat.malum.*;
 import de.dafuqs.spectrum.compat.modonomicon.*;
 import de.dafuqs.spectrum.compat.neepmeat.*;
@@ -47,6 +48,7 @@ public class SpectrumIntegrationPacks {
 	public static final String NEEPMEAT_ID = "neepmeat";
 	public static final String MALUM_ID = "malum";
 	public static final String EXCLUSIONS_LIB_ID = "exclusions_lib";
+	public static final String LOOTR_ID = "lootr";
 
 	@SuppressWarnings("Convert2MethodRef")
 	public static void register() {
@@ -68,6 +70,7 @@ public class SpectrumIntegrationPacks {
 			registerIntegrationPack(MALUM_ID, () -> new MalumCompat());
 			registerIntegrationPack(TRAVELERS_BACKPACK_ID, () -> new TravelersBackpackCompat());
 			registerIntegrationPack(CREATE_ID, () -> new CreateCompat());
+			registerIntegrationPack(LOOTR_ID, () -> new LootrCompat());
 		}
 		
 		for (ModIntegrationPack container : INTEGRATION_PACKS.values()) {

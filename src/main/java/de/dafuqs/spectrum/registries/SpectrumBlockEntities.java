@@ -91,7 +91,7 @@ public class SpectrumBlockEntities {
 	public static BlockEntityType<DeepLightBlockEntity> DEEP_LIGHT;
 	public static BlockEntityType<PlayerTrackerBlockEntity> PLAYER_TRACKING;
 	
-	private static <T extends BlockEntity> BlockEntityType<T> register(String id, FabricBlockEntityTypeBuilder.Factory<T> factory, Block... blocks) {
+	public static <T extends BlockEntity> BlockEntityType<T> register(String id, FabricBlockEntityTypeBuilder.Factory<T> factory, Block... blocks) {
 		return Registry.register(Registries.BLOCK_ENTITY_TYPE, SpectrumCommon.locate(id), FabricBlockEntityTypeBuilder.create(factory, blocks).build());
 	}
 	
