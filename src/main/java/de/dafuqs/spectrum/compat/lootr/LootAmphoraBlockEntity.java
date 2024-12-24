@@ -227,7 +227,7 @@ public class LootAmphoraBlockEntity extends AmphoraBlockEntity implements ILootB
 	public void updatePacketViaState() {
 		if (this.world != null && !this.world.isClient) {
 			BlockState state = this.world.getBlockState(this.getPos());
-			this.world.updateListeners(this.getPos(), state, state, 8);
+			this.world.updateListeners(this.getPos(), state, state, Block.REDRAW_ON_MAIN_THREAD);
 		}
 	}
 
