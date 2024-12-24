@@ -29,6 +29,11 @@
     "spectrum:weeping_gala_amphora",
     "spectrum:weeping_gala_barrel",
     "spectrum:weeping_gala_pillar",
-    "spectrum:weeping_gala_light"
+    "spectrum:weeping_gala_light",
+
+    {
+      "id": "spectrum:weeping_gala_loot_amphora",
+      "required": false
+    }
   ]
 }
