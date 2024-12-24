@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:block",
+	"pools": [{
+		"rolls": 1,
+		"entries": [{
+			"type": "minecraft:loot_table",
+			"name": "spectrum:blocks/ivory_noxwood_amphora"
+		}]
+	}]
+}
