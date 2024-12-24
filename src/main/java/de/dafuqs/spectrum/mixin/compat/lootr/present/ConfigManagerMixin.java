@@ -5,11 +5,10 @@ import de.dafuqs.spectrum.compat.*;
 import de.dafuqs.spectrum.compat.lootr.*;
 import de.dafuqs.spectrum.registries.*;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.*;
-import net.minecraft.util.math.*;
 import net.zestyblaze.lootr.config.*;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.*;
 
 import java.util.*;
 
@@ -18,30 +17,18 @@ public class ConfigManagerMixin {
 	@Shadow
 	private static Map<Block, Block> replacements;
 	
-	@ModifyVariable(method = "replacement", at = @At(value = "INVOKE_ASSIGN", target = "Ljava/util/Map;get(Ljava/lang/Object;)Ljava/lang/Object;", ordinal = 0), name = "replacement")
-	private static Block modifyReplacement(Block replacement, BlockState original) {
-		if (SpectrumCommon.CONFIG.IntegrationPacksToSkipLoading.contains(SpectrumIntegrationPacks.LOOTR_ID)) return replacement;
+	@Inject(method = "<clinit>", at = @At("TAIL"))
+	private static void addReplacements(CallbackInfo ci) {
+		if (SpectrumCommon.CONFIG.IntegrationPacksToSkipLoading.contains(SpectrumIntegrationPacks.LOOTR_ID)) return;
 		
-		if (replacement == null && original.isIn(SpectrumBlockTags.AMPHORAS)) {
-			Block block = original.getBlock();
-			
-			if (block instanceof BlockEntityProvider provider && provider.createBlockEntity(BlockPos.ORIGIN, original) instanceof LootableContainerBlockEntity) {
-				if (original.isOf(SpectrumBlocks.SLATE_NOXWOOD_AMPHORA)) {
-					replacements.put(block, LootrCompat.SLATE_NOXWOOD_LOOT_AMPHORA);
-				} else if (original.isOf(SpectrumBlocks.EBONY_NOXWOOD_AMPHORA)) {
-					replacements.put(block, LootrCompat.EBONY_NOXWOOD_LOOT_AMPHORA);
-				} else if (original.isOf(SpectrumBlocks.IVORY_NOXWOOD_AMPHORA)) {
-					replacements.put(block, LootrCompat.IVORY_NOXWOOD_LOOT_AMPHORA);
-				} else if (original.isOf(SpectrumBlocks.CHESTNUT_NOXWOOD_AMPHORA)) {
-					replacements.put(block, LootrCompat.CHESTNUT_NOXWOOD_LOOT_AMPHORA);
-				} else if (original.isOf(SpectrumBlocks.WEEPING_GALA_AMPHORA)) {
-					replacements.put(block, LootrCompat.WEEPING_GALA_LOOT_AMPHORA);
-				}
-			}
-			
-			return replacements.get(block);
+		if (replacements == null) {
+			replacements = new HashMap<>();
 		}
 		
-		return replacement;
+		replacements.put(SpectrumBlocks.SLATE_NOXWOOD_AMPHORA, LootrCompat.SLATE_NOXWOOD_LOOT_AMPHORA);
+		replacements.put(SpectrumBlocks.EBONY_NOXWOOD_AMPHORA, LootrCompat.EBONY_NOXWOOD_LOOT_AMPHORA);
+		replacements.put(SpectrumBlocks.IVORY_NOXWOOD_AMPHORA, LootrCompat.IVORY_NOXWOOD_LOOT_AMPHORA);
+		replacements.put(SpectrumBlocks.CHESTNUT_NOXWOOD_AMPHORA, LootrCompat.CHESTNUT_NOXWOOD_LOOT_AMPHORA);
+		replacements.put(SpectrumBlocks.WEEPING_GALA_AMPHORA, LootrCompat.WEEPING_GALA_LOOT_AMPHORA);
 	}
 }
